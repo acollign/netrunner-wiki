@@ -81,6 +81,7 @@ mtgred, JoelCFC25, and nealterrell have been hard at work keeping our card base 
 * mtgred implemented the Caïssa programs with the new hosting system.
 * Titan Transnational players will appreciate implementations of Trick of Light, Mark Yale, Constellation Protocol, and upcoming implementations of space-ice discounts.
 * Andromeda's favorite pastime of Security Testing is now automated.
+* Ash 2X3ZB9CY is on the job waiting to turn Runners away from your sensitive servers. Just be sure to click him once the Runner passes the last ice, before you select No Action!
 
 ## Contribute
 
