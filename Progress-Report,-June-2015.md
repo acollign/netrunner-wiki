@@ -14,7 +14,7 @@ Card hosting has been one of our most-requested features for some time, and June
 * Installed hosting: Dinosaurus, Djinn, Leprechaun, London Library, Off-Campus Apartment, Progenitor, Omni-Drive, and Scheherazade. Cards hosted on these are installed and can be used and targeted by abilities and effects. To host a card on these, click the host card and then select the card you want to host from your hand. Improvements will come for interactions with Self-modifying Code, Clone Chip, etc.
 * Host modifiers: Parasite, The Personal Touch, Patch, Sub Boost, Oversight AI, Bioroid Efficiency Research, Bishop, Knight, Pawn, Rook. These are installed / hosted onto existing cards and modify them in some way. 
 
-Face-down hosting for Glen Station and Street Peddler has not been finished.
+Face-down hosting for Glenn Station and Street Peddler has not been finished.
 
 ### Ice dynamic strengths
 
