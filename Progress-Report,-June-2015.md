@@ -70,7 +70,7 @@ mtgred, JoelCFC25, and nealterrell have been hard at work keeping our card base 
 ## Other notables
 
 * JoelCFC25 and nealterrell collaborated to implement the Grail ice, allowing Corps to both reveal and resolve Grail ice from their hand.
-* mtgred implemented the Caissa ice with the new hosting system.
+* mtgred implemented the Caïssa programs with the new hosting system.
 * Titan Transnational players will appreciate implementations of Trick of Light, Mark Yale, Constellation Protocol, and upcoming implementations of space-ice discounts.
 * Andromeda's favorite pastime of Security Testing is now automated.
 
