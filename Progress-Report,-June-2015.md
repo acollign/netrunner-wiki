@@ -6,6 +6,14 @@ Welcome to the Jinteki.net open-source progress report for June 2015. In this in
 
 ## Major system changes
 
+### Network lag
+
+One of the biggest improvements in user experience wasn't related to the game at all, simply an improvement to networking code. At the prompting of eah13, developers looking into server lag noticed a lot of data being sent to maintain the Current Games list. It turned out that each player's entire deck list was being sent to all site visitors every time a game was created, joined, or finished, even though that information is only needed up until a game is started. With network traffic identified as the main performance bottleneck, we implemented a simple fix that reduced data being sent from the server by ~75! Whereas the server used to become extremely laggy at around 15 active games, this fix has helped us push 25-30 active games without a sign of lag!
+
+![Network traffic improvement](https://cloud.githubusercontent.com/assets/284114/8163966/77fa7b6e-1386-11e5-9899-41a92e5ebe2d.png)
+
+_Can you guess the date that the fix was deployed?_
+
 ### Hosting cards
 
 Card hosting has been one of our most-requested features for some time, and June saw the implementation of most card-hosting effects. mtgred finished code for several hosting scenarios:
