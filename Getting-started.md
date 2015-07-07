@@ -33,6 +33,7 @@ You have to specify the `--msvs_version` flag. So, if you use Visual Studio 2013
 ```
 npm install --msvs_version=2013 
 ```
+
 ---
 Install JavaScript dependencies:
 
@@ -49,6 +50,7 @@ $ coffee fetch.coffee
 ```
 
 On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
+
 ---
 Compile and watch client side Clojurescript files:
 
