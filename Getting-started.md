@@ -1,3 +1,5 @@
+This page contains all information you need to get startet with developing as well as usefull tips.
+
 ## IDE
 
 There are several options avaiable, including:
