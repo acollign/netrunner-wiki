@@ -1,4 +1,4 @@
-This page contains all information you need to get startet with developing as well as usefull tips.
+This page contains all information you need to get startet with developing as well as usefull tips (see also [this issue](https://github.com/mtgred/netrunner/issues/328)).
 
 ## IDE
 
