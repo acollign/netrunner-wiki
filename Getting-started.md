@@ -76,7 +76,13 @@ $ coffee server.coffee
 
 ## Setting up IntelliJ IDEA 
 
-coming soon
+> How can I use a REPL while running the server?
+
+Create a new Run Configuration and choose `Clojure REPL -> Local`:
+
+![Setting a REPL](https://i.imgur.com/Df7h756.png)
+
+When the REPL started, use `(future-call dev)` to start the game server.
 
 ## Debugging with IntelliJ IDEA 
 
@@ -85,3 +91,7 @@ coming soon
 Cursive uses a default time out of 60 seconds when trying to connect to the REPL. Change `Settings -> Clojure -> REPL startup timeout` to a higher value:
 
 ![Increase the timeout](https://i.imgur.com/2OlGHtA.png)
+
+> How can I access the code in the REPL?
+
+Right click the file in the editor, `REPL -> Switch REPL NS to current file`
