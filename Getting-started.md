@@ -1,15 +1,17 @@
-This page contains all information you need to get startet with developing as well as usefull tips (see also [this issue](https://github.com/mtgred/netrunner/issues/328)).
+This page contains all the information you need to get started with developing as well as useful tips (see also [this issue](https://github.com/mtgred/netrunner/issues/328)).
 
 ## IDE
 
-There are several options avaiable, including:
+There are several options available, including:
 
-- [Intellij IDEA](https://www.jetbrains.com/idea/) with [Cursive](https://cursiveclojure.com/)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) with [Cursive](https://cursiveclojure.com/)
+- Emacs ([Unix](https://www.gnu.org/software/emacs/) | [Windows](https://ftp.gnu.org/gnu/emacs/windows/) | [MacOS](http://emacsformacosx.com/)) with [CIDER](https://github.com/clojure-emacs/cider)
 
 ## Dependencies
 
 You need the following dependencies installed:
 
+- [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (for MacOS, download the full [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
 - [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
 - [Leiningen (version 2+)](http://leiningen.org/)
 - [MongoDB](https://www.mongodb.org/)
@@ -30,7 +32,7 @@ Install JavaScript dependencies:
 $ bower install
 ```
 
-Launch MongoDB and fetch card data:
+Launch MongoDB _(possibly with --dbpath option specifying card data directory)_ and fetch card data:
 
 ```
 $ mongod
@@ -64,10 +66,10 @@ Launch the Node server:
 $ coffee server.coffee
 ```
 
-## Setting up Intellij IDEA 
+## Setting up IntelliJ IDEA 
 
-comming soon
+coming soon
 
-## Debugging with Intellij IDEA 
+## Debugging with IntelliJ IDEA 
 
-comming soon
+coming soon
