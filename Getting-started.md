@@ -1,10 +1,10 @@
-###IDE
+## IDE
 
 There are several options avaiable, including:
 
 - [Intellij IDEA](https://www.jetbrains.com/idea/) with [Cursive](https://cursiveclojure.com/)
 
-###Dependencies
+## Dependencies
 
 You need the following dependencies installed:
 
