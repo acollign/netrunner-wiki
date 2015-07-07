@@ -69,12 +69,8 @@ $ coffee server.coffee
 
 ## Setting up Intellij IDEA 
 
-***
-
 comming soon
 
-## Debugging wi
-
-***
+## Debugging with Intellij IDEA 
 
 comming soon
