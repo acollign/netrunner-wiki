@@ -72,4 +72,8 @@ coming soon
 
 ## Debugging with IntelliJ IDEA 
 
-coming soon
+> I start a REPL from IntelliJ IDEA, but I get the following error: 'No nREPL ack received'.
+
+Cursive uses a default time out of 60 seconds when trying to connect to the REPL. Change `Settings -> Clojure -> REPL startup timeout` to a higher value:
+
+![Increase the timeout](https://i.imgur.com/2OlGHtA.png)
