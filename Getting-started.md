@@ -17,6 +17,7 @@ You need the following dependencies installed:
 - [MongoDB](https://www.mongodb.org/)
 - [Coffeescript](http://coffeescript.org/)
 - [Bower](http://bower.io/)
+- [Python 2.7](https://www.python.org/)
 
 ## Installation
 
