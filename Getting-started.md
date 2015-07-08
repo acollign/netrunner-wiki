@@ -34,6 +34,10 @@ You have to specify the `--msvs_version` flag. So, if you use Visual Studio 2013
 npm install --msvs_version=2013 
 ```
 
+> I'm still getting errors like `error: ‘NewSymbol’ is not a member of ‘v8::String’` when `npm` tries to compile `gyp`
+
+**soon**
+
 ---
 Install JavaScript dependencies:
 
