@@ -15,8 +15,8 @@ You need the following dependencies installed:
 - [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
 - [Leiningen (version 2+)](http://leiningen.org/)
 - [MongoDB](https://www.mongodb.org/)
-- [Coffeescript](http://coffeescript.org/) (npm install -g coffee-script)
-- [Bower](http://bower.io/) (npm install -g bower)
+- [Coffeescript](http://coffeescript.org/) (`npm install -g coffee-script`)
+- [Bower](http://bower.io/) (`npm install -g bower`)
 - [Python 2.7](https://www.python.org/)
 
 ## Installation
