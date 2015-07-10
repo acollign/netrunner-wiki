@@ -101,7 +101,7 @@ Cursive uses a default time out of 60 seconds when trying to connect to the REPL
 
 > How can I access the code in the REPL?
 
-Right click the file in the editor, `REPL -> Switch REPL NS to current file`
+Right click the file in the editor, `REPL -> Switch REPL NS to current file` or run `(in-ns 'game.core)` to switch the namespace
 
 ## Using Emacs with Cider
 
