@@ -91,7 +91,7 @@ Create a new Run Configuration and choose `Clojure REPL -> Local`:
 
 When the REPL started, use `(future-call dev)` to start the game server.
 
-## Debugging with IntelliJ IDEA 
+## Using IntelliJ IDEA with Cursive
 
 > I start a REPL from IntelliJ IDEA, but I get the following error: 'No nREPL ack received'.
 
@@ -102,3 +102,23 @@ Cursive uses a default time out of 60 seconds when trying to connect to the REPL
 > How can I access the code in the REPL?
 
 Right click the file in the editor, `REPL -> Switch REPL NS to current file`
+
+## Using Emacs with Cider
+
+If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
+
+## Development tips
+
+#### Server
+
+When you modify a function or a card, simply reload the function or the `cards.clj` file to the REPL and it should be reflected in the game engine without having to recreate a new game:
+
+    (load-file "src/clj/game/cards.clj")
+
+For cards already installed you have to drag it back to hand and install it again to reflect the new code. No need to refresh the browser, you can keep the game state.
+
+To inspect the content of clojure data structure, `prn` is handy. You can add `prn` in your functions or inside the `(req )` macro in card definitions you want to inspect.
+
+#### Client
+
+To modify the client side, `Figwheel` is super awesome. Run `lein figwheel` and `stylus -w src/css -o resources/public/css/`. When you save a cljs or styl file, the Clojurescript or Stylus are automatically compiled and sent to the connected browsers. No need to refresh anything, you keep the game state. When you have an error in a cljs file, the UI might disappear. Don't panic! As soon as the error is corrected the UI will reappear. No need to reload anything.
