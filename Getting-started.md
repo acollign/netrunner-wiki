@@ -27,7 +27,7 @@ Install Node.js dependencies:
 $ npm install
 ```
 
-> `npm install` throws errors when trying to compile modules on Windows
+> `npm install` throws errors when trying to compile modules on Windows :-(
 
 You have to specify the `--msvs_version` flag. So, if you use Visual Studio 2013, run
 
@@ -35,9 +35,9 @@ You have to specify the `--msvs_version` flag. So, if you use Visual Studio 2013
 npm install --msvs_version=2013 
 ```
 
-> I'm still getting errors like `error: ‘NewSymbol’ is not a member of ‘v8::String’` when `npm` tries to compile `gyp`
+> I'm still getting errors like `error: ‘NewSymbol’ is not a member of ‘v8::String’` when `npm` tries to compile `gyp` on Windows :-(
 
-**soon**
+There's a problem with the engine.io node module that depends on an old version of the ws module. See [this](https://github.com/Automattic/engine.io-client/issues/376) and [this](https://github.com/Automattic/socket.io/issues/2057) issue for more information.
 
 ---
 Install JavaScript dependencies:
