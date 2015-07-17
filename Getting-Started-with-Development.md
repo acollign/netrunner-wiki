@@ -122,3 +122,14 @@ To inspect the content of clojure data structure, `prn` is handy. You can add `p
 #### Client
 
 To modify the client side, `Figwheel` is super awesome. Run `lein figwheel` and `stylus -w src/css -o resources/public/css/`. When you save a cljs or styl file, the Clojurescript or Stylus are automatically compiled and sent to the connected browsers. No need to refresh anything, you keep the game state. When you have an error in a cljs file, the UI might disappear. Don't panic! As soon as the error is corrected the UI will reappear. No need to reload anything.
+
+## Good Starting Issues
+
+Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
+
+* [#383](https://github.com/mtgred/netrunner/issues/383) - hosting a 0-cost card onto Personal Workshop should auto-install it.
+* [#344](https://github.com/mtgred/netrunner/issues/344) - Order of Sol needs to fire at start of turn if the Runner has 0 credits; currently only fires when dropping to 0 credits.
+* [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
+* [#303](https://github.com/mtgred/netrunner/issues/303) - Shi.Kyu does not get added to Runner's score area if access from a remote server.
+
+(Updated 17 June 2015.)
