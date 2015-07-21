@@ -37,6 +37,7 @@ At this time there is no way for the active player to choose the sequence of mul
 ##### Accessing Multiple Cards
 When accessing Archives, you can't currently choose the order of access, so everything gets accessed simultaneously. This means you could, for example, take a bunch of damage from Shocks even if in real life you would choose to access agendas and win prior to taking any damage. When accessing an asset/agenda plus upgrades in a remote, you'll access them all at once instead of one-by-one as you would in real life. 
 
+Mediums or Nerve Agents with multiple virus counters are also problematic because you will automatically get all the additional accesses, even though you are supposed to be allowed to choose to access fewer cards if desired. 
 ### Gameplay Tips:
 
 * Be sure to check available resources, especially credits and MU, before trying to install
