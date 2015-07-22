@@ -1,5 +1,4 @@
 ## Chat
-
 The chat page is where you start on Jinteki.net. General chat is where users discuss cards, site status, and generally connect about playing Netunner. It works like most chat or IRC clients in that you type your message into the box and hit enter to send. There are region specific channels that work well for discussing local events and finding players in your geographic area.
 
 ### Chat Tips:
@@ -8,7 +7,6 @@ The chat page is where you start on Jinteki.net. General chat is where users dis
 * Keep an eye out for posts from MTGred and other contributors about card status updates
 
 ## Deckbuilder
-
 The deck builder is an excellent way to quickly create decks either from scratch or plain text. Begin by selecting the ID, naming your deck, and either copy/pasting the list or adding cards using the Add cards box. Be sure to press the Save button when you are done making changes! Be aware that some card names with special characters do not copy and paste well or work with the Add cards dialog that attempts to autocomplete names. Déjà Vu and R&D Interface are the best examples, but there may be others. Add these by typing a quantity and a unique portion of card name directly into the Decklist text box--e.g., typing "3 vu" will add 3 Déjà Vu, and "3 R&D" will add 3 R&D Interface.
 
 ### Deckbuilder Tips:
@@ -17,11 +15,10 @@ The deck builder is an excellent way to quickly create decks either from scratch
 * Be sure to delete the deck summary added by most sites, as this will confuse the deck builder
 
 ## Gameplay
-
 Jinteki.net gameplay is quite intuitive. Generally clicking on a card will do what you want it to do or give you the options you need. If something doesn’t work or you make a mistake, just adjust resources (credits, clicks, etc.) appropriately and fix the game state. Most actions that can’t be accomplished by clicking on a card can be done by dragging the card image to the appropriate area. If you find a situation that doesn’t fit within the game engine, explain it to your opponent in chat and track it that way.
-
+### Server Restarts
+The game server periodically gets restarted to deploy code for new features or bug fixes. If you find erratic behavior or features not working as they normally do, make sure to do a forced refresh of the site (Ctrl-F5 in your browser) to retrieve the latest client-side code. 
 ### Gameplay Limitations
-
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
 * **Manipulation of ice position/arrangement:** Escher, Tenma Line, Sunset, Midori
@@ -39,13 +36,11 @@ When accessing Archives, you can't currently choose the order of access, so ever
 
 Mediums or Nerve Agents with multiple virus counters are also problematic because you will automatically get all the additional accesses, even though you are supposed to be allowed to choose to access fewer cards if desired. 
 ### Gameplay Tips:
-
 * Be sure to check available resources, especially credits and MU, before trying to install
 * Clicking the side of a pop up menu will usually dismiss it
 * Try to take recurring credits before doing the action for which they are used
 
 ## Etiquette
-
 The Netrunner community has always been an outstanding place to game and Jinteki.net is no exception. Here are a few suggestions to make the online play experience more fun for everyone involved.
 
 * Greet your opponent before starting the game (glhf is traditional)
