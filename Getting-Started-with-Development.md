@@ -127,6 +127,7 @@ To modify the client side, `Figwheel` is super awesome. Run `lein figwheel` and 
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
 
+* [#428](https://github.com/mtgred/netrunner/issues/428) - Reina Roja's ability is lost if the Corp attempts to rez ice they can't afford.
 * [#383](https://github.com/mtgred/netrunner/issues/383) - hosting a 0-cost card onto Personal Workshop should auto-install it.
 * [#344](https://github.com/mtgred/netrunner/issues/344) - Order of Sol needs to fire at start of turn if the Runner has 0 credits; currently only fires when dropping to 0 credits.
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
