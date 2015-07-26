@@ -22,7 +22,7 @@ The game server periodically gets restarted to deploy code for new features or b
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
 * **Manipulation of ice position/arrangement:** Escher, Tenma Line, Sunset, Midori
-* **Additional costs to run, access, steal, etc:** Red Herrings, Gagarin Deep Space, Strongbox, Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
+* **Additional costs to run, access, etc:** Gagarin Deep Space, Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
 * **Tag prevention:** The damage prevention system works, but hasn't yet been extended to tags
 * **Some broad prevention effects:** Blacklist, Crisium Grid, Cerebral Static, Lockdown, RSVP, *et al*
 * **Other unique complicated effects:** Accelerated Diagnostics, Tori Hanzō, Valley Grid
