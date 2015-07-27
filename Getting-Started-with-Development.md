@@ -30,14 +30,21 @@ $ npm install
 > `npm install` throws errors when trying to compile modules on Windows :-(
 
 You have to specify the `--msvs_version` flag. So, if you use Visual Studio 2013, run
-
 ```
 npm install --msvs_version=2013 
 ```
-
 > I'm still getting errors like `error: ‘NewSymbol’ is not a member of ‘v8::String’` when `npm` tries to compile `gyp` on Windows :-(
 
 There's a problem with the engine.io node module that depends on an old version of the ws module. See [this](https://github.com/Automattic/engine.io-client/issues/376) and [this](https://github.com/Automattic/socket.io/issues/2057) issue for more information.
+
+> `npm install` throws errors on MacOS that complain about `zmq`
+
+To be able to install and find `libzmq`, first install [Homebrew](http://brew.sh), then use it to install `zeromq` and `pkg-config`: 
+
+```
+$ brew install zeromq
+$ brew install pkg-config
+```
 
 ---
 Install JavaScript dependencies:
