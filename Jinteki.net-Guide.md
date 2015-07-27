@@ -50,6 +50,6 @@ The Netrunner community has always been an outstanding place to game and Jinteki
 * Allow your opponent to jack out instead of firing an end the run, unless it would alter the game state
 * Check with your opponent before firing subroutines that alter the game state (trash & damage ones especially)
 * Inform your opponent of your reasoning before adjusting resources manually
-* Avoid complaining about opponents in general chat
+* ***Please*** **avoid complaining about opponents in general chat**
 * Add a description like, “PRIVATE” to your game if it’s not for anyone to join
 * Remember that the site is a free, fan-made endeavor and act accordingly
