@@ -21,7 +21,7 @@ The game server periodically gets restarted to deploy code for new features or b
 ### Gameplay Limitations
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
-* **Manipulation of ice position/arrangement:** Escher, Tenma Line, Sunset, Midori
+* **Manipulation of ice position/arrangement:** Escher, Tenma Line, Sunset, Midori, Howler
 * **Additional costs to run, access, etc:** Gagarin Deep Space, Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
 * **Tag prevention:** The damage prevention system works, but hasn't yet been extended to tags
 * **Some broad prevention effects:** Blacklist, Crisium Grid, Cerebral Static, Lockdown, RSVP, *et al*
