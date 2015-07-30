@@ -18,6 +18,7 @@ You need the following dependencies installed:
 - [Coffeescript](http://coffeescript.org/) (`npm install -g coffee-script`)
 - [Bower](http://bower.io/) (`npm install -g bower`)
 - [Python 2.7](https://www.python.org/)
+- A C++ compiler (g++ on Linux, Visual Studio on Windows)
 
 ## Installation
 
