@@ -41,9 +41,18 @@ There's a problem with the engine.io node module that depends on an old version 
 
 To be able to install and find `libzmq`, first install [Homebrew](http://brew.sh), then use it to install `zeromq` and `pkg-config`: 
 
+
 ```
 $ brew install zeromq
 $ brew install pkg-config
+```
+
+> `npm install` fails on Linux: npm WARN This failure might be due to the use of legacy binary "node"
+
+Install the nodejs-legacy package:
+
+```
+sudo apt-get install nodejs-legacy
 ```
 
 ---
