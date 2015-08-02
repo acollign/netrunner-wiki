@@ -24,7 +24,7 @@ With [this challenge](https://github.com/mtgred/netrunner/issues/259) issued, ne
 
 _Is it crowded in here?_
 
-With ice and icebreaker strengths being comprehensively tracked, development shifted to an automated "increase strength to match this ice" button for pumpable icebreakers. Thanks to some voodoo magic (and some self-modifying code...), nealterrell and JoelCFC25 ported the entire catalog of icebreakers to a new system supporting the auto-increase of icebreaker strength. Any time you encounter an ice that your breaker can interact with, you will see a "Match strength with ____" button; click this, and the breaker will automatically apply its "increase strength" routine until it matches the target ice's strength. Corroder used to take __22 mouse clicks__ to break Curtain Wall; now it takes 2 to match strength and 3 to break!
+With ice and icebreaker strengths being comprehensively tracked, development shifted to an automated "increase strength to match this ice" button for pumpable icebreakers. Thanks to some voodoo magic (and some self-modifying code...), nealterrell and JoelCFC25 ported the entire catalog of icebreakers to a new system supporting the auto-increase of icebreaker strength. Any time you encounter an ice that your breaker can interact with, you will see a "Match strength with ____" button; click this, and the breaker will automatically apply its "increase strength" routine until it matches the target ice's strength. Corroder used to take __22 mouse clicks__ to break Curtain Wall; now it takes 2 to match strength and 6 to break!
 
 ![Match strength with Curtain Wall](https://cloud.githubusercontent.com/assets/10083341/8505138/b154cbce-2193-11e5-9dcd-b419abbbbf52.PNG)
 
