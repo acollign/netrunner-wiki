@@ -8,7 +8,7 @@ Welcome to the Jinteki.net open-source progress report for July 2015. In this re
 
 We'll get to their submissions below, but let's take a moment to thank the new developers who completed a variety of improvements to the platform this month. In alphabetical order, huge thanks to DominicKexel, gaverhae, justinliew, lanaganojunior, and Leffelin!
 
-Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by DominicKexel, JoelCFC25, and mtgred!
+Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by DominicKexel, JoelCFC25, and mtgred! More interested in simply learning to use the site? darlingsensei led development of a great [Using Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide).
 
 ## Major system changes
 
@@ -32,6 +32,8 @@ _Weyland players consider this a dramatic nerf to Curtain Wall, whose carpal tun
 
 ### Run credits
 
+Bad publicity is one of the last major game systems that has no automated support on Jinteki.net, and laganojunior took some major strides this month towards eliminating that weakness. His "run credit" system automatically grants credits for bad publicity or Stimhack at the start of the run, and takes any unspent run credits and the end of a run. We are still experimenting with how to best represent the credits in the UI, and under what circumstances they should automatically be spent, but the system lifts a big burden from Runners (who previously had to manually take credits to account for bad publicity).
+
 
 ### Card hover preview
 
@@ -52,6 +54,19 @@ _Utopia Fragment, NAPD Contract, Predictive Algorithm, Red Herrings, Strongbox, 
 ## Other notables
 
 1. Rez-cost modifications for IQ and "space ice" (Asteroid Belt, Nebula, Wormhole, Orion).
-2. Better support for "the first time this turn" requirements, leading to more correct implementations of Near Earth Hub, Autoscripter, and Symmetrical Visage.
+2. Better support for "the first time this turn" requirements, leading to more correct implementations of Daily Business Show, Autoscripter, and Symmetrical Visage.
 3. Last month we implemented Wyrm... this month, JoelCFC25 continues the "just in case _anyone_ uses these" mission with Hellion Alpha Test, Shiro, Monolith, and Helium-3 Deposit.
 4. Joel also worked on fixing interactions between HQ Interface and Gang Sign / Raymond Flint. Multiple Gang Signs still give problems, but a single Sign will stack correctly with HQI.
+
+As of this writing, we are at __87.7%__ card automation up to _The Underway_!
+
+## Coming soon
+
+1. Crisium Grid and Cerebral Static.
+2. Options for flagging games as Beginner/Intermediate/Expert and as Friendly/Serious/Tournament.
+3. Manual selection of access order.
+3. __Lots__ of new cards :D.
+
+## Contribute
+
+Jinteki.net is an open-source project of love run and paid for by mtgred (Worlds 2014 runner-up!) and other volunteers. You can contribute by reporting bugs and even submitting fixes and new implementations on our GitHub page.
