@@ -55,7 +55,7 @@ _Utopia Fragment, NAPD Contract, Predictive Algorithm, Red Herrings, Strongbox, 
 
 1. Rez-cost modifications for IQ and "space ice" (Asteroid Belt, Nebula, Wormhole, Orion).
 2. Better support for "the first time this turn" requirements, leading to more correct implementations of Daily Business Show, Autoscripter, and Symmetrical Visage.
-3. Last month we implemented Wyrm... this month, JoelCFC25 continues the "just in case _anyone_ uses these" mission with Hellion Alpha Test, Shiro, Monolith, and Helium-3 Deposit.
+3. Last month we implemented Wyrm... this month, JoelCFC25 continues the "just in case _anyone_ uses these" mission with Hellion Alpha Test, Shiro, Raymond Flint, and Helium-3 Deposit.
 4. Joel also worked on fixing interactions between HQ Interface and Gang Sign / Raymond Flint. Multiple Gang Signs still give problems, but a single Sign will stack correctly with HQI.
 
 As of this writing, we are at __87.7%__ card automation up to _The Underway_!
