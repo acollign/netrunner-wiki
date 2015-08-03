@@ -20,6 +20,9 @@ You need the following dependencies installed:
 - [Python 2.7](https://www.python.org/)
 - A C++ compiler (g++ on Linux, Visual Studio on Windows)
 
+Optional:
+
+- [Stylus](https://learnboost.github.io/stylus/) (`npm install stylus -g`)
 ## Installation
 
 Install Node.js dependencies:
@@ -78,6 +81,12 @@ Compile and watch client side Clojurescript files:
 
 ```
 $ lein cljsbuild auto dev
+```
+
+Compile and watch CSS files:
+
+```
+$ stylus -w src/css -o resources/public/css/
 ```
 ---
 Compile server side Clojure files:
