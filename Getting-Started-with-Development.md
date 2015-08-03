@@ -157,6 +157,6 @@ Here are some easier / less complicated issues from our Issue Tracker than newer
 * [#383](https://github.com/mtgred/netrunner/issues/383) - hosting a 0-cost card onto Personal Workshop should auto-install it.
 * [#344](https://github.com/mtgred/netrunner/issues/344) - Order of Sol needs to fire at start of turn if the Runner has 0 credits; currently only fires when dropping to 0 credits.
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
-* [#303](https://github.com/mtgred/netrunner/issues/303) - Shi.Kyu does not get added to Runner's score area if access from a remote server.
+* [#303](https://github.com/mtgred/netrunner/issues/303) - Shi.Kyu does not get added to Runner's score area if accessed in a remote server.
 
 (Updated 03 August 2015.)
