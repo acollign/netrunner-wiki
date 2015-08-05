@@ -15,6 +15,7 @@ The deck builder is an excellent way to quickly create decks either from scratch
 * Export your deck list from your site of choice as plain text and copy it right into the deck field
 * Decks are sorted by most recently changed, so keep your favorites fresh
 * Be sure to delete the deck summary added by most sites, as this will confuse the deck builder
+
 ### Datapack Availability
 Card data is retrieved from [NetrunnerDB](http://www.netrunnerdb.com), so when new datapacks go live there, the deckbuilder here will be able to display them and you can add them to decks. 
 
