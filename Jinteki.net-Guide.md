@@ -36,9 +36,7 @@ While the system is fairly mature, it is still in development and some kinds of 
 Hosting is a recent addition to the site. Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
 ##### Ordering Simultaneous Effects
 At this time there is no way for the active player to choose the sequence of multiple effects that occur in the same window. This can give incorrect outcomes (e.g., 2 Gang Signs with 1 HQ Interface will do 4 HQ accesses all at once instead of access 2, shuffle, access 2). 
-##### Accessing Multiple Cards
-When accessing Archives, you can't currently choose the order of access, so everything gets accessed simultaneously. This means you could, for example, take a bunch of damage from Shocks even if in real life you would choose to access agendas and win prior to taking any damage. When accessing an asset/agenda plus upgrades in a remote, you'll access them all at once instead of one-by-one as you would in real life. 
-
+##### Accessing Multiple Cards with Medium/Nerve Agent
 Mediums or Nerve Agents with multiple virus counters are also problematic because you will automatically get all the additional accesses, even though you are supposed to be allowed to choose to access fewer cards if desired. These 2 cards also need to be extended to work when accesses occur outside of runs. 
 ### Gameplay Tips:
 * Be sure to check available resources, especially credits and MU, before trying to install
