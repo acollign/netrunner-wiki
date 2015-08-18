@@ -33,7 +33,9 @@ While the system is fairly mature, it is still in development and some kinds of 
 * **Other unique complicated effects:** Accelerated Diagnostics, Tori Hanzō, Valley Grid
 
 ##### Hosting
-Hosting is a recent addition to the site. Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
+Hosting is a recent addition to the site. Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why.
+
+Due to the way the game state is currently stored, hosting many cards at once or having "nested" hosting (e.g., The Supplier hosted on Off-Campus Apartment) will severely degrade performance. 
 ##### Ordering Simultaneous Effects
 At this time there is no way for the active player to choose the sequence of multiple effects that occur in the same window. This can give incorrect outcomes (e.g., 2 Gang Signs with 1 HQ Interface will do 4 HQ accesses all at once instead of access 2, shuffle, access 2). 
 ##### Accessing Multiple Cards with Medium/Nerve Agent
