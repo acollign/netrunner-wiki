@@ -135,10 +135,8 @@ If you want to use Emacs you have to install clojure-mode and cider. Cider allow
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
 
-* [#562](https://github.com/mtgred/netrunner/issues/562) - special run abilities still fire if the run changes to a new server
 * [#536](https://github.com/mtgred/netrunner/issues/536) - Rolodex prints the cards that were looked at
 * [#491](https://github.com/mtgred/netrunner/issues/491) - Parasite disappears when installed off Street Peddler
-* [#344](https://github.com/mtgred/netrunner/issues/344) - Order of Sol needs to fire at start of turn if the Runner has 0 credits; currently only fires when dropping to 0 credits.
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
 * [#303](https://github.com/mtgred/netrunner/issues/303) - Shi.Kyu does not get added to Runner's score area if accessed in a remote server.
 
