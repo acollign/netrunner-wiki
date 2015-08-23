@@ -131,6 +131,13 @@ Right click the file in the editor, `REPL -> Switch REPL NS to current file` or 
 
 If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
 
+## Videos
+
+These live-coding videos may help you with some of the basics:
+
+* [Brief introduction / Implementing Tenma Line](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)
+* [Events system overview / Implementing Utopia Shard](https://www.livecoding.tv/video/jintekinet-events-utopia-shard-12/)
+
 ## Good Starting Issues
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
