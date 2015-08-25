@@ -137,6 +137,7 @@ These live-coding videos may help you with some of the basics:
 
 * [Brief introduction / Implementing Tenma Line](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)
 * [Events system overview / Implementing Utopia Shard](https://www.livecoding.tv/video/jintekinet-events-utopia-shard-12/)
+* [Resolving abilities / Implementing Howler](https://www.livecoding.tv/video/jintekinet-resolving-abilities-howler/)
 
 ## Good Starting Issues
 
