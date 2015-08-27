@@ -1,1 +1,3 @@
 Neal: Escher, Crisium Grid, Cerebral Static, access order, Film Critic, Shards, hosting performance
+
+Minh: spectating! Jackson, OH & UoT, run credits cleanup
