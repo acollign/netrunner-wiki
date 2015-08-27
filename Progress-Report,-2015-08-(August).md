@@ -1,1 +1,1 @@
-Neal: Escher, Tenma Line, Crisium Grid, Cerebral Static, access order, Casting Call, Film Critic, Haarpsichord, Shards, Howler, hosting performance
+Neal: Escher, Crisium Grid, Cerebral Static, access order, Film Critic, Shards, hosting performance
