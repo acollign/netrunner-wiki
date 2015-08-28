@@ -8,4 +8,4 @@ MisterMentat (John Honaker): Fixing card names being shown when moved back onto 
 
 Justin Liew: Working through all the implications of recurring credits. I think I have a solid design that balances manual payment but enforces proper context/usage. Hopefully will have more to report next month!
 
-Dominic (queueseven): Fixed/improved some cards (i.e. Paintbrush, Datahound, Hostage, Sherlock 1.0 and some others), implemented a bunch of cards (Amazon Industrial Zone, Recruiting Trip, Paige Piper, all Apex cards, Adam, Adam's directives and some others), implemented cloud ice-breakers, improved the message log to show the number of cards in hand and credits when a turn starts or ends.
+Dominic (queueseven): Fixed/improved some cards (i.e. Paintbrush, Datahound, Hostage, Sherlock 1.0 and some others), implemented a bunch of cards (Amazon Industrial Zone, Recruiting Trip, Paige Piper, all Apex cards, Adam, Adam's directives and some others), implemented cloud ice-breakers, improved the message log to show the number of cards in hand and credits when a turn starts or ends. Set up a Trello board to better coordinate our work.
