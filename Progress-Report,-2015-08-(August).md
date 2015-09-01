@@ -8,7 +8,7 @@ Welcome to the Jinteki.net open-source progress report for August 2015. In this 
 
 We'll get to their submissions below, but let's take a moment to thank the new developers who completed a variety of improvements to the platform this month. In alphabetical order, huge thanks to AndrewHynes, dtelad11, domtancredi, JHonaker, Makai, and mharris717. JoeyKL also returned to implement some D&D cards!
 
-Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by DominicKexel, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
+Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei.
 
