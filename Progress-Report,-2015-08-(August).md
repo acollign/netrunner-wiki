@@ -73,7 +73,7 @@ How to play some of our new cards:
 2. Crisium Grid: rez prior to hitting No Action when the runner has passed the last ice.
 3. Film Critic: click when you get the "You accessed ____" prompt. This is also when you can click Imp to trash the accessed card.
 4. Jackson Howard: new implementation, Archives will open and then let you select 3 cards to shuffle. If you want to shuffle less than 3, click Done when ready.
-5. Utopia/Eden/Hades Shards: when you get the Successful Run prompt, click the Shard from hand to install it for 0 cost and end the run.
+5. Utopia/Eden/Hades Shards: when you get the Successful Run prompt, click the Shard from hand to install it for 0 cost and end the run. (Thanks to db0's OCTGN implementation for the idea!)
 6. Adam: include 1 copy of each directive in your deck; they will be installed at the start of the game automatically. Those 3 cards are not part of your deck for minimum-count purposes. You may include more copies if you want them in your deck.
 7. Apex: install things, destroy things.
 8. Cerebral Static: does not stop Runner from clicking his/her identity to activate it; only stops automated effects from triggering. Likewise for Employee Strike (D&D).
