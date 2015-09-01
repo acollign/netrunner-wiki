@@ -143,6 +143,7 @@ These live-coding videos may help you with some of the basics:
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
 
+* [#657](https://github.com/mtgred/netrunner/issues/657) - Valencia and GRNDL effects should not stack
 * [#515](https://github.com/mtgred/netrunner/issues/515) - Laramy Fisk effect occurs at the wrong time
 * [#491](https://github.com/mtgred/netrunner/issues/491) - Parasite disappears when installed off Street Peddler
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
