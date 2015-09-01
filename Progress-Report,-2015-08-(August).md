@@ -22,6 +22,12 @@ Our valiant leader mtgred implemented a simple spectating system this month, all
 
 In the past, when a run was successful on a server with more than one card installed in it, or on a central server with an upgrade, Runners had to be satisfied with accessing those cards in whatever order the game server decided to allow. Lacking an interface for choosing which cards to access in which order (including such edge cases as "1 card from HQ, upgrade in HQ, another card in HQ") meant that complicated interactions like trashing Oaktown Grid before another asset, or accessing the game-winning agenda in Archives before the Shock!, could only be handled manually. nealterrell implemented a system for manual selection of access order, aimed at being as unobtrusive as possible any time the access order is obvious, e.g., when only accessing one card, or if all but 1 card has already been accessed. This was a big change for users, but necessary for strict enforcement of Netrunner rules, and brings us much closer to our goal of full game rule automation.
 
+![image](https://cloud.githubusercontent.com/assets/10083341/9028342/ba67ee54-392a-11e5-8c00-ef741e8ecee3.png)
+![image](https://cloud.githubusercontent.com/assets/10083341/9028366/2eb39cea-392b-11e5-9f79-d1b66849dd23.png)
+![image](https://cloud.githubusercontent.com/assets/10083341/9028383/aefc2d5e-392b-11e5-8bb6-ab77ba21dead.png)
+
+_Accessing from a remote, from HQ/R&D, from Archives._
+
 ### Apex and Adam
 
 queueseven brings us the new Runner hotness of Adam and Apex, two of the three Runner mini-factions from Data and Destiny. (The third, Sunny, is trivially implemented.) Major systems work went into implementing these Runners, so give him a shoutout in chat if you enjoy watching the world burn with Apocalypse or smashing into HQ to Neutralize All Threats.
@@ -55,6 +61,9 @@ and you have written 55 individual numbers when you intended to only write 10. T
 3. Someone, please, turn off that damn Noise with Cerebral Static.
 4. SO MANY cards from Old Hollywood, Universe of Tomorrow, and Data and Destiny, courtesy of mtgred, JoelCFC25, JoeyKL, and queueseven. Seriously, didn't anyone think of the poor coders before releasing all three packs at once?
 5. Get your Forgers, City Halls and Decoys ready, because tag avoidance is now here.
+6. Paige Piper is now picking pecks of peppers.
+
+As of this writing, we are at __90.6%__ card automation through _The Universe of Tomorrow_!
 
 ### How to play...
 
@@ -69,17 +78,22 @@ How to play some of our new cards:
 7. Apex: install things, destroy things.
 8. Cerebral Static: does not stop Runner from clicking his/her identity to activate it; only stops automated effects from triggering. Likewise for Employee Strike (D&D).
 9. Executive Boot Camp: click to trigger before clicking Start Turn, as with Blue Sun.
+10. Cloud icebreakers: these will now automatically discount their MU cost.
 
 ### Joel's "Don't You Forget About Me" Corner
 
 You forgot about these cards, but they haven't forgotten about you. JoelCFC25, nealterrell, and queueseven bring you this month's collection of "down but not out" card implementations: Bad Times, Exploratory Romp, Project Ares, Sunset, Tenma Line, Howler, and Data Hound.
 
-Minh: spectating! OH & UoT, run credits cleanup
+### Bug of the Month
 
-Joel: several Universe of Tomorrow/Data & Destiny cards, bring a few cards to full implementation (Muertos Gang Member, Docklands Crackdown, Executive Boot Camp), fixed cards (Exile, Order of Sol), and of course breaking new ground with more terrible cards that no one uses (Bad Times, Exploratory Romp, Project Ares, Sunset, Nasir Meidan)
+Haas-Bioroid would like to thank Jinteki.net developers for removing the Runner's ability to trash assets. We were disappointed when this feature was removed after only an hour, but assure our investors that our Adonis and Eve bioroids did tremendously good work in that time.
 
-MisterMentat (John Honaker): Fixing card names being shown when moved back onto the stack (i.e. Rolodex), fixed nested prompts with choices (May abilities that selected cards), fixed cards that fired on first time events (Hayley, Comet), reworked `:optional` abilities that caused me to briefly break (and then fix) trashing cards and scoring costs. Started working on everyone's favorite identity Jinteki: Replicating Perfection and the associated refactoring of `:register` keys to `:restrictions`.
+### Coming soon...
 
-Justin Liew: Working through all the implications of recurring credits. I think I have a solid design that balances manual payment but enforces proper context/usage. Hopefully will have more to report next month!
+* Jinteki: Replicating Perfection
+* Better automation of recurring credits
+* More Data and Destiny cards!
 
-Dominic (queueseven): Fixed/improved some cards (i.e. Paintbrush, Datahound, Hostage, Sherlock 1.0 and some others), implemented a bunch of cards (Amazon Industrial Zone, Recruiting Trip, Paige Piper, all Apex cards, Adam, Adam's directives and some others), implemented cloud ice-breakers, improved the message log to show the number of cards in hand and credits when a turn starts or ends, visual indicator when your memory is < 0 and when the runner is tagged. Set up a Trello board to better coordinate our work.
+## Contribute
+
+Jinteki.net is an open-source project of love run and paid for by mtgred (Worlds 2014 runner-up!) and other volunteers. You can contribute by reporting bugs and even submitting fixes and new implementations on our GitHub page.
