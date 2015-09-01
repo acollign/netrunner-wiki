@@ -82,7 +82,7 @@ How to play some of our new cards:
 
 ### Joel's "Don't You Forget About Me" Corner
 
-You forgot about these cards, but they haven't forgotten about you. JoelCFC25, nealterrell, and queueseven bring you this month's collection of "down but not out" card implementations: Bad Times, Exploratory Romp, Project Ares, Sunset, Tenma Line, Howler, and Data Hound.
+You forgot about these cards, but they haven't forgotten about you. JoelCFC25, nealterrell, and queueseven bring you this month's collection of "down but not out" card implementations: Bad Times, ChiLo City Grid, Exploratory Romp, Project Ares, Sunset, Tenma Line, Howler, and Data Hound.
 
 ### Bug of the Month
 
