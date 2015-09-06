@@ -1,3 +1,9 @@
+# AUTOMATED ENVIRONMENT
+
+To get a local copy running with one command, see https://github.com/astrostl/nrdev
+
+# MANUAL ENVIRONMENT
+
 This page contains all the information you need to get started with developing as well as useful tips (see also [this issue](https://github.com/mtgred/netrunner/issues/328)).
 
 ## IDE
