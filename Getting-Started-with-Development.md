@@ -154,4 +154,4 @@ Here are some easier / less complicated issues from our Issue Tracker than newer
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
 * [#303](https://github.com/mtgred/netrunner/issues/303) - Shi.Kyu does not get added to Runner's score area if accessed in a remote server.
 
-_Updated 25 August 2015_
+_Updated 7 September 2015_
