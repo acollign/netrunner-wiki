@@ -27,6 +27,37 @@ You need the following dependencies installed:
 - [Python 2.7](https://www.python.org/)
 - A C++ compiler (g++ on Linux, Visual Studio on Windows)
 
+## Git
+
+If you want to contribute, you should fork the mtgred/netrunner repository on github. 
+
+After cloning your own fork on your machine, configure mtgred/netrunner as a remote.
+
+```
+$ git remote add upstream https://github.com/mtgred/netrunner.git
+```
+
+When you run `git remote -v`, you now should see something like this:
+
+```
+origin  https://github.com/yourgithubname/netrunner (fetch)
+origin  https://github.com/yourgithubname/netrunner (push)
+upstream        https://github.com/mtgred/netrunner.git (fetch)
+upstream        https://github.com/mtgred/netrunner.git (push)
+```
+
+To keep your own repository up-to-date, refer to [Syncing a fork](https://help.github.com/articles/syncing-a-fork/).
+
+If you want to start coding a feature or fix a bug, simply use
+
+```
+git checkout -b your_new_branch_name upstream/master
+```
+
+to create a local copy of the current `master` branch named `your_new_branch_name` that can easily be merged with a pull request.
+
+Push it to your own repo with `git push origin your_new_branch_name` and create a pull request via the github website.
+
 ## Installation
 
 Install Node.js dependencies:
