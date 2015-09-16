@@ -6,7 +6,7 @@ Welcome to the Jinteki.net open-source progress report for September 2015. In th
 
 ### DRAFT
 
-queueseven: Mutate, Blacklist, Flip Identities (Jinteki, SYNC) and others
+queueseven: Mutate, Surfer, Blacklist, Flip Identities (Jinteki, SYNC) and others. Spend costs are displayed in the log: ![](https://cloud.githubusercontent.com/assets/3126597/9705929/505b01d8-54d5-11e5-9914-b47f62382143.png)
 
 JoelCFC25: Cyber Threat, Social Engineering, Shipment from MirrorMorph ,
 Director Haas' Pet Project, The Twins, handling of subtypes (Tinkering, Paintbrush etc.) and others
