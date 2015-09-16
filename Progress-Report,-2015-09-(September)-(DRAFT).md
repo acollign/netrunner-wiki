@@ -5,3 +5,8 @@ Welcome to the Jinteki.net open-source progress report for September 2015. In th
 [Jinteki.net](http://www.jinteki.net) is a service for playing Android: Netrunner in a browser. It requires no installation to play, is compatible with most operating systems and modern browsers, and includes an interactive deck-builder, chat room, and automation of most game rules and cards.
 
 ### DRAFT
+
+queueseven: Mutate, Blacklist, Flip Identities (Jinteki, SYNC) and others
+
+JoelCFC25: Cyber Threat, Social Engineering, Shipment from MirrorMorph ,
+Director Haas' Pet Project, The Twins, handling of subtypes (Tinkering, Paintbrush etc.) and others
