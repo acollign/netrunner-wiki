@@ -9,4 +9,4 @@ Welcome to the Jinteki.net open-source progress report for September 2015. In th
 queueseven: Mutate, Surfer, Blacklist, Flip Identities (Jinteki Biotech, SYNC), Brain Chip, Wireless Net Pavilion. Spend costs are displayed in the log: 
 ![](https://cloud.githubusercontent.com/assets/3126597/9705929/505b01d8-54d5-11e5-9914-b47f62382143.png)
 
-JoelCFC25: New Angeles Sol: Your News, Security Chip, Cyber Threat, Social Engineering, Shipment from MirrorMorph, Copycat, Showing Off, Itinerant Protesters, An Offer You Can't Refuse, Director Haas' Pet Project, The Twins, handling of subtypes (Rebranding Team, Tinkering, Paintbrush, Sub Boost, Rielle "Kit" Peddler)
+JoelCFC25: New Angeles Sol: Your News, Security Chip, Cyber Threat, Social Engineering, Shipment from MirrorMorph, Copycat, False Echo, Showing Off, Itinerant Protesters, An Offer You Can't Refuse, Director Haas' Pet Project, The Twins, handling of subtypes (Rebranding Team, Tinkering, Paintbrush, Sub Boost, Rielle "Kit" Peddler)
