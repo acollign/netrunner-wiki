@@ -33,3 +33,5 @@ Spectators can't use commands. When a player uses such a command, it is displaye
 
 
 JoelCFC25: New Angeles Sol: Your News, Security Chip, Cyber Threat, Social Engineering, Shipment from MirrorMorph, Copycat, False Echo, Showing Off, Itinerant Protesters, An Offer You Can't Refuse, Director Haas' Pet Project, The Twins, handling of subtypes (Rebranding Team, Tinkering, Paintbrush, Sub Boost, Rielle "Kit" Peddler)
+
+Neal: Gagarin... that's it!
