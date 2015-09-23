@@ -2,7 +2,11 @@
 
 #### Launching the Game Server
 
-After starting the REPL with `lein repl`, launch the game server by doing `(future-call dev)` from within the REPL. 
+After starting the REPL with `lein repl`, launch the game server by doing:
+
+    (future-call dev) 
+
+from within the REPL. 
 
 #### Server
 
