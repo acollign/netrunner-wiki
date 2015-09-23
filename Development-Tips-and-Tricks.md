@@ -1,5 +1,9 @@
 ## Development tips
 
+#### Launching the Game Server
+
+After starting the REPL with `lein repl`, launch the game server by doing `(future-call dev)` from within the REPL. 
+
 #### Server
 
 When you modify a function or a card, simply reload the function or the `cards.clj` file to the REPL and it should be reflected in the game engine without having to recreate a new game:
