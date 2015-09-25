@@ -19,6 +19,7 @@ You need the following dependencies installed:
 - [Bower](http://bower.io/) (`npm install -g bower`)
 - [Stylus](https://learnboost.github.io/stylus/) (`npm install stylus -g`)
 - [Python 2.7](https://www.python.org/)
+- [ZeroMQ](http://zeromq.org/)
 - A C++ compiler (g++ on Linux, Visual Studio on Windows)
 
 ## Git
