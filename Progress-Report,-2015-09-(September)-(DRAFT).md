@@ -34,4 +34,4 @@ Spectators can't use commands. When a player uses such a command, it is displaye
 
 JoelCFC25: New Angeles Sol: Your News, Security Chip, Cyber Threat, Social Engineering, Shipment from MirrorMorph, Copycat, False Echo, Showing Off, Itinerant Protesters, An Offer You Can't Refuse, Director Haas' Pet Project, The Twins, Starlight Crusade Funding, Heinlein Grid, handling of subtypes (Rebranding Team, Tinkering, Paintbrush, Sub Boost, Rielle "Kit" Peddler), fixing Shards to count as successful runs when installing for free from Grip
 
-Neal: Gagarin... that's it!
+Neal: Gagarin, unit testing, just lots of bug fixes and corresponding tests... that's it!
