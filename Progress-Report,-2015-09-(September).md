@@ -1,4 +1,4 @@
-Welcome to the Jinteki.net open-source progress report for September 2015 (plus a few days of October). In this inaugural report, we will highlight some of the recent changes to the Jinteki.net Android: Netrunner platform.
+Welcome to the Jinteki.net open-source progress report for September 2015 (plus a few days of October). In this monthly report, we will highlight some of the recent changes to the Jinteki.net Android: Netrunner platform.
 
 #### About Jinteki.net
 
