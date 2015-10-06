@@ -93,7 +93,7 @@ Mutate, Surfer, Blacklist, flippable identities (Jinteki Biotech, SYNC), Brain C
 **_Enhanced:_** fixed Shards to count as successful runs when installing for free from Grip, fully automated Pawn, Bishop rehosting restrictions, recursive installs with Accelerated Beta Test so it will work with HB: The Foundry, discounted program installs from Monolith, dynamically changing strength for IQ
 
 ##### Neal
-Gagarin: Deep Space, lots of bug fixes (Faust, Chakana, nested hosting, Lag Time .
+Gagarin: Deep Space, lots of bug fixes (Faust, Chakana, nested hosting, Lag Time, Team Sponsorship, _et al_).
 
 ##### domtancredi
 Quantum Predictive Model, Research Grant
