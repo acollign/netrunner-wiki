@@ -179,6 +179,7 @@ These live-coding videos may help you with some of the basics:
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
 
+* [#818](https://github.com/mtgred/netrunner/issues/818) - Cards installed facedown are wrongly being activated
 * [#712](https://github.com/mtgred/netrunner/issues/712) - Recurring credits don't refresh on cards that get hosted after being installed
 * [#491](https://github.com/mtgred/netrunner/issues/491) - Parasite disappears when installed off Street Peddler
 * [#350](https://github.com/mtgred/netrunner/issues/350) - Trashing hosted cards from hosts that ignore MU costs results in adding MU
