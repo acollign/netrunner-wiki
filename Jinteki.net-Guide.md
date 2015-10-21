@@ -21,6 +21,25 @@ Card data is retrieved from [NetrunnerDB](http://www.netrunnerdb.com), so when n
 
 ## Gameplay
 Jinteki.net gameplay is quite intuitive. Generally clicking on a card will do what you want it to do or give you the options you need. If something doesn’t work or you make a mistake, just adjust resources (credits, clicks, etc.) appropriately and fix the game state. Most actions that can’t be accomplished by clicking on a card can be done by dragging the card image to the appropriate area. If you find a situation that doesn’t fit within the game engine, explain it to your opponent in chat and track it that way.
+### Console Commands
+To speed up the process of fixing the game state when something goes awry, use the following commands by entering them into your game's chat:
+
+- `/draw n` -> Draw `n` cards
+- `/credit n` -> Set your credits to `n`
+- `/click n` -> Set your clicks to `n`
+- `/memory n` -> Set your memory to `n`
+- `/tag n` -> Set your tags to `n`
+- `/bp n` -> Set your bad publicity to `n`
+- `/link n` -> Set your link to `n`
+- `/handsize n` -> Set your handsize to `n`
+- `/take-meat n` -> Take `n` meat damage (Runner only)
+- `/take-net n` -> Take `n` meat damage (Runner only) 
+- `/take-brain n` -> Take `n` meat damage (Runner only)
+- `/discard #n` -> Discard card number `n` from your hand  
+- `/deck #n` -> Put card number `n` from your hand on top of your deck
+
+Although the log will flag the usage of these commands with an orange icon to alert the other player, please use these judiciously and with the consent of your opponent. 
+
 ### Server Restarts
 The game server periodically gets restarted to deploy code for new features or bug fixes. If you find erratic behavior or features not working as they normally do, make sure to do a forced refresh of the site (<kbd>Ctrl</kbd>-<kbd>F5</kbd> in your browser) to retrieve the latest client-side code. 
 ### Gameplay Limitations
