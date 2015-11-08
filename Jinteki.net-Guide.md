@@ -33,8 +33,8 @@ To speed up the process of fixing the game state when something goes awry, use t
 - `/link n` -> Set your link to `n`
 - `/handsize n` -> Set your handsize to `n`
 - `/take-meat n` -> Take `n` meat damage (Runner only)
-- `/take-net n` -> Take `n` meat damage (Runner only) 
-- `/take-brain n` -> Take `n` meat damage (Runner only)
+- `/take-net n` -> Take `n` net damage (Runner only) 
+- `/take-brain n` -> Take `n` brain damage (Runner only)
 - `/discard #n` -> Discard card number `n` from your hand  
 - `/deck #n` -> Put card number `n` from your hand on top of your deck
 
