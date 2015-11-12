@@ -179,11 +179,9 @@ These live-coding videos may help you with some of the basics:
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
 
-* [#818](https://github.com/mtgred/netrunner/issues/818) - Cards installed facedown are wrongly being activated
-* [#712](https://github.com/mtgred/netrunner/issues/712) - Recurring credits don't refresh on cards that get hosted after being installed
-* [#491](https://github.com/mtgred/netrunner/issues/491) - Parasite disappears when installed off Street Peddler
+* [#816](https://github.com/mtgred/netrunner/issues/816) - Whirlpool firing when the only card in a server leaves players unable to end the run
 * [#350](https://github.com/mtgred/netrunner/issues/350) - Trashing hosted cards from hosts that ignore MU costs results in adding MU
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
 * [#303](https://github.com/mtgred/netrunner/issues/303) - Shi.Kyu does not get added to Runner's score area if accessed in a remote server.
 
-_Updated 19 October 2015_
+_Updated 12 November 2015_
