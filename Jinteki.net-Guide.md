@@ -47,13 +47,16 @@ While the system is fairly mature, it is still in development and some kinds of 
 
 * **Additional costs to run, access, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
 * **Some broad prevention effects:** RSVP, *et al*
-* **Other unique complicated effects:** Accelerated Diagnostics, Archives Interface, Bug, Tori Hanzō, Satellite Grid, Valley Grid, Surveillance Sweep, Jak Sinclair, *et al*
+* **Other unique complicated effects:** Accelerated Diagnostics, Bug, Tori Hanzō, Satellite Grid, Valley Grid, Surveillance Sweep, Jak Sinclair, *et al*
 
 ##### Hosting
 Hosting is a recent addition to the site. Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
 
 ##### Ordering Simultaneous Effects
-At this time there is no way for the active player to choose the sequence of multiple effects that occur in the same window. This can yield incorrect outcomes. For example, 2 Gang Signs with 1 HQ Interface will do 4 HQ accesses all at once instead of access 2, shuffle, access 2. Accessing a Snare! with Dedicated Response Team can fail to apply the DRT damage if the Runner trashes the Snare! before the Corp has decided to pay to trigger the Snare!
+At this time there is no way for players to choose the correct sequence of multiple effects that occur in the same window unless the cards have been altered to make them manually triggered. This can yield incorrect outcomes. For example, accessing a Snare! with Dedicated Response Team can fail to apply the DRT damage if the Runner trashes the Snare! before the Corp has decided to pay to trigger the Snare!
+
+Some cards have been changed to prompt the user in the game log when they become activated so the user can resolve them in the order desired. Examples include: Leela Patel, Comet, Gang Sign, and Turntable. 
+
 ##### Accessing Multiple Cards with Medium/Nerve Agent
 Mediums or Nerve Agents with multiple virus counters are also problematic because you will automatically get all the additional accesses, even though you are supposed to be allowed to choose to access fewer cards if desired. These 2 cards also need to be extended to work when accesses occur outside of runs. 
 ### Gameplay Tips:
