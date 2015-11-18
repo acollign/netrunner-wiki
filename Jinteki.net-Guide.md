@@ -55,10 +55,8 @@ Hosting is a recent addition to the site. Cards capable of hosting other cards h
 ##### Ordering Simultaneous Effects
 At this time there is no way for players to choose the correct sequence of multiple effects that occur in the same window unless the cards have been altered to make them manually triggered. This can yield incorrect outcomes. For example, accessing a Snare! with Dedicated Response Team can fail to apply the DRT damage if the Runner trashes the Snare! before the Corp has decided to pay to trigger the Snare!
 
-Some cards have been changed to prompt the user in the game log when they become activated so the user can resolve them in the order desired. Examples include: Leela Patel, Comet, Gang Sign, and Turntable. 
-
-##### Accessing Multiple Cards with Medium/Nerve Agent
-Mediums or Nerve Agents with multiple virus counters are also problematic because you will automatically get all the additional accesses, even though you are supposed to be allowed to choose to access fewer cards if desired. These 2 cards also need to be extended to work when accesses occur outside of runs. 
+Some cards have been changed to prompt the user in the game log when they become activated so the user can resolve them in the order desired. Examples include: Leela Patel, Comet, Gang Sign, Team Sponsorship, and Turntable. 
+ 
 ### Gameplay Tips:
 * Be sure to check available resources, especially credits and MU, before trying to install
 * Clicking the side of a pop up menu will usually dismiss it
