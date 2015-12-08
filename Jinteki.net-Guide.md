@@ -46,11 +46,10 @@ The game server periodically gets restarted to deploy code for new features or b
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
 * **Additional costs to run, access, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Some broad prevention effects:** RSVP, *et al*
-* **Other unique complicated effects:** Accelerated Diagnostics, Bug, Tori Hanzō, Satellite Grid, Valley Grid, Surveillance Sweep, *et al*
+* **Other unique complicated effects:** Tori Hanzō, Satellite Grid, Valley Grid, Surveillance Sweep, Genetics Pavilion, Gene Conditioning Shoppe, RSVP, *et al*
 
 ##### Hosting
-Hosting is a recent addition to the site. Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
+Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
 
 ##### Ordering Simultaneous Effects
 At this time there is no way for players to choose the correct sequence of multiple effects that occur in the same window unless the cards have been altered to make them manually triggered. This can yield incorrect outcomes. For example, accessing a Snare! with Dedicated Response Team can fail to apply the DRT damage if the Runner trashes the Snare! before the Corp has decided to pay to trigger the Snare!
