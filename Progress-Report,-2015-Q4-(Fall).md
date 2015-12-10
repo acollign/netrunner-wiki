@@ -44,7 +44,7 @@ etc. Quite a change!
 
 The big picture is that we used to struggle with 10 games, but now regularly see 50-60 games in progress without any server lag. We still see lag on occasion, but it's usually related to poor card implementations, rather than the architecture itself. Game on!
 
-![Bandwidth graph](https://files.slack.com/files-pri/T035ML9G7-F0GBZMBE2/screen_shot_2015-12-10_at_21.18.45.png)
+![image](https://cloud.githubusercontent.com/assets/10083341/11727938/ce81de28-9f3b-11e5-8a54-6c8721992951.png)
 
 _June: remove decks from game list. October: caching issues with WebSocket compression. Late October: state diffs._
 
