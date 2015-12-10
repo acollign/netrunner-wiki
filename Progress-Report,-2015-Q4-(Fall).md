@@ -58,15 +58,73 @@ We decided on these guidelines for the two prompts:
 * If you can't see the card you want to affect (it is in your deck), use a Choice prompt. If the operation is cancellable, a "Cancel" button will allow you to back out of the operation... say, if you accidentally clicked your Self-modifying Code. Any time the Choices come from your deck, they will be sorted alphabetically to not give away information about card order illegally.
 * If your effect does not involve another card but simply a list of options, use a Choice prompt.
 
+We hope our users find this more consistent and appreciate the ability to cancel the majority of prompt interactions.
 
-#### User interface
+![image](https://cloud.githubusercontent.com/assets/10083341/11728223/8266fad0-9f3d-11e5-9859-ce1fab085ba7.png)
+
+_Targeting Gordian Blade with Modded._
+
+#### De-automations
+
+This might sound like an odd feature to report, but we have moved recently towards de-automating some tricky cards. The cards still function, they just typically require input from the user (usually by clicking the card) to activate, instead of triggering automatically. These cards were -- for many reasons -- difficult to fully integrate with every edge case and interaction, so we decided to put the emphasis on the player to activate them. Each prints a log message indicating how the player can act:
+
+* Laramy Fisk's identity ability (too difficult to integrate the optional ability into the access routines)
+* Team Sponsorship (multiple Sponsorships cause confusing prompt overlaps, easier if you click to activate them individually)
+* Medium / Nerve Agent (with no interaction, accesses the full number of cards; if you want fewer than max [as is allowed], click Medium when the run is successful.)
+* Leela's identity ability (too many ordering concerns, click it when you're ready)
+* Gang Sign (multiple Signs were causing issues when automated)
+* Comet (too many varied effects from Events)
+* Turntable (click it after stealing an agenda)
+
+#### Win conditions and statistics
+
+mtgred recently started saving games to our database to collect statistics on win rates and card usage. We are trying to better enforce win conditions to support this, rather than leaving it up to the players to realize when the game is over. A "Concede" button has been added next to "Leave game", and we request players to use this button when appropriate so we can keep our statistics accurate. We don't have a web interface to view stats yet, but mtgred occasionally shares numbers with us, including this post from Reddit:
+
+* Haas-Bioroid: Engineering the Future, count: 1881, won: 1088, lost: 793, winrate: 0.5784157363104732
+* Jinteki: Personal Evolution, count: 1466, won: 821, lost: 645, winrate: 0.5600272851296043
+* Near-Earth Hub: Broadcast Center, count: 1031, won: 701, lost: 330, winrate: 0.6799224054316197
+* Blue Sun: Powering the Future, count: 936, won: 540, lost: 396, winrate: 0.5769230769230769
+* Spark Agency: Worldswide Reach, count: 927, won: 530, lost: 397, winrate: 0.5717367853290184
+* Haarpsichord Studios: Entertainment Unleashed, count: 578, won: 395, lost: 183, winrate: 0.6833910034602076
+* SYNC: Everything, Everywhere, count: 569, won: 340, lost: 229, winrate: 0.5975395430579965
+* Argus Security: Protection Guaranteed, count: 556, won: 292, lost: 264, winrate: 0.5251798561151079
+* Jinteki: Replicating Perfection, count: 503, won: 287, lost: 216, winrate: 0.5705765407554672
+* Gagarin Deep Space: Expanding the Horizon, count: 485, won: 234, lost: 251, winrate: 0.4824742268041237
+* Industrial Genomics: Growing Solutions, count: 476, won: 270, lost: 206, winrate: 0.5672268907563025
+* New Angeles Sol: Your News, count: 435, won: 214, lost: 221, winrate: 0.49195402298850577
+* Titan Transnational: Investing In Your Future, count: 392, won: 183, lost: 209, winrate: 0.46683673469387754
+* Weyland Consortium: Building a Better World, count: 372, won: 165, lost: 207, winrate: 0.4435483870967742
+* Cybernetics Division: Humanity Upgraded, count: 354, won: 126, lost: 228, winrate: 0.3559322033898305
+* NBN: Making News, count: 262, won: 147, lost: 115, winrate: 0.5610687022900763
+* Jinteki Biotech: Life Imagined, count: 249, won: 154, lost: 95, winrate: 0.6184738955823293
+* Harmony Medtech: Biomedical Pioneer, count: 222, won: 100, lost: 122, winrate: 0.45045045045045046
+* Chronos Protocol: Selective Mind-mapping, count: 188, won: 64, lost: 124, winrate: 0.3404255319148936
+* GRNDL: Power Unleashed, count: 176, won: 90, lost: 86, winrate: 0.5113636363636364
+* The Foundry: Refining the Process, count: 176, won: 65, lost: 111, winrate: 0.3693181818181818
+* Haas-Bioroid: Stronger Together, count: 159, won: 56, lost: 103, winrate: 0.3522012578616352
+* NEXT Design: Guarding the Net, count: 138, won: 60, lost: 78, winrate: 0.43478260869565216
+* Tennin Institute: The Secrets Within, count: 129, won: 54, lost: 75, winrate: 0.4186046511627907
+* Weyland Consortium: Because We Built It, count: 102, won: 28, lost: 74, winrate: 0.27450980392156865
+* Cerebral Imaging: Infinite Frontiers, count: 98, won: 29, lost: 69, winrate: 0.29591836734693877
+* NBN: The World is Yours*, count: 93, won: 54, lost: 39, winrate: 0.5806451612903226
+* Nisei Division: The Next Generation, count: 82, won: 49, lost: 33, winrate: 0.5975609756097561
+* Custom Biotics: Engineered for Success, count: 56, won: 19, lost: 37, winrate: 0.3392857142857143
+* Haarpsichord Studios, count: 33, won: 15, lost: 18, winrate: 0.45454545454545453
+
+#### Other improvements and automations
+
+1. Ever rez an ice not realizing the runner was using Inside Job? There goes that surprise! domtancredi and mtgred collaborated to add a run's "source" card to the orange run arrow. 
+2. Apocalypse finally forced us to make Architect truly untrashable. Thanks dersam!
+3. Chronos Protocol might be the most difficult identity implementation in the game, but justinliew conquered it like a champ!
+4. JoelCFC25 continues his reign as Jinteki.net's most active bug fixer and implementer of unwanted cards. Seriously, the guy's a machine.
 
 ### New card implementations
 
-As of this writing, we are at __94.2%__ card automation through _Data and Destiny_!
+As of this writing, we are at __96.6%__ card automation through _Data and Destiny_!
 
 ### Coming soon...
 
+1. __REPLAYS__: step through every action during a past game.
 
 ### Contribute
 
