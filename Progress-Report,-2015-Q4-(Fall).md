@@ -6,7 +6,7 @@ Welcome to the Jinteki.net open-source progress report Fall 2015. In this quarte
 
 ### New contributors
 
-Thanks to the new developers who added to the platform this quarter: Clamatius, dersam, and GordonsBeard!
+Thanks to the new developers who added to the platform this quarter: Clamatius, dersam, GordonsBeard, and merrickbrown!
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
@@ -117,6 +117,9 @@ mtgred recently started saving games to our database to collect statistics on wi
 2. Apocalypse finally forced us to make Architect truly untrashable. Thanks dersam!
 3. Chronos Protocol might be the most difficult identity implementation in the game, but justinliew conquered it like a champ!
 4. JoelCFC25 continues his reign as Jinteki.net's most active bug fixer and implementer of unwanted cards. Seriously, the guy's a machine.
+5. The legendary "subtypes-only" meta arrived with the implementation of Blackmail and DDoS. For 24 hours, runners couldn't install cards with no subtype or else their game would freeze. We fixed that bug but kept the new cards courtesy of dersam.
+6. GordonsBeard improved our Trace message logs to indicate the effect of the trace during the bidding phase.
+7. You can stop manually adjusting your Agenda Points... Global Food Initiative is properly starving runners of 1 point when stolen.
 
 ### New card implementations
 
@@ -125,6 +128,7 @@ As of this writing, we are at __96.6%__ card automation through _Data and Destin
 ### Coming soon...
 
 1. __REPLAYS__: step through every action during a past game.
+2. Mumbad cycle???
 
 ### Contribute
 
