@@ -46,7 +46,7 @@ The game server periodically gets restarted to deploy code for new features or b
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
 * **Additional costs to run, access, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Other unique complicated effects:** Tori Hanzō, Satellite Grid, Valley Grid, Surveillance Sweep, Genetics Pavilion, Gene Conditioning Shoppe, RSVP, *et al*
+* **Other unique complicated effects:** Tori Hanzō, Satellite Grid, Surveillance Sweep, Genetics Pavilion, Gene Conditioning Shoppe, RSVP, *et al*
 
 ##### Hosting
 Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
