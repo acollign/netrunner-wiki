@@ -179,10 +179,9 @@ These live-coding videos may help you with some of the basics:
 
 Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
 
+* [#984](https://github.com/mtgred/netrunner/issues/984) - AstroScript Pilot Program can place tokens on scored agendas
 * [#902](https://github.com/mtgred/netrunner/issues/902) - Using Hades Shard against Haarpsichord Studios will allow the Runner to steal multiple agendas from Archives
-* [#901](https://github.com/mtgred/netrunner/issues/901) - Leave play effects should not fire on cards turned facedown by Apocalypse
 * [#816](https://github.com/mtgred/netrunner/issues/816) - Whirlpool firing when the only card in a server leaves players unable to end the run
-* [#350](https://github.com/mtgred/netrunner/issues/350) - Trashing hosted cards from hosts that ignore MU costs results in adding MU
 * [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
 
 _Updated 29 November 2015_
