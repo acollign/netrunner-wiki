@@ -53,6 +53,22 @@ to create a local copy of the current `master` branch named `your_new_branch_nam
 
 Push it to your own repo with `git push origin your_new_branch_name` and create a pull request via the github website.
 
+### .gitignore
+
+Adding IDE-specific files to .gitignore should happen in a global `gitignore` file, e.g. in `~/.gitignore`:
+
+```
+# IDEA IntelliJ files
+.idea
+*.iml
+```
+
+And then inform git of this file via:
+
+```
+git config --global core.excludesfile '~/.gitignore'
+```
+
 ## Installation
 
 Install Node.js dependencies:
