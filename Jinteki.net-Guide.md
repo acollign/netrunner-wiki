@@ -37,6 +37,13 @@ To speed up the process of fixing the game state when something goes awry, use t
 - `/take-brain n` -> Take `n` brain damage (Runner only)
 - `/discard #n` -> Discard card number `n` from your hand  
 - `/deck #n` -> Put card number `n` from your hand on top of your deck
+- `/end-run` -> End the run (Corp only)
+- `/jack-out` -> Jack out (Runner only)
+- `/trace #n` -> Start trace with base strength `n` (Corp only)
+- `/psi` -> Start a Psi game (Corp only)
+- `/counter #n` -> set counters on a card to `n` (player's own cards only)
+- `/adv-counter #n` -> set advancement counters on a card to `n` (player's own cards only)
+- `/card-info` -> display debug info about a card (player's own cards only)
 
 Although the log will flag the usage of these commands with an orange icon to alert the other player, please use these judiciously and with the consent of your opponent. 
 
