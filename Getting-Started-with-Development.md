@@ -17,7 +17,7 @@ You need the following dependencies installed:
 - [MongoDB](https://www.mongodb.org/)
 - [Coffeescript](http://coffeescript.org/) (`npm install -g coffee-script`)
 - [Bower](http://bower.io/) (`npm install -g bower`)
-- [Stylus](https://learnboost.github.io/stylus/) (`npm install stylus -g`)
+- [Stylus](https://learnboost.github.io/stylus/) (`npm install -g stylus`)
 - [Python 2.7](https://www.python.org/)
 - [ZeroMQ](http://zeromq.org/)
 - A C++ compiler (g++ on Linux, Visual Studio on Windows)
