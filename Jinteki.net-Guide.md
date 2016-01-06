@@ -41,6 +41,7 @@ To speed up the process of fixing the game state when something goes awry, use t
 - `/jack-out` -> Jack out (Runner only)
 - `/trace n` -> Start trace with base strength `n` (Corp only)
 - `/psi` -> Start a Psi game (Corp only)
+- `/close-prompt` -> close an active prompt and show the next waiting prompt, or the core click actions
 - `/counter n` -> set counters on a card to `n` (player's own cards only)
 - `/adv-counter n` -> set advancement counters on a card to `n` (player's own cards only)
 - `/card-info` -> display debug info about a card (player's own cards only)
