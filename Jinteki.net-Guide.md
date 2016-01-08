@@ -9,7 +9,9 @@ The chat page is where you start on Jinteki.net. General chat is where users dis
 * You can easily focus the chat box by pressing <kbd>Access key</kbd> + <kbd>L</kbd> (Take a look [here](https://en.wikipedia.org/wiki/Access_key) to find out which key your access key is, usually <kbd>Alt</kbd>, <kbd>Ctrl</kbd>, or <kbd>Alt</kbd> + <kbd>Shift</kbd>).
 
 ## Deckbuilder
-The deck builder is an excellent way to quickly create decks either from scratch or plain text. Begin by selecting the ID, naming your deck, and either copy/pasting the list or adding cards using the Add cards box. Be sure to press the Save button when you are done making changes! Be aware that some card names with special characters do not copy and paste well or work with the Add cards dialog that attempts to autocomplete names. Déjà Vu and R&D Interface are the best examples, but there may be others. Add these by typing a quantity and a unique portion of card name directly into the Decklist text box--e.g., typing "3 vu" will add 3 Déjà Vu, and "3 R&D" will add 3 R&D Interface.
+The deck builder is an excellent way to quickly create decks either from scratch or plain text. Begin by selecting the ID, naming your deck, and either copy/paste a plain text list exported from another deckbuilding site (e.g., NetrunnerDB, MeteorDecks, Acoo) or add cards using the Add cards box. Be sure to press the Save button when you are done making changes!
+
+Be aware that some card names with special characters do not copy and paste well or work with the Add cards dialog that attempts to autocomplete names. Déjà Vu and R&D Interface are the best examples, but there may be others. Add these by typing a quantity and a unique portion of card name directly into the Decklist text box--e.g., typing "3 vu" will add 3 Déjà Vu, and "3 R&D" will add 3 R&D Interface.
 
 ### Deckbuilder Tips:
 * Export your deck list from your site of choice as plain text and copy it right into the deck field
