@@ -5,8 +5,8 @@ This page contains all the information you need to get started with developing a
 The main language the whole project is written in is Clojure. Below are a few links to useful learning resources and documentation of Clojure and libraries used:
 
 - [Clojure for the Brave and True](http://www.braveclojure.com/) - a nice online crash course of Clojure, written in accessible language
-- [ClojureDocs](https://clojuredocs.org/core-library) - online Clojure documentation 
-- [ReactJS documentation](https://facebook.github.io/react/docs/getting-started.html) - ReactJS is used in many places on the web presentation side
+- [ClojureDocs](https://clojuredocs.org/core-library) - online Clojure documentation
+- [Om](https://github.com/omcljs/om) - ClojureScript interface to Facebook's [React](https://facebook.github.io/react/index.html). Used in many places on the web presentation side.
 - [Hiccup](https://github.com/weavejester/hiccup/wiki/Syntax) and [Ŝablono](https://github.com/r0man/sablono) guides - they describe the HTML templating libraries used in the `.cljs` files.
 
 ## IDE
