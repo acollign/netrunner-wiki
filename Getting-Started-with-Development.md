@@ -1,5 +1,14 @@
 This page contains all the information you need to get started with developing as well as useful tips (see also [this issue](https://github.com/mtgred/netrunner/issues/328)).
 
+## Language
+
+The main language the whole project is written in is Clojure. Below are a few links to useful learning resources and documentation of Clojure and libraries used:
+
+- [Clojure for the Brave and True](http://www.braveclojure.com/) - a nice online crash course of Clojure, written in accessible language
+- [ClojureDocs](https://clojuredocs.org/core-library) - online Clojure documentation 
+- [ReactJS documentation](https://facebook.github.io/react/docs/getting-started.html) - ReactJS is used in many places on the web presentation side
+- [Hiccup](https://github.com/weavejester/hiccup/wiki/Syntax) and [Ŝablono](https://github.com/r0man/sablono) guides - they describe the HTML templating libraries used in the `.cljs` files.
+
 ## IDE
 
 There are several options available, including:
@@ -190,6 +199,10 @@ These live-coding videos may help you with some of the basics:
 * [Brief introduction / Implementing Tenma Line](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)
 * [Events system overview / Implementing Utopia Shard](https://www.livecoding.tv/video/jintekinet-events-utopia-shard-12/)
 * [Resolving abilities / Implementing Howler](https://www.livecoding.tv/video/jintekinet-resolving-abilities-howler/)
+
+## Slack channel
+
+The main communication channel between developers, besides GitHub, is the [team's Slack Channel](https://jinteki.slack.com/). To request access, send an email to [mtgred](mailto:mtgred@gmail.com) stating who you are on GitHub and linking two Pull Requests you got accepted into the repository. 
 
 ## Good Starting Issues
 
