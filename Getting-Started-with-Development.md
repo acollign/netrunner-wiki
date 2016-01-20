@@ -206,4 +206,4 @@ The main communication channel between developers, besides GitHub, is the [team'
 
 ## Good Starting Issues
 
-If you want to look for some of the easier issues to get started, look through our GitHub issues for [issues labeled *simple*.](https://github.com/mtgred/netrunner/labels/simple). These usually don't require in-depth codebase knowledge, and changes required to fix them shouldn't involve more than 1-3 source files.
+If you want to look for some of the easier issues to get started, look through our GitHub issues for [issues labeled **simple**](https://github.com/mtgred/netrunner/labels/simple). These usually don't require in-depth codebase knowledge, and changes required to fix them shouldn't involve more than 1-3 source files.
