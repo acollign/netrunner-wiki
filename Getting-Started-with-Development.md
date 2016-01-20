@@ -206,12 +206,4 @@ The main communication channel between developers, besides GitHub, is the [team'
 
 ## Good Starting Issues
 
-Here are some easier / less complicated issues from our Issue Tracker than newer developers can look into in order to better learn the code base with an active example:
-
-* [#1013](https://github.com/mtgred/netrunner/issues/1013) - Paige Piper prints the wrong card name when choosing to remove cards from Stack and shouldn't be preventable
-* [#977](https://github.com/mtgred/netrunner/issues/977) - Chameleon won't return to the Grip if hosted on something _after_ being installed
-* [#700](https://github.com/mtgred/netrunner/issues/700) - Negative max hand size for the Runner at the end of their turn doesn't trigger a Corp win
-* [#523](https://github.com/mtgred/netrunner/issues/523) - Hosting cards doesn't check for uniqueness
-* [#322](https://github.com/mtgred/netrunner/issues/322) - add a "Thinking..." button to the UI. At the simplest, could simply print "____ is thinking" to `(system-msg)`.
-
-_Updated 23 December 2015_
+If you want to look for some of the easier issues to get started, look through our GitHub issues for [issues labeled *simple*.](https://github.com/mtgred/netrunner/labels/simple). These usually don't require in-depth codebase knowledge, and changes required to fix them shouldn't involve more than 1-3 source files.
