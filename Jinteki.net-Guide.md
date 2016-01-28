@@ -51,18 +51,18 @@ To speed up the process of fixing the game state when something goes awry, use t
 Although the log will flag the usage of these commands with an orange icon to alert the other player, please use these judiciously and with the consent of your opponent. 
 
 ### Server Restarts
-The game server periodically gets restarted to deploy code for new features or bug fixes. If you find erratic behavior or features not working as they normally do, make sure to do a forced refresh of the site (<kbd>Ctrl</kbd>-<kbd>F5</kbd> in your browser) to retrieve the latest client-side code. 
+The game server periodically gets restarted to deploy code for new features or bug fixes. If you find erratic behavior or features not working as they normally do, make sure to do a forced refresh of the site (<kbd>Ctrl</kbd>-<kbd>F5</kbd> in your browser on PCs, hold <kbd>Shift</kbd> while refreshing on Mac browsers) to retrieve the latest client-side code. 
 ### Gameplay Limitations
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
-* **Additional costs to run, access, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Other unique complicated effects:** Tori Hanzō, Satellite Grid, Surveillance Sweep, Genetics Pavilion, Gene Conditioning Shoppe, RSVP, *et al*
+* **Additional costs to run, break subs, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
+* **Other unique complicated effects:** Tori Hanzō, Satellite Grid, Surveillance Sweep, Genetics Pavilion, RSVP, *et al*
 
 ##### Hosting
-Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop). Please communicate with your opponent when using the ability to host something that's already installed so they are clear about what is happening and why. 
+Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop, Street Peddler). Please communicate with your opponent when using the ability to host something that's already installed so they understand what is happening and why. 
 
 ##### Ordering Simultaneous Effects
-At this time there is no way for players to choose the correct sequence of multiple effects that occur in the same window unless the cards have been altered to make them manually triggered. This can yield incorrect outcomes. For example, accessing a Snare! with Dedicated Response Team can fail to apply the DRT damage if the Runner trashes the Snare! before the Corp has decided to pay to trigger the Snare!
+At this time there is no way for players to choose the correct sequence of multiple effects that occur in the same window unless the cards have been altered to make them manually triggered. 
 
 Some cards have been changed to prompt the user in the game log when they become activated so the user can resolve them in the order desired. Examples include: Leela Patel, Comet, Gang Sign, Team Sponsorship, and Turntable. 
  
