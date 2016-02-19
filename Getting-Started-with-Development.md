@@ -199,6 +199,7 @@ These live-coding videos may help you with some of the basics:
 * [Brief introduction / Implementing Tenma Line](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)
 * [Events system overview / Implementing Utopia Shard](https://www.livecoding.tv/video/jintekinet-events-utopia-shard-12/)
 * [Resolving abilities / Implementing Howler](https://www.livecoding.tv/video/jintekinet-resolving-abilities-howler/)
+* [Testing framework / Fixing a MaxX bug](https://www.livecoding.tv/nealpro/videos/E7eo3-jintekinet-testing-framework-fixing-a-bug)
 
 ## Slack channel
 
