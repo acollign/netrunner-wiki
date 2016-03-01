@@ -32,3 +32,5 @@ To modify the client side, `Figwheel` is super awesome. Run `lein figwheel` and 
 #### Tests
 
 To run the unit tests: `lein test test.core`
+
+To combine test and repl run: `lein clean && lein test test.core && lein repl`. This makes sure no compiled files are left from a branch switch or similar, and only starts the repl if all the tests pass.
