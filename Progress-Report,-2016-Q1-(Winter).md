@@ -54,6 +54,8 @@ NEXT Design
 
 Chronos Protocol
 
+Kala Ghoda cards (18/20)
+
 As of this writing, we are at __96.6%__ card automation through _Data and Destiny_!
 
 ### Coming soon...
