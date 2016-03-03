@@ -30,7 +30,7 @@ neal's game list diffs. need a bandwidth graph.
 
 #### Waiting prompts
 
-#### Spectator griefing fix
+#### Fix for spectators moving cards
 
 #### Other improvements and automations
 
