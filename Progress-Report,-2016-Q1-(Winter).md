@@ -44,6 +44,10 @@ Ice subtype changes (Kit, morph)
 
 Negative hand-size now properly flatlines runner
 
+Finally fixes Sundew
+
+Splits hand-size and hand-size modifiers to properly handle CI and Bagbiter
+
 ### New card implementations
 
 NEXT Design
