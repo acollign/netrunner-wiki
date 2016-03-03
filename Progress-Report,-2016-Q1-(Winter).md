@@ -6,7 +6,7 @@ Welcome to the Jinteki.net open-source progress report Fall 2015. In this quarte
 
 ### New contributors
 
-Thanks to the new developers who added to the platform this quarter: saintis FILL THIS IN
+Thanks to the new developers who added to the platform this quarter: Saintis FILL THIS IN
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
