@@ -56,7 +56,7 @@ Chronos Protocol
 
 Kala Ghoda cards (18/20)
 
-As of this writing, we are at __96.8%__ card automation through _Kala Ghoda_!
+As of this writing, we are at __97.0%__ card automation through _Kala Ghoda_!
 
 ### Coming soon...
 
