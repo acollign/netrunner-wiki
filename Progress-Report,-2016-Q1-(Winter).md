@@ -42,6 +42,8 @@ New /commands
 
 Ice subtype changes (Kit, morph)
 
+Negative hand-size now properly flatlines runner
+
 ### New card implementations
 
 NEXT Design
