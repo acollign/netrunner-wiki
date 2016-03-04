@@ -42,7 +42,7 @@ More details on legality labels can be found on [the help page](http://www.jinte
 
 #### Lobby improvements
 
-**TODO** - Zaroth faction icons [#1237](https://github.com/mtgred/netrunner/pull/1237)
+**TODO** - Zaroth faction icons [#1237](https://github.com/mtgred/netrunner/pull/1237), mention that full ID name is on icon hover
 
 
 ![5759a19e95878a41](https://cloud.githubusercontent.com/assets/840021/13052139/6f5c8776-d3fd-11e5-8f08-4574ce77b77b.png)
