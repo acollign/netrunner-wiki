@@ -16,7 +16,7 @@ More interested in simply learning to use the site? We also have a great [Jintek
 
 #### Server performance
 
-neal's game list diffs. need a bandwidth graph.
+**TODO** neal's game list diffs. need a bandwidth graph.
 
 #### Start of turn effects and step 4.3
 
@@ -41,6 +41,13 @@ New season brought us a number of curveballs when comes to deckbuilding: NAPD Mo
 More details on legality labels can be found on [the help page](http://www.jinteki.net/help#napdmwl).
 
 #### Lobby improvements
+
+**TODO** - Zaroth faction icons [#1237](https://github.com/mtgred/netrunner/pull/1237)
+
+
+![5759a19e95878a41](https://cloud.githubusercontent.com/assets/840021/13052139/6f5c8776-d3fd-11e5-8f08-4574ce77b77b.png)
+
+**TODO** - Zaroth competitive casual rooms [#1215](https://github.com/mtgred/netrunner/pull/1215), [help page](http://www.jinteki.net/help#competitive)
 
 #### Waiting prompts
 
@@ -76,11 +83,19 @@ To save ourselves the headache from answering the same questions in chat over, a
 
 ##### Ice subtype changes (Kit, morph)
 
+**TODO** - JoelCFC25 [#1030](https://github.com/mtgred/netrunner/pull/1030)
+
 ##### Negative hand-size now properly flatlines runner
+
+**TODO** - Saintis [#1053](https://github.com/mtgred/netrunner/pull/1053)
 
 ##### Finally fixed Sundew
 
+**TODO** - Saintis [#1144](https://github.com/mtgred/netrunner/pull/1144)
+
 ##### Splits hand-size and hand-size modifiers to properly handle CI and Bagbiter
+
+**TODO** - Saintis [#1133](https://github.com/mtgred/netrunner/pull/1133)
 
 ##### New card implementations
 
@@ -94,6 +109,8 @@ Mostly brought to you by JoelCFC25, the binder cards wizard:
 As of time of this writing, we are at [__97.0%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) through _Kala Ghoda_!
 
 ### Coming soon...
+
+**TODO**
 
 1. __REPLAYS__: step through every action during a past game.
 2. Mumbad cycle???
