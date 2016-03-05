@@ -6,7 +6,7 @@ Welcome to the Jinteki.net open-source progress report for Q1 2016. In this quar
 
 ### New Contributors
 
-Thanks to the new developers who added to the platform this quarter: Saintis, Zaroth, Kevkcc, jaerme, haplesshero13, proland, and Bmatsuo!
+Thanks to the new developers who added to the platform this quarter: bmatsuo, haplesshero13, jaerme, kevkcc, proland, Saintis, and zaroth!
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! Nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
@@ -16,7 +16,9 @@ More interested in simply learning to use the site? We also have a great [Jintek
 
 #### Server Performance
 
-**TODO** neal's game list diffs. need a bandwidth graph.
+The five of you who read these reports thoroughly are probably sick of hearing about bandwidth improvements... but all the amazing feature additions over the last 6 months have exploded Jinteki.net's user base, and we need constant improvements to server performance to keep up with the demand. You may remember server announcements in January discouraging people from playing when there were 80+ games active; you may also remember those announcements disappearing shortly thereafter. That lag spike was, once again, a product of sending too much data. But with all the upgrades detailed in [last quarter's progress report](https://github.com/mtgred/netrunner/wiki/Progress-Report,-2015-Q4-(Fall)#server-performance), where would we turn to squeeze out more performance?
+
+The answer was to apply the same "diff" communication structure (detailed last time) to our game lobby list. A game lobby of 80 active games comes out to 80Kb+ of JSON data; with 160 active players, 20 spectators, and 70 lurkers, we're looking at pushing 250 * 80Kb = 20Mb of game lobby data per second. (That's 1.2 Gb per minute, 72 Gb per hour, completely ignoring the actual game data.) With a "diff" approach, we only push game data games that have been created, updated, or closed in the last 1 second. A game update or closing clocks in around 500 bytes; a new game, around 10Kb. 
 
 #### Start of turn effects and run Step 4.3
 
@@ -93,33 +95,28 @@ Saintis changed the runner end of turn check to include the hand size in [#1053]
 
 To properly implement Cerebral Imaging and Theophilius Bagbiter Saintis split the previous max-hand-size variable into base hand size and hand size modifier ([#1133](https://github.com/mtgred/netrunner/pull/1133)). This means that a runner with Bagbiter and Public Sympathy installed will always have a hand size of their credits plus 2. 
 
-##### Fixed several longstanding card issues
+##### Longstanding Issues
 
-**TODO**
-
-* Sundew: Saintis rewrote the existing function to trigger properly at the first click the runner spends, if that is not spent on making a run on the server Sundew is in [#1144](https://github.com/mtgred/netrunner/pull/1144).
-* Sneakdoor Beta
-* Chameleon
-* Film Critic bug that affected the Executive assets that are trashable for 2 points
-* Femme Fatale: Saintis added a visually icon to ICE chosen for bypass with Femme Fatale in [#1197](https://github.com/mtgred/netrunner/pull/1197).
-* Apocalypse and "leave play" effects
-* removed flawed automation from Pawn
-* several 24/7 News Cycle issues
+* Apocalypse: correctly restores MU and no longer triggers many leave-play effects.
+* Chameleon: will return to hand if hosted on another card, thanks to kevkvcc.
+* Executive assets: JoelCFC25 tracked down a longtime bug with Executives ending up in the Runner's score area when voluntarily trashed by the Corp... blame your local Film Critic!
+* Femme Fatale: Saintis added a visually icon to ICE chosen for bypass with Femme Fatale. Similarly, we added labels to 
+Cyber-Cypher's server selection.
+* Gagarin Deep Space: Runners can decline to access a single-card remote against Gagarin.
+* Hostile Infrastructure: deals one large chunk of damage during interaction with Apocalypse and Singularity, instead of many 1-damage chunks.
+* Leela Patel: two key issues fixed by nealterrell. If a card is added to HQ by Leela in the middle of multi-access on HQ, subsequent access attempts can potentially choose that returned card. A specific interaction with Gang Sign was also fixed, so that Leela can in some situations "store" a use of her ability until Gang Sign finishes resolving.
+* Sneakdoor Beta: several key interactions have been fixed, including with Crisium Grid (on Archives, stops the switch to HQ; on HQ, prevents Desperado/other successful run triggers); Security Testing (grants credits if on HQ); Ash 2X3ZB9CY on HQ (trigger Ash before the runner hits Successful Run); and Nerve Agent.
+* Sundew: you can stop manually adjusting your credits... Saintis fixed Sundew's credit-gain from runs initiated on its server.
 
 
 ##### New Card Implementations
 
-* NEXT Design: Guarding the Net  _(JoelCFC25)_
-* Chronos Protocol: Selective Mind-mapping _(justinliew)_
-* Jinteki: Replicating Perfection _(Saintis)_
-* Off the Grid _(Saintis)_
-* Gene Conditioning Shoppe _(proland)_
-* 15 Minutes _(zaroth)_
-* Eden Fragment _(bmatsuo)_
-* Port Anson Grid _(JoelCFC25)_
-* Toshiyuki Sakai _(JoelCFC25)_
-* Genetics Pavilion _(JoelCFC25)_
-* Deep Red _(JoelCFC25)_
+Notable new automations:
+
+* Identities: NEXT Design _(JoelCFC25)_, Chronos Protocol _(justinliew)_, __Replicating Perfection__ _(Saintis)_
+* Agendas: 15 Minutes _(zaroth)_, Eden Fragment _(bmatsuo)_
+* Tricky implementations: Off the Grid _(Saintis)_, Gene Conditioning Shoppe _(proland)_, Deep Red _(JoelCFC25)_, Genetics Pavilion _(JoelCFC25)_
+* Wait... what's that card do: Port Anson Grid _(JoelCFC25)_, Toshiyuki Sakai _(JoelCFC25)_
 * Kala Ghoda cards (18/20)
 
 As of time of this writing, we are at [__97.1%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) through _Kala Ghoda_!
