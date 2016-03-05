@@ -97,11 +97,11 @@ To properly implement Cerebral Imaging and Theophilius Bagbiter Saintis split th
 
 **TODO**
 
-* Sundew: Saintis rewrote the existing function to trigger properly at the first click the runner spends, if that is not spent on making a run on the server Sundew is in ([#1144](https://github.com/mtgred/netrunner/pull/1144)).
+* Sundew: Saintis rewrote the existing function to trigger properly at the first click the runner spends, if that is not spent on making a run on the server Sundew is in [#1144](https://github.com/mtgred/netrunner/pull/1144).
 * Sneakdoor Beta
 * Chameleon
 * Film Critic bug that affected the Executive assets that are trashable for 2 points
-* Femme Fatale: Saintis added a visually icon to ICE chosen for bypass with Femme Fatale.
+* Femme Fatale: Saintis added a visually icon to ICE chosen for bypass with Femme Fatale in [#1197](https://github.com/mtgred/netrunner/pull/1197).
 * Apocalypse and "leave play" effects
 * removed flawed automation from Pawn
 * several 24/7 News Cycle issues
