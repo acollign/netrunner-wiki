@@ -87,11 +87,11 @@ JoelCFC25 completed most of the remaining tasks for full ICE subtype handling in
 
 ##### Negative hand size flatlines the Runner
 
-**TODO** - Saintis [#1053](https://github.com/mtgred/netrunner/pull/1053)
+Saintis changed the runner end of turn check to include the hand size in [#1053](https://github.com/mtgred/netrunner/pull/1053). If the runner's hand size is negative they are now properly flatlined.
 
 ##### Split hand size and hand size modifiers
 
-**TODO** - handle CI and Bagbiter: Saintis [#1133](https://github.com/mtgred/netrunner/pull/1133)
+To properly implement Cerebral Imaging and Theophilius Bagbiter Saintis split the previous max-hand-size variable into base hand size and hand size modifier ([#1133](https://github.com/mtgred/netrunner/pull/1133)). This means that a runner with Bagbiter and Public Sympathy installed will always have a hand size of their credits plus 2. 
 
 ##### Fixed several longstanding card issues
 
