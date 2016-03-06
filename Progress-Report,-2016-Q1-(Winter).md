@@ -6,7 +6,7 @@ Welcome to the Jinteki.net open-source progress report for Q1 2016. In this quar
 
 ### New Contributors
 
-Thanks to the new developers who added to the platform this quarter: bmatsuo, haplesshero13, jaerme, kevkcc, proland, Saintis, and zaroth!
+Thanks to the new developers who added to the platform this quarter: bmatsuo, cryogen, haplesshero13, ivandervisevic, jaerme, kevkcc, proland, Saintis, and zaroth!
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! Nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
