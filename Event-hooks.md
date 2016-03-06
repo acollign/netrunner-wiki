@@ -1,58 +1,77 @@
 This is a list of event hooks that can be found in the code, taken from uses in `cards`.
 
-    :jack-out
-    :pre-rez-cost
-    :runner-turn-begins
-    :pre-corp-install
-    :pre-ice-strength
-    :advance
-    :damage
-    :pre-damage
-    :pre-steal-cost
-    :corp-turn-begins
-    :corp-install
-    :successful-trace
-    :pre-rez
-    :corp-draw
-    :successful-run-ends
-    :pre-install
-    :pre-trash
-    :access
-    :runner-trash
-    :agenda-counter-spent
-    :runner-spent-click
-    :agenda-scored
-    :agenda-stolen
-    :server-created
-    :run-ends
-    :successful-run
-    :rez
-    :corp-turn-ends
-    :runner-turn-ends
-    :pre-advancement-cost
-    :no-action
-    :server-created
-    :runner-install
-    :expose
-    :play-event
-    :pre-breaker-strength
-    :pre-tag
-    :run
-    :counter-added
-    :purge
-    :card-moved
-    :corp-loss
+### Actions
+Events related to click actions taken on corp or runner's turn.
+
+#### Corp
     :corp-click-credit
     :corp-click-draw
+    :corp-draw
+    :advance
+    :pre-corp-install
+    :corp-install
+    :server-created
     :pre-purge
-    :runner-loss
-    :trace
-    :runner-click-draw
+    :purge
     :play-operation
-    :pre-advancement-cost
-    :pre-init-trace
-    :pre-access-card
-    :pre-first-turn
-    :play-event
-    :psi-game
+
+#### Runner
+    :runner-click-draw
     :runner-draw
+    :runner-spent-click
+    :pre-install
+    :runner-install
+    :play-event
+
+### Runs
+Events related to runs
+
+    :run
+    :pre-ice-strength
+    :pre-breaker-strength
+    :no-action
+    :jack-out
+    :pre-access-card
+    :access
+    :successful-run
+    :successful-run-ends
+    :run-ends
+
+### Turns
+Events related to the start and end of player turns
+
+    :pre-first-turn
+    :corp-turn-begins
+    :corp-turn-ends
+    :runner-turn-begins
+    :runner-turn-ends
+
+### Tracing and tagging
+
+    :pre-init-trace
+    :trace
+    :successful-trace
+    :pre-tag
+
+### Agendas, stealing and scoring
+
+    :pre-advancement-cost
+    :agenda-counter-spent
+    :pre-steal-cost
+    :agenda-stolen
+    :agenda-scored
+
+### Others
+    :pre-rez
+    :pre-rez-cost
+    :rez
+    :pre-damage
+    :damage
+    :pre-trash
+    :runner-trash
+    :expose
+    :counter-added
+    :card-moved
+    :corp-loss
+    :runner-loss
+    :psi-game
