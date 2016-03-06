@@ -41,9 +41,11 @@ Events related to runs
 Events related to the start and end of player turns
 
     :pre-first-turn
-    :corp-turn-begins
+    :corp-phase-12 -- when corp enters Step 1.2 between Start Turn and Mandatory Draw
+    :corp-turn-begins -- when corp ends Step 1.2
     :corp-turn-ends
-    :runner-turn-begins
+    :runner-phase-12 -- when runner enters Step 1.2 between Start Turn and Take Clicks
+    :runner-turn-begins -- when runner ends Step 1.2 
     :runner-turn-ends
 
 ### Tracing and tagging
