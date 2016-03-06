@@ -22,7 +22,7 @@ The answer was to apply the same "diff" communication structure (detailed last t
 
 INSERT BANDWIDTH GRAPH
 
-#### Start-of-turn effects and run Step 4.3
+#### Run Step 4.3 and Start of Turn Effects
 
 Jinteki.net has historically been lax with certain game rules, particularly when proper 100% enforcement of those rules slows the game down. We like designing systems that are (hopefully) unobtrusive to use: Scorched Earth won't ask the runner if they want to prevent damage, for example, unless they have a card out that has registered itself as able to prevent meat damage. Without such a card, the damage is simply dealt; with a card like Plascrete Carapace installed, extra UI steps enforce the correct rules timings. This is one of our unofficial goals when implementing features: unobtrusive UI until the intrusion is really necessary.
 
@@ -32,7 +32,19 @@ This system meets our goal for system design: if the Corp doesn't need the step,
 
 Similarly, we have always merged the Corp Start of Turn and Corp Mandatory Draw steps into one UI action, because 95% of game interactions don't require a strict separation between these two phases. (Likewise for Runner Start of Turn and Runner First Click). But those few interactions deserve the correct rules support, and so nealterrell implemented "Step 1.2" of the turn sequence, which is the period after a turn begins, prior to Corp Mandatory Draw or Runner First Click. In this step, you can manually activate cards that trigger during that step, like Blue Sun, The Supplier, and Drug Dealer. The beauty of the system, though, is that you don't see anything different if you don't have any cards that need the window. If you're Blue Sun and have no rezzed cards, then clicking Start Turn will also trigger your draw. If you have Drug Dealer and no other "drip economy" cards, then clicking Start Turn will make you lose 1 credit and begin your first click. But if you do have some special interactions -- Drug Dealer with Daily Casts; Executive Boot Camp; MaxX with Wyldside; and many others -- then you get the chance to trigger those effects manually, as per the game rules. If you don't care about the order they trigger, then just begin your turn with one extra mouse click; the server will play the effects in a random order.
 
-There's a lot of complexity to the Step 1.2 system -- you can read about it [here](https://github.com/mtgred/netrunner/pull/1218). We think we've been successful with our goals: strong rules compliance, but easy to use, and unobtrusive when the situation doesn't call for the extra ability.
+There's a lot of complexity to the Step 1.2 system -- you can read about it [in #1218](https://github.com/mtgred/netrunner/pull/1218). We think we've been successful with our goals: strong rules compliance, but easy to use, and unobtrusive when the situation doesn't call for the extra ability.
+
+![image](https://cloud.githubusercontent.com/assets/10083341/13551750/c495b4d2-e2f9-11e5-88bf-cb9169d86dbd.png)
+
+_As MaxX, I can spend my last credit to install Daily Casts off The Supplier; then I can choose to use MaxX or Wyldside first. If I then take my clicks, Drug Dealer will auto-resolve and I will lose 0 credits._
+
+#### Deck Builder Improvements - MWL and Deck Legality
+
+The new FFG Organized Play season brought us a number of curveballs when it came to deckbuilding: the NAPD Most Wanted List, alliances, and future spoilers. zaroth has taken over the deck builder to stay up to date with FFG's latest wild ideas. His sophisticated system can tell you at a glance your deck's legality and the exact reasons why it gets its status:
+
+![status-tooltip](https://cloud.githubusercontent.com/assets/840021/13109413/511d56dc-d579-11e5-9762-2259eada4bee.png)
+
+The deck builder enforces Most Wanted List influence penalties, normal influence limits, special influence cases (The Professor, Custom Biotics), minimum deck sizes, agenda points, Mumbad alliances, and will also flag unreleased cards. More details on legality labels can be found on [the help page](http://www.jinteki.net/help#napdmwl).
 
 #### Toasts
 
@@ -42,13 +54,6 @@ There was a need to discreetly convey information to a single player without spa
 ![pay-toast](https://cloud.githubusercontent.com/assets/13198563/12204678/eec72bf0-b635-11e5-81bb-4da12ab227d0.png)
 ![teamsponsorship](https://cloud.githubusercontent.com/assets/13198563/12204871/4b4ba03a-b637-11e5-8932-e288dafc9dc8.png)
 
-#### Deckbuilder improvements - MWL and deck legality
-
-The new FFG Organized Play season brought us a number of curveballs when it came to deckbuilding: the NAPD Most Wanted List, alliances, and future spoilers. Zaroth stayed on the top of things and kept the deckbuilder up to date. Now you can see at a glance a deck's legality and the exact reasons why it gets its status:
-
-![status-tooltip](https://cloud.githubusercontent.com/assets/840021/13109413/511d56dc-d579-11e5-9762-2259eada4bee.png)
-
-More details on legality labels can be found on [the help page](http://www.jinteki.net/help#napdmwl).
 
 #### Lobby Improvements
 
@@ -59,21 +64,21 @@ More details on legality labels can be found on [the help page](http://www.jinte
 
 **TODO** - Zaroth competitive casual rooms [#1215](https://github.com/mtgred/netrunner/pull/1215), [help page](http://www.jinteki.net/help#competitive)
 
-#### Waiting prompts
+#### "Waiting" Prompts
 
-Since the start, there were problems with handling order of effects having the same trigger, or one player rushing through the actions, not waiting for the reaction trigger effects. Thanks to Nealterrell's PR [#1059](https://github.com/mtgred/netrunner/pull/1059), some of such interactions got way smoother now:
+We all like fast play, but sometimes you just need to slow down while your opponent resolves some effect. A new simple "waiting prompts" system helps complicated card interactions force a player to wait while some other effect is finished. For example, the Runner needs to wait for the Corp to decide about using Snare! before they can trash it and see any other accessed cards; the Runner also needs to wait for the Corp to mulligan, while the Corp needs to wait until the Runner boosts their link strength before proceeding with their next action after a trace. These interactions and more go a lot smoother now with this very simple UI addition:
 
 ![image](https://cloud.githubusercontent.com/assets/10083341/12056074/ce762310-aee7-11e5-8fb4-78d3f83e3d24.png)
 
 #### Fix for spectators moving cards
 
-However we were able to be lax on security matters beforehand, as our community grew, we got our first griefers causing headache by joining games and using an exploit to ruin the game state. Thankfully we had Saintis who quickly stepped in with fixes in [#1048](https://github.com/mtgred/netrunner/pull/1048) and the most pressing issue with spectators ruining games got fixed. However, there is still a lot of work to be done in this area, so any contributors knowledgeable on web security are very welcome!
+Chalk this up to growing pains: with a small community, we could be lax about securing and verifying game states to; but as our user base grew, we got our first griefers causing headaches by spectating games and using an exploit to drag cards belonging to the players. Thankfully we had Saintis who quickly stepped in with fixes in [#1048](https://github.com/mtgred/netrunner/pull/1048) and the most pressing issue with spectators ruining games got fixed. However, there is still a lot of work to be done in this area, so any contributors knowledgeable on web security are very welcome!
 
 #### Other Improvements and Automations
 
 ##### Refactorings and Testing Framework
 
-No codebase can survive in a good state without some maintenance. Thanks to some code reorganization by Nealterrell and Saintis, the code is now easier to browse and modify and is much more fully documented. There have also been a number of convenient functions added to the unit testing framework to speed the process of writing tests. The release lull in between Data & Destiny and Kala Ghoda became an opportunity to flesh out the testing framework with dozens more card tests. 
+No codebase can survive in a good state without some maintenance. Thanks to some code reorganization by nealterrell and especially Saintis, the code is now easier to browse and modify and is much more fully documented. There have also been a number of convenient functions added to the unit testing framework to speed the process of writing tests. The release lull in between Data & Destiny and Kala Ghoda became an opportunity to flesh out the testing framework with dozens more card tests. 
 
 ##### Improved Touchscreen Support
 
@@ -85,7 +90,9 @@ This one was a team effort--finding the reason why the lobby game list kept scro
 
 ##### Help Page
 
-To save ourselves the headache of answering the same questions in chat over and over, Zaroth put together a terrific [Help page](http://www.jinteki.net/help) with the most frequently asked questions. Users still don't always think to look at it, but it's still nice having more thorough documentation on the site!
+To save ourselves the headache of answering the same questions in chat over and over, zaroth put together a terrific [Help page](http://www.jinteki.net/help) with the most frequently asked questions. Users still don't always think to look at it, but it's still nice having more thorough documentation on the site!
+
+__Hey you! Yes, you! Go read the Help page right now!!__
 
 ##### New Console Commands
 
@@ -133,8 +140,7 @@ As of time of this writing, we are at [__97.1%__ card automation](https://docs.g
 
 **TODO**
 
-1. __REPLAYS__: step through every action during a past game.
-2. Mumbad cycle???
+* Rebirth (ugh)
 
 ### Contribute
 
