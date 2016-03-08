@@ -107,7 +107,13 @@ __Hey you! Yes, you! Go read the Help page right now!!__
 
 ##### New Console Commands
 
-`/psi`, `/close-prompt`, `/trace`, `/rez-all` and more... Full list can be found on [the help page](http://www.jinteki.net/help#commands).
+* `/psi` - starts a psi game with a manually-resolved effect.
+* `/trace n` - starts a trace with base strength `n`.
+* `/close-prompt` - cancels the currently-showing "prompt". Helpful for working around broken interactions or fixing errors in play.
+* `/rez` - rez a card, ignoring all costs. In case Archer gets incorrectly derezzed, etc.
+* `/rez-all` - rez all cards, ignoring all costs. For showing off your servers at end-of-game.
+
+A full list can be found on [the Jinteki.net help page](http://www.jinteki.net/help#commands).
 
 ##### ICE subtype changes (Kit, Morph)
 
