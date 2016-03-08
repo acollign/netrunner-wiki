@@ -160,4 +160,4 @@ As of time of this writing, we are at [__97.1%__ card automation](https://docs.g
 
 ### Contribute
 
-Jinteki.net is an open-source project run and paid for by mtgred (Worlds 2014 runner-up!) and other volunteers. You can contribute by reporting bugs, submitting fixes, and even adding new implementations on our GitHub page.
+Jinteki.net is an open-source project run and paid for by mtgred (recently moved to London, look out UK!) and other volunteers. You can contribute by reporting bugs, submitting fixes, and even adding new implementations on our GitHub page.
