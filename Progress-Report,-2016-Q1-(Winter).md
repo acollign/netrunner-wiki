@@ -8,7 +8,7 @@ Welcome to the Jinteki.net open-source progress report for Q1 2016. In this quar
 
 Thanks to the new developers who added to the platform this quarter: bmatsuo, cryogen, haplesshero13, ivandervisevic, jaerme, kevkcc, proland, Saintis, and zaroth!
 
-Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! Nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
+Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
@@ -20,7 +20,9 @@ The five of you who read these reports thoroughly are probably sick of hearing a
 
 The answer was to apply the same "diff" communication structure (detailed last time) to our game lobby list. A game lobby of 80 active games comes out to 80Kb+ of JSON data; with 160 active players, 20 spectators, and 70 lurkers, we're looking at pushing 250 * 80Kb = 20Mb of game lobby data per second. (That's 1.2 Gb per minute, 72 Gb per hour, completely ignoring the actual game data.) With a "diff" approach, we only push game data games that have been created, updated, or closed in the last 1 second. A game update or closing clocks in around 500 bytes; a new game, around 10Kb for the selected decks. It may be hard to appreciate the difference, but it's huge. Check out this bandwidth graph:
 
-INSERT BANDWIDTH GRAPH
+![image](https://cloud.githubusercontent.com/assets/10083341/13607189/e7579ce0-e503-11e5-91a0-be2b9620c388.png)
+
+_Latest upgrade was in mid-January, and bandwidth has been lower than ever since then, even with site activity at an all-time high._
 
 #### Run Step 4.3 and Start of Turn Effects
 
@@ -57,12 +59,21 @@ There was a need to discreetly convey information to a single player without spa
 
 #### Lobby Improvements
 
-**TODO** - Zaroth faction icons [#1237](https://github.com/mtgred/netrunner/pull/1237), mention that full ID name is on icon hover
+New contributor zaroth did a ton of great work for us this quarter, including the deck builder improvements above. His other major task was upgrading the web lobby UI. You'll notice his work in two new ways: first, any game that is already started will now show the faction of each player as an icon in the game list. You can even __mouse-hover__ the icons to see each player's ID, helping you pick out a game to spectate featuring your favorite identity:
 
+![image](https://cloud.githubusercontent.com/assets/10083341/13607452/0ef8a928-e505-11e5-9c6a-b02d209c9e29.png)
 
-![5759a19e95878a41](https://cloud.githubusercontent.com/assets/840021/13052139/6f5c8776-d3fd-11e5-8f08-4574ce77b77b.png)
+You'll also notice his other change in this picture: the split of the game list into Casual and Competitive lists ([#1215](https://github.com/mtgred/netrunner/pull/1215)). This split is to help experienced players find games against other experienced players who are looking for a competitive match. In the absence of a ranking system (which we are reluctant to pursue), this split is one of the ways we can help avoid unfortunate situations where new or inexperienced players join games against experts, leading to slow one-sided matches that no one enjoys. 
 
-**TODO** - Zaroth competitive casual rooms [#1215](https://github.com/mtgred/netrunner/pull/1215), [help page](http://www.jinteki.net/help#competitive)
+We've had a lot of questions about what makes a "competitive" match, and we don't have a simple checklist. In general, you should play in Competitive if you:
+
+* Understand all the rules of the game, and know how to look up correct answers to edge cases that you aren't sure about.
+* Know the Jineki.net user interface well enough to play fast.
+* Know your __tournament-legal__ deck and its general game plan.
+* Have enough time to commit to a full game.
+* Want an opponent who meets the same criteria.
+
+Does this mean every person in Competitive is going to be a world-class expert? No. But expert players should have a more reliable time in Competitive than with everyone joining games from one list.
 
 #### "Waiting" Prompts
 
@@ -138,8 +149,7 @@ As of time of this writing, we are at [__97.1%__ card automation](https://docs.g
 
 ### Coming Soon...
 
-**TODO**
-
+* More Mumbad Cycle!
 * Rebirth (ugh)
 
 ### Contribute
