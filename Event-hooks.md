@@ -31,6 +31,7 @@ Events related to runs
     :pre-breaker-strength
     :no-action
     :jack-out
+    :pass-ice
     :pre-access-card
     :access
     :successful-run
