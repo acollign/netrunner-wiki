@@ -47,6 +47,8 @@ To speed up the process of fixing the game state when something goes awry, use t
 - `/counter n` -> set counters on a card to `n` (player's own cards only)
 - `/adv-counter n` -> set advancement counters on a card to `n` (player's own cards only)
 - `/card-info` -> display debug info about a card (player's own cards only)
+- `/rez` -> Rez a card ignoring all costs (Corp only)
+- `/rez-all` -> Rez all installed cards, e.g. at game end to show what you had (Corp only)
 
 Although the log will flag the usage of these commands with an orange icon to alert the other player, please use these judiciously and with the consent of your opponent. 
 
@@ -56,7 +58,7 @@ The game server periodically gets restarted to deploy code for new features or b
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
 * **Additional costs to run, break subs, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Other unique complicated effects:** Tori Hanzō, Satellite Grid, Surveillance Sweep, Genetics Pavilion, RSVP, *et al*
+* **Other unique complicated effects:** Disrupter, Tori Hanzō, Satellite Grid, Surveillance Sweep, RSVP, *et al*
 
 ##### Hosting
 Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop, Street Peddler). Please communicate with your opponent when using the ability to host something that's already installed so they understand what is happening and why. 
@@ -64,7 +66,7 @@ Cards capable of hosting other cards have both "Click to host from Grip" and "Ho
 ##### Ordering Simultaneous Effects
 At this time there is no way for players to choose the correct sequence of multiple effects that occur in the same window unless the cards have been altered to make them manually triggered. 
 
-Some cards have been changed to prompt the user in the game log when they become activated so the user can resolve them in the order desired. Examples include: Leela Patel, Comet, Gang Sign, Team Sponsorship, and Turntable. 
+Some cards have been changed to alert the user with notifications when they become enabled so the user can resolve them in the order desired. Examples include: Leela Patel, Comet, Gang Sign, Team Sponsorship, and Turntable. 
  
 ### Gameplay Tips:
 * Be sure to check available resources, especially credits and MU, before trying to install
