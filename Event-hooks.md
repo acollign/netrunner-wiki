@@ -1,7 +1,7 @@
 This is a list of event hooks that can be found in the code, taken from uses in `cards`.
 
 ### Actions
-Events related to click actions taken on corp or runner's turn.
+Events related to click actions taken on Corp or Runner's turn.
 
 #### Corp
     :corp-click-credit
@@ -27,15 +27,17 @@ Events related to click actions taken on corp or runner's turn.
 Events related to runs
 
     :run
-    :pre-ice-strength
-    :pre-breaker-strength
+    :approach-ice
+    :encounter-ice
     :no-action
+    :continue
     :jack-out
     :pass-ice
     :pre-access-card
     :access
     :successful-run
     :successful-run-ends
+    :unsuccessful-run
     :run-ends
 
 ### Turns
@@ -50,19 +52,27 @@ Events related to the start and end of player turns
     :runner-turn-ends
 
 ### Tracing and tagging
-
     :pre-init-trace
     :trace
     :successful-trace
+    :unsuccessful-trace
     :pre-tag
 
 ### Agendas, stealing and scoring
-
     :pre-advancement-cost
     :agenda-counter-spent
     :pre-steal-cost
     :agenda-stolen
     :agenda-scored
+
+### ICE strength and subtypes
+    :pre-ice-strength
+    :ice-strength-changed
+    :ice-subtype-changed
+
+### Icebreaker strength
+    :pre-breaker-strength
+    :breaker-strength-changed
 
 ### Others
     :pre-rez
