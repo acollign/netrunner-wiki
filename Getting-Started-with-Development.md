@@ -192,6 +192,20 @@ Right click the file in the editor, `REPL -> Switch REPL NS to current file` or 
 
 If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
 
+## Get going
+
+> How do I run the tests?
+
+Run `lein test test.core` from the command line.
+
+> I have the REPL up and running, now what?
+
+You find the game state in `@game-states`. You probably want to run `(def state (second (first @game-states)))` as soon as you started your game so you can easily access its state now via `@state`.
+
+> So, I have changed a card, now what?
+
+Run `(load-file "src/clj/game/cards.clj")` to reload all cards. Note that if the card you changed is already in play, you have to play it again before you see your code changes.
+
 ## Videos
 
 These live-coding videos may help you with some of the basics:
