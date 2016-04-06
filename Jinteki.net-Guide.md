@@ -57,8 +57,8 @@ The game server periodically gets restarted to deploy code for new features or b
 ### Gameplay Limitations
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
-* **Additional costs to run, break subs, etc:** Ruhr Valley, Midway Station Grid, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Other unique complicated effects:** Disrupter, Tori Hanzō, Satellite Grid, Surveillance Sweep, RSVP, *et al*
+* **Additional costs to run, break subs, etc:** Ruhr Valley, Midway Station Grid, Interrupt 0, Enhanced Login Protocol, Donut Taganes, *et al*
+* **Other unique complicated effects:** Disrupter, Inazuma, Satellite Grid, Surveillance Sweep, RSVP, *et al*
 
 ##### Hosting
 Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop, Street Peddler). Please communicate with your opponent when using the ability to host something that's already installed so they understand what is happening and why. 
