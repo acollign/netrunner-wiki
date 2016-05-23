@@ -196,7 +196,7 @@ If you want to use Emacs you have to install clojure-mode and cider. Cider allow
 
 > How do I run the tests?
 
-Run `lein test test.core` from the command line.
+Run `lein test test.all` from the command line.
 
 > I have the REPL up and running, now what?
 
