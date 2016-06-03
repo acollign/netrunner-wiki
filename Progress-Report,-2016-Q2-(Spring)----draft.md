@@ -7,3 +7,15 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 ### Survey results
 
 ![](http://i.imgur.com/g1R2lNH.png)
+
+![](https://i.imgur.com/MyPFvtN.png)
+
+![](http://i.imgur.com/JKvUR9D.png)
+
+![](http://i.imgur.com/Tn7Fmmd.png)
+
+![](http://i.imgur.com/qONXXhA.png)
+
+![](http://i.imgur.com/nEYhJ7B.png)
+
+![](http://i.imgur.com/F8YQqw9.png)
