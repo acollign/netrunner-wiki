@@ -6,4 +6,4 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 
 ### Survey results
 
-![](http://imgur.com/g1R2lNH)
+![](http://i.imgur.com/g1R2lNH.png)
