@@ -41,4 +41,7 @@ Let spectators leave the game, active player indicator, Trigger active player's 
 
 #### New Card Implementations
 Tori Hanzo, Titanium Ribs, Draft IDs (Joel)
+
 Caprice (Saintis)
+
+Partial or better status for 87.7% of cycle, 97.8% of catalog
