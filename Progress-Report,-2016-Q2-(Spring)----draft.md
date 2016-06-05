@@ -14,6 +14,9 @@ meatcompute, tmoritaa, nikolasavic, IanWhalen
 
 #### Rebirth and server-side card data
 
+#### Concurrency
+
+
 #### Server Performance
 Just kidding. We are quite happy with the server's performance since the last Progress Report and haven't needed to upgrade anything.
 
