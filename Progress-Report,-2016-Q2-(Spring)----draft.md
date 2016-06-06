@@ -48,7 +48,7 @@ But what if a successful-run trigger requires a decision to be made by the user.
 4. Now that Silhouette's ability is resolved, any other successful-run triggers can also resolve.
 5. We can now return to the access phase.
 
-It might not seem important, but the fact that Silhouette requires user interaction is important to the C-like code above. We handle user interaction through "prompts" (in other UI systems, these would be called "dialogs"), and do to the nature of our browser-based interface, all our prompts are "modeless" -- creating a prompt doesn't prevent any code that follows the prompt from executing. So if we substitute the Silhouette code into our example above, we start to see a problem:
+It might not seem important, but the fact that Silhouette requires user interaction is impactful on the C-like code above. We handle user interaction through "prompts" (in other UI systems, these would be called "dialogs"), and do to the nature of our browser-based interface, all our prompts are "modeless" -- creating a prompt doesn't prevent any code that follows the prompt from executing. So if we substitute the Silhouette code into our example above, we start to see a problem:
 
 ```
 triggerEvent(successfulRun);
