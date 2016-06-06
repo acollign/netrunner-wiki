@@ -11,8 +11,20 @@ meatcompute, tmoritaa, nikolasavic, IanWhalen
 
 ### Major System Changes
 #### Counters Rework
+Everything changed when the Corporate Sales Team attacked Titan Transnational.
+
+When times were simpler, our card data only supported two types of "counters": advancement counters, and all other counters. When advancing a card, we placed a `:advance-counter` integer on the card; for agenda counters, power counters, credits (like Bank Job), virus counters, and recurring credits, we placed a `:counter` integer. This worked fine for most interactions, and those that were incorrect (using Helium-3 Deposit to place a virus counter on Hivemind) were seen as unimportant.
+
+Then Corporate Sales Team was released, the first agenda using non-agenda counters that Weyland can score. When Titan Transnational scores an agenda, a `:counter` is placed on that agenda. Corporate Sales Team sees its `:counter`s as credits, so Titan scoring a CST adds an eleventh credit instead of a single agenda counter. Whoops.
+
+Saintis put together a comprehensive counters rework to cleanly differentiate between all types of counters. Each counter now has a different color background, and card effects can better filter counter types when necessary. Helium-3 Deposit requires a `:counter :power` for its effect, while Titan places a `:counter :agenda` on a scored agenda.
+
+<img width="676" alt="counters5" src="https://cloud.githubusercontent.com/assets/13198563/15653229/85c3de6e-2683-11e6-90ba-67875ac49c22.png">
+
+_Virus, recurring, power, current-strength, and credit counters on runner's rig; agenda and credit counters in Corp's scored area; advancement and current-strong counters on Corp's server._
 
 #### Rebirth and server-side card data
+
 
 #### "Wait-for-completion"
 This may get complicated :P.
