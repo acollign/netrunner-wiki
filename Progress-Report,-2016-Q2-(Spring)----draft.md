@@ -11,7 +11,7 @@ meatcompute, tmoritaa, nikolasavic, IanWhalen
 Product Roadmap discussion - 1st Jinteki.net Dev Meeting  
 _(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)_  
 
-Discussion items: 
+Product Discussion Items: 
 * Licensing: MIT License was agreed upon, due to its simplicity and lack of terms we can’t enforce anyway. (Minh, Dominic, Łukasz)
 * History of Jinteki.net by Minh
 * Casual/Competitive (Room-split) discussion: potential cause for drop in usage
@@ -29,9 +29,10 @@ Discussion items:
 ** Discussion on what to do with negative players (discuss shadowban, ban, and community moderation features)
 
 Action Points:
-1 Add MIT license to the repo
-2 Change repository name to jinteki
-3 Add basic user profile code - just changing e-mail for now.
+
+1. Add MIT license to the repo
+2. Change repository name to jinteki
+3. Add basic user profile code - just changing e-mail for now.
 
 ### Major System Changes
 #### Counters Rework
