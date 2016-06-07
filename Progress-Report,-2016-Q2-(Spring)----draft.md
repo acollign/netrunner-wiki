@@ -31,7 +31,7 @@ Product Discussion Items:
 Action Points:
 
 1. Add MIT license to the repo
-2. Change repository name to jinteki
+2. Change repository name to *jinteki*
 3. Add basic user profile code - just changing e-mail for now.
 
 ### Major System Changes
