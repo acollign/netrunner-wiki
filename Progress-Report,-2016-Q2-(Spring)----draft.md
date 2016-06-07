@@ -14,9 +14,23 @@ Discussion items:
 * Licensing: MIT License was agreed upon, due to its simplicity and lack of terms we can’t enforce anyway. (Minh, Dominic, Łukasz)
 * History of Jinteki.net by Minh
 * Casual/Competitive (Room-split) discussion: potential cause for drop in usage
-* Dictator Project Lead (agreed-upon approach): Minh open for Game Engine changes; has final say on UX changes
+* Project leading, pull requests: 
+** Dictator Project Lead (agreed-upon approach)
+** Minh open for Game Engine changes; Minh has final say on UX changes
 * Server Access: 
+** Jinteki.net is hosted on a private server, and access will not be shared. 
+** Docker possible on another server, for supporting future container-based deployments
+* Immediate Product Roadmap plans: 
+** Łukasz: Chat experience
+** Dominic Kexel: Deck synchronization with NRDB; User Survey
+** Minh: User Profiles
 * Player Behavior:
+** Discussion on what to do with negative players (discuss shadowban, ban, and community moderation features)
+
+Action Points:
+# Add MIT license to the repo
+# Change repository name to jinteki
+# Add basic user profile code - just changing e-mail for now.
 
 ### Major System Changes
 #### Counters Rework
