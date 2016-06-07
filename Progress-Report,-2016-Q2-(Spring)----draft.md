@@ -146,8 +146,14 @@ Let spectators leave the game, active player indicator, Trigger active player's 
 
 
 #### New Card Implementations
-Tori Hanzo, Titanium Ribs, Draft IDs (Joel)
+Tori Hanzo, Titanium Ribs, Draft IDs, Corporate Scandal, lots of Mumbad Cycle cards, several dozen more card unit tests (Joel)
 
-Caprice (Saintis)
+Caprice Nisei automation (Saintis)
+
+The Price of Freedom, Political Dealings, Lateral Growth, Political Graffiti, Bhagat, Patron (queueseven)
+
+Voting Machine Initiative (Neal)
+
+Salsette Slums (ilyanep)
 
 Partial or better status for 87.7% of cycle, 97.8% of catalog
