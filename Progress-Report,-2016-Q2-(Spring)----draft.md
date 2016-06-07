@@ -8,8 +8,9 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 meatcompute, tmoritaa, nikolasavic, IanWhalen
 
 ### Dev Meeting & License (May 12th, 2016)
-Product Roadmap discussion - 1st Jinteki.net Dev Meeting
-(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)
+Product Roadmap discussion - 1st Jinteki.net Dev Meeting  
+_(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)_  
+
 Discussion items: 
 * Licensing: MIT License was agreed upon, due to its simplicity and lack of terms we can’t enforce anyway. (Minh, Dominic, Łukasz)
 * History of Jinteki.net by Minh
@@ -28,9 +29,9 @@ Discussion items:
 ** Discussion on what to do with negative players (discuss shadowban, ban, and community moderation features)
 
 Action Points:
-# Add MIT license to the repo
-# Change repository name to jinteki
-# Add basic user profile code - just changing e-mail for now.
+1 Add MIT license to the repo
+2 Change repository name to jinteki
+3 Add basic user profile code - just changing e-mail for now.
 
 ### Major System Changes
 #### Counters Rework
