@@ -126,3 +126,6 @@ Tori Hanzo, Titanium Ribs, Draft IDs (Joel)
 Caprice (Saintis)
 
 Partial or better status for 87.7% of cycle, 97.8% of catalog
+
+### Product Roadmap - 1st Jinteki.net Dev Meeting (May 12th, 2016)
+(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)
