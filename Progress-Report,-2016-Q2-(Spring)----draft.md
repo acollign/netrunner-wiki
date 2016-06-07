@@ -7,7 +7,16 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 ### New Contributors
 meatcompute, tmoritaa, nikolasavic, IanWhalen
 
-### Dev Meeting & License
+### Dev Meeting & License (May 12th, 2016)
+Product Roadmap discussion - 1st Jinteki.net Dev Meeting
+(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)
+Discussion items: 
+* Licensing: MIT License was agreed upon, due to its simplicity and lack of terms we can’t enforce anyway. (Minh, Dominic, Łukasz)
+* History of Jinteki.net by Minh
+* Casual/Competitive (Room-split) discussion: potential cause for drop in usage
+* Dictator Project Lead (agreed-upon approach): Minh open for Game Engine changes; has final say on UX changes
+* Server Access: 
+* Player Behavior:
 
 ### Major System Changes
 #### Counters Rework
@@ -126,6 +135,3 @@ Tori Hanzo, Titanium Ribs, Draft IDs (Joel)
 Caprice (Saintis)
 
 Partial or better status for 87.7% of cycle, 97.8% of catalog
-
-### Product Roadmap - 1st Jinteki.net Dev Meeting (May 12th, 2016)
-(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)
