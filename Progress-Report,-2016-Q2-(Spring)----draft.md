@@ -5,7 +5,7 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 [Jinteki.net](http://www.jinteki.net) is a service for playing Android: Netrunner in a browser. It requires no installation to play, is compatible with most operating systems and modern browsers, and includes an interactive deck-builder, chat room, and automation of most game rules and cards.
 
 ### New Contributors
-meatcompute, tmoritaa, nikolasavic, IanWhalen
+meatcompute, tmoritaa, nikolasavic, IanWhalen, ilyanep
 
 ### Dev Meeting & License (May 12th, 2016)
 Product Roadmap discussion - 1st Jinteki.net Dev Meeting  
@@ -48,8 +48,25 @@ Saintis put together a comprehensive counters rework to cleanly differentiate be
 
 _Virus, recurring-credit, current-strength, power, and credit counters on runner's rig; agenda and credit counters in Corp's scored area; advancement and current-strength counters on Corp's server._
 
-#### Rebirth and server-side card data
+#### Rebirth and Server-Side Card Data
+When a game begins, a list of cards in each player's deck is sent from the game lobby server to the game logic server, which is responsible for running the actual game with input from the players. The logic server uses the decks to load behavioral definitions for each card in the current game; these definitions are expressed in code (as "the card named Hedge Fund has an effect of granting 9 credits"), as opposed to the cards themselves being data ("the card named Hedge Fund is a neutral corp card costing 5 credits"), loaded from our database of cards, itself imported from NetrunnerDB's API. Importantly, the logic server does not have the ability to load card _data_ on the fly; it only has the data for the cards that are in each player's deck.
 
+This makes Rebirth a problem. Rebirth needs to load card _data_ for all cards in Android: Netrunner, so it can filter those cards into a list of identities of the same faction as the player. We could simply hard-code that list of identities in the behavioral code for Rebirth, but that list would have to change with every new identity and would be easy to overlook in the long term. The better long-term solution is to give the logic server a list of all card data when the server begins... so that's what we did.
+
+nealterrell extended the game lobby server to load all cards from the database (the game logic server does not know of this database, and does not need to) and send those cards as a one-time message when the logic server boots. The logic server retains that list and makes it available to all card behaviors through a variable called `@all-cards`. Rebirth can now present a list of targets in a prompt as:
+
+```clojure
+:prompt "Choose an identity to become"
+:choice (filter is-swappable? @all-cards)
+```
+
+where `is-swappable?` tests a card to see if it is of the same faction as the player's selected identity. Simple!
+
+It's more complicated to hook up the identity so its abilities start working, and there were a lot of edge cases to work through, but mharris717 rose to the challenge and finished an excellent implementation of the card. A few identities were naively implemented and need to be updated now that an identity can become "active" in the middle of a game, but we'll tackle those as they come up. Gabe, for example, assumes that the first run on HQ that he "sees" is the first of the turn, but now that Gabe can become active during a turn in which the runner already ran HQ, his behavior will have to be updated to examine previous actions that turn.
+
+![Rebirth](https://cloud.githubusercontent.com/assets/64296/15781281/5cd1127c-2973-11e6-9288-a0c5956a2942.png)
+
+_Rebirthing from Kate._
 
 #### "Wait-for-completion"
 This may get complicated :P.
@@ -141,19 +158,18 @@ Just kidding. We are quite happy with the server's performance since the last Pr
 ![](http://i.imgur.com/F8YQqw9.png)
 
 ### Other Improvements and Automations
-Let spectators leave the game, active player indicator, Trigger active player's events first (queueseven)
-"Gained subroutines" messages, face up/down archives indicators (Saintis)
+#### UI improvements
+* Spectators can leave the game after both players have left (queueseven)
+* Newly installed cards shown with an orange highlight until next turn begins (mtgred)
+* The active player's stats now highlight in orange (queueseven)
+* Archives now shows how many cards are face-up vs. face-down (Saintis)
+* ICE that gain subroutines (Komainu) can print how many subs they have (Saintis)
 
+#### Notable new card implementations
+* Tori Hanzo, Titanium Ribs, Draft IDs, Corporate Scandal, lots of Mumbad Cycle cards (JoelCFC25)
+* Caprice Nisei automation (Saintis)
+* The Price of Freedom, Political Dealings, Lateral Growth, Political Graffiti, Bhagat, Patron (queueseven)
+* Voting Machine Initiative, Out of the Ashes, Information Sifting (nealterrell)
+* Salsette Slums (ilyanep)
 
-#### New Card Implementations
-Tori Hanzo, Titanium Ribs, Draft IDs, Corporate Scandal, lots of Mumbad Cycle cards, several dozen more card unit tests (Joel)
-
-Caprice Nisei automation (Saintis)
-
-The Price of Freedom, Political Dealings, Lateral Growth, Political Graffiti, Bhagat, Patron (queueseven)
-
-Voting Machine Initiative (Neal)
-
-Salsette Slums (ilyanep)
-
-Partial or better status for 87.7% of cycle, 97.8% of catalog
+As of time of this writing, we are at [__97.8%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) through _Salsette Island_!
