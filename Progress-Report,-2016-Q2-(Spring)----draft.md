@@ -194,6 +194,10 @@ Over 600 people answered our Players' Survey in May, and here are the results!
 * Archives now shows how many cards are face-up vs. face-down (Saintis)
 * ICE that gain subroutines (Komainu) can print how many subs they have (Saintis)
 
+
+#### New commands
+* `/rfg`: remove a card from the game
+
 #### Notable new card implementations
 * Tori Hanzo, Titanium Ribs, Draft IDs, Corporate Scandal, lots of Mumbad Cycle cards (JoelCFC25)
 * Caprice Nisei automation (Saintis)
