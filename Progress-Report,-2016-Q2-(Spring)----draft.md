@@ -46,7 +46,7 @@ Saintis put together a comprehensive counters rework to cleanly differentiate be
 
 <img width="676" alt="counters5" src="https://cloud.githubusercontent.com/assets/13198563/15653229/85c3de6e-2683-11e6-90ba-67875ac49c22.png">
 
-_Virus, recurring, power, current-strength, and credit counters on runner's rig; agenda and credit counters in Corp's scored area; advancement and current-strong counters on Corp's server._
+_Virus, recurring-credit, current-strength, power, and credit counters on runner's rig; agenda and credit counters in Corp's scored area; advancement and current-strength counters on Corp's server._
 
 #### Rebirth and server-side card data
 
