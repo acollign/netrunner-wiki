@@ -163,7 +163,7 @@ Just kidding. We are quite happy with the server's performance since the last Pr
 
 
 ### Survey Results
-Over 600 people answered our Players' Survey in May, and here are the results!
+Over 600 people answered our Players' Survey in May, and here are the results! Anonymized responses can be found in [this Google Sheets document](https://docs.google.com/spreadsheets/d/1Zvm0H1CeRQKAb_vSZT08DHDimtfXrKzsPbD3_bs8qSI/edit?usp=sharing), or view the charts below!
 
 #### Charts
 ![](http://i.imgur.com/g1R2lNH.png)
@@ -193,7 +193,6 @@ Over 600 people answered our Players' Survey in May, and here are the results!
 * The active player's stats now highlight in orange (queueseven)
 * Archives now shows how many cards are face-up vs. face-down (Saintis)
 * ICE that gain subroutines (Komainu) can print how many subs they have (Saintis)
-
 
 #### New commands
 * `/rfg`: remove a card from the game
