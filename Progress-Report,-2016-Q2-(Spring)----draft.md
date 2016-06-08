@@ -5,7 +5,11 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 [Jinteki.net](http://www.jinteki.net) is a service for playing Android: Netrunner in a browser. It requires no installation to play, is compatible with most operating systems and modern browsers, and includes an interactive deck-builder, chat room, and automation of most game rules and cards.
 
 ### New Contributors
-meatcompute, tmoritaa, nikolasavic, IanWhalen, ilyanep
+Thanks to the new developers who added to the platform this quarter: IanWhalen, ilyanep, meatcompute, nikolasavic, and tmoritaa!
+
+Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
+
+More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
 ### Dev Meeting & License (May 12th, 2016)
 Product Roadmap discussion - 1st Jinteki.net Dev Meeting  
@@ -180,7 +184,7 @@ Over 600 people answered our Players' Survey in May, and here are the results!
 * "The user interface is just too painful for me to play online. Call me when it's at the Hearthstone level." -- Don't sit by the phone :(.
 * "Makes me want to learn Clojure to contribute but then I just end up running." -- Don't be afraid! Remember: to iterate is human, to recurse is divine.
 * "Better control over simultaneous effects, such as getting to choose the order in which start of turn triggers fire. Example - being able to install Earthrise Hotel with The Supplier and get the 2 card draw for that turn." -- We have this, it's just that your example doesn't work according to the game rules, as Earthrise Hotel was not installed when the turn began and is not eligible to trigger its effect even though it was brought into play during The Supplier's effect.
-* "I can't emphasize how much I want a friends list..." -- We're workign on it!
+* "I can't emphasize how much I want a friends list..." -- We're working on it!
 
 ### Other Improvements and Automations
 #### UI improvements
