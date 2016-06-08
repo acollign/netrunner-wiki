@@ -11,9 +11,11 @@ Interested in contributing? Check out our new [Getting Started With Development]
 
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
-### Dev Meeting & License (May 12th, 2016)
+### Developer Meeting (12 May 2016)
+The Jinteki.net dev team met on Google Hangouts for the first time in May, to discuss the current state of the project, outstanding issues, and a roadmap for the future. Here are some brief notes from the meeting, courtesy of domtancredi:
+
 Product Roadmap discussion - 1st Jinteki.net Dev Meeting  
-_(Attendees: Minh, Neal, Joel, Filip, Dominic K., Dominic T., Justin, Łukasz, Nikola)_  
+_(Attendees: Minh (mtgred), Neal (nealterrell), Joel (JoelCFC25), Filip (Saintis), Dominic K. (queueseven), Dominic T. (domtancredi), Justin (justinliew), Łukasz (zaroth), Nikola (nikolasavic))_  
 
 Product Discussion Items: 
 * Licensing: MIT License was agreed upon, due to its simplicity and lack of terms we can’t enforce anyway. (Minh, Dominic, Łukasz)
@@ -34,9 +36,9 @@ Product Discussion Items:
 
 Action Points:
 
-1. Add MIT license to the repo
-2. Change repository name to *jinteki*
-3. Add basic user profile code - just changing e-mail for now.
+1. MIT license added to the project -- done.
+2. Player survey to guide future development -- done.
+3. Add basic user profile code - just changing e-mail for now -- in progress.
 
 ### April Fools
 The Weyland Consortium graciously took over Jinteki.net for a day of meat-damage madness on 1 April 2016, when the site was transformed into Weyland.meat to celebrate April Fools Day. zaroth and nealterrell collaborated to bring a whole bunch of silliness to the J.net community while JoelCFC25 was grumpily vacationing in Florida. In case you missed it, here are some highlights:
