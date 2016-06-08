@@ -34,6 +34,23 @@ Action Points:
 2. Change repository name to *jinteki*
 3. Add basic user profile code - just changing e-mail for now.
 
+### April Fools
+The Weyland Consortium graciously took over Jinteki.net for a day of meat-damage madness on 1 April 2016, when the site was transformed into Weyland.meat to celebrate April Fools Day. zaroth and nealterrell collaborated to bring a whole bunch of silliness to the J.net community while JoelCFC25 was grumpily vacationing in Florida. In case you missed it, here are some highlights:
+
+* Sounds! zaroth collected a list of sound clips from movies, video games, and other sources to attach sounds to dozens or hundreds of in-game actions. Our favorites? [Fight Club](https://www.youtube.com/watch?v=E1d5VvCa8Fo) for Scorched Earth; "Our hero!" Jackson Howard; ["1.21 gigawatts?!?"](https://www.youtube.com/watch?v=mjCRUvX2D0E) for Marcus Batty; and Guile's Theme for Stimhack.
+* Usernames randomized to one of several patterns: 
+  * Bioroid, with a random pattern of capital letters/numbers after the username
+  * Bioroid designation, with a 1.0/2.0/3.0 designation after the username
+  * "l33t sp34k"
+  * "NetrunnerDB Decklist of the Week Winner" suffix
+  * Chairman _username_
+  * Runner subtype, with a random Natural/Digital/G-mod/etc. after the username
+  * Unfortunately, modulo arithmetic is too difficult for nealterrell, and so anyone who was randomly chosen to have a Bioroid designation always received 3.0, and anyone with a Runner subtype always received "Digital". 
+* Randomized Weyland-themed card images as avatars (mostly meat damage cards)
+* A fake "Admin" page showing site administrators and other VIPs manipulating game engine settings like "Agenda density", "Rage quit simulator", community stats, and more.
+
+We hope you enjoyed this labor of love :).
+
 ### Major System Changes
 #### Counters Rework
 Everything changed when the Corporate Sales Team attacked Titan Transnational.
@@ -142,7 +159,9 @@ Just kidding. We are quite happy with the server's performance since the last Pr
 
 
 ### Survey Results
+Over 600 people answered our Players' Survey in May, and here are the results!
 
+#### Charts
 ![](http://i.imgur.com/g1R2lNH.png)
 
 ![](https://i.imgur.com/MyPFvtN.png)
@@ -156,6 +175,12 @@ Just kidding. We are quite happy with the server's performance since the last Pr
 ![](http://i.imgur.com/nEYhJ7B.png)
 
 ![](http://i.imgur.com/F8YQqw9.png)
+
+#### Selected comments
+* "The user interface is just too painful for me to play online. Call me when it's at the Hearthstone level." -- Don't sit by the phone :(.
+* "Makes me want to learn Clojure to contribute but then I just end up running." -- Don't be afraid! Remember: to iterate is human, to recurse is divine.
+* "Better control over simultaneous effects, such as getting to choose the order in which start of turn triggers fire. Example - being able to install Earthrise Hotel with The Supplier and get the 2 card draw for that turn." -- We have this, it's just that your example doesn't work according to the game rules, as Earthrise Hotel was not installed when the turn began and is not eligible to trigger its effect even though it was brought into play during The Supplier's effect.
+* "I can't emphasize how much I want a friends list..." -- We're workign on it!
 
 ### Other Improvements and Automations
 #### UI improvements
@@ -173,3 +198,12 @@ Just kidding. We are quite happy with the server's performance since the last Pr
 * Salsette Slums (ilyanep)
 
 As of time of this writing, we are at [__97.8%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) through _Salsette Island_!
+
+### Coming Soon...
+
+* More Mumbad Cycle!
+* Manual resolution of simultaneous triggers
+
+### Contribute
+
+Jinteki.net is an open-source project run and paid for by mtgred and other volunteers. You can contribute by reporting bugs, submitting fixes, and even adding new implementations on our GitHub page.
