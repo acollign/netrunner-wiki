@@ -160,6 +160,29 @@ We are slowly applying this framework to different parts of the game engine, but
 * Successful-run effects, as above.
 * Entire runs will be "finished" when the run ends, allowing Out of the Ashes to wait until one run finishes before asking if another Out of the Ashes should be triggered from the heap.
 
+#### Manual Ordering of Simultaneous Triggers
+Take a deep breath... we're almost done.
+
+With the ability to wait for an effect to finish completely, we can now turn our attention to the manual resolution of simultaneous triggers. We have been missing this feature for a very long time, and while JoelCFC25 has become adept at hacking creative solutions to around this problem, the time has come to code the game rules for real, and allow each player to choose the order that their cards respond to event triggers in the game. 
+
+As an example of why this is important, consider the following scenario from one of our oldest Issues, courtesy of Zulyen:
+> "Runner got 2 Agendas in his/her score area and only two cards in hand which one is "I've Had Worst". Jinteki PE scores a Philotic Entanglement.
+>
+> 2 net damages occurs because of the Agenda and 1 net damage occurs because of the ability of PE in the same time. The corp can choose in which order.
+>
+> 0% of winning chance by starting with the Philotic.
+>
+> 50% of winning chance by starting with the PE."
+
+nealterrell addressed this issue by working up a "choose your own trigger" UI for resolving multiple handlers of the same trigger. The system is (relatively) intelligent: you will only be asked to order the simultaneous abilities if there is some known important reason for doing so; otherwise they will automatically resolve. If you have 3 Fan Sites installed, then you won't need to manually trigger them... but if you have Human First and Gang Sign installed, you may want to resolve Human First before doing your Gang Sign access in case there's an NAPD Contract in HQ. 
+
+This system currently only applies to agenda-stolen and agenda-scored triggers, which is where we find most of the shenanigans needing this ability, but we will be expanding to other triggers soon. For now, you can look forward to:
+
+1. Triggering Jinteki: PE before Philotic Entanglement to increase the chances of a kill
+2. Triggering Turntable after adding "The Price of Freedom" to your score area when stealing an agenda
+3. Proper nesting of cascading triggers, like Leela and Gang Sign interactions
+
+
 #### Server Performance
 Just kidding. We are quite happy with the server's performance since the last Progress Report and haven't needed to upgrade anything.
 
