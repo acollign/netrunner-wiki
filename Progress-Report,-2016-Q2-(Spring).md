@@ -179,7 +179,6 @@ nealterrell addressed this issue by working up a "choose your own trigger" UI fo
 This system currently only applies to agenda-stolen and agenda-scored triggers, which is where we find most of the shenanigans needing this ability, but we will be expanding to other triggers soon. For now, you can look forward to:
 
 1. Triggering Jinteki: PE before Philotic Entanglement to increase the chances of a kill
-2. Triggering Turntable after adding "The Price of Freedom" to your score area when stealing an agenda
 3. Proper nesting of cascading triggers, like Leela and Gang Sign interactions
 
 
