@@ -227,6 +227,7 @@ Over 600 people answered our Players' Survey in May, and here are the results! A
 * The Price of Freedom, Political Dealings, Lateral Growth, Political Graffiti, Bhagat, Patron (queueseven)
 * Voting Machine Initiative, Out of the Ashes, Information Sifting (nealterrell)
 * Salsette Slums (ilyanep)
+* Exclusive Party, Localized Product Line (mtgred)
 
 As of time of this writing, we are at [__97.8%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) through _Salsette Island_!
 
