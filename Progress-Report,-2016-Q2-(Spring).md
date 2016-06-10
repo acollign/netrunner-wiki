@@ -29,7 +29,7 @@ Product Discussion Items:
 ** Docker possible on another server, for supporting future container-based deployments
 * Immediate Product Roadmap plans: 
 ** Łukasz: Chat experience
-** Dominic Kexel: Deck synchronization with NRDB; User Survey
+** Dominic K.: Deck synchronization with NRDB; User Survey
 ** Minh: User Profiles
 * Player Behavior:
 ** Discussion on what to do with negative players (discuss shadowban, ban, and community moderation features)
