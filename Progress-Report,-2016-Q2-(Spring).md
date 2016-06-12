@@ -181,11 +181,6 @@ This system currently only applies to agenda-stolen and agenda-scored triggers, 
 1. Triggering Jinteki: PE before Philotic Entanglement to increase the chances of a kill
 3. Proper nesting of cascading triggers, like Leela and Gang Sign interactions
 
-
-#### Server Performance
-Just kidding. We are quite happy with the server's performance since the last Progress Report and haven't needed to upgrade anything.
-
-
 ### Survey Results
 Over 600 people answered our Players' Survey in May, and here are the results! Anonymized responses can be found in [this Google Sheets document](https://docs.google.com/spreadsheets/d/1Zvm0H1CeRQKAb_vSZT08DHDimtfXrKzsPbD3_bs8qSI/edit?usp=sharing), or view the charts below!
 
