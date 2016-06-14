@@ -214,6 +214,7 @@ These live-coding videos may help you with some of the basics:
 * [Events system overview / Implementing Utopia Shard](https://www.livecoding.tv/video/jintekinet-events-utopia-shard-12/)
 * [Resolving abilities / Implementing Howler](https://www.livecoding.tv/video/jintekinet-resolving-abilities-howler/)
 * [Testing framework / Fixing a MaxX bug](https://www.livecoding.tv/nealpro/videos/E7eo3-jintekinet-testing-framework-fixing-a-bug)
+* [Synchronized resolution of triggers / Fixing a Bio-Ethics Association bug](https://www.livecoding.tv/nealpro/videos/z8o6Y-jintekinet-resolution-of-simultaneous-triggers)
 
 ## Slack channel
 
