@@ -131,6 +131,8 @@ $ coffee fetch.coffee
 
 On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
 
+If you get time-out errors (`ETIMEDOUT`) while running `coffee fetch.coffee` the data is still being downloaded if you see the card numbers being output in the terminal window. Just rerun the `fetch.coffee` until all cards are downloaded (no more numbers being printed).
+
 ---
 Compile and watch client side Clojurescript files:
 
