@@ -47,6 +47,7 @@ To speed up the process of fixing the game state when something goes awry, use t
 - `/counter n` -> set counters on a card to `n` (player's own cards only)
 - `/adv-counter n` -> set advancement counters on a card to `n` (player's own cards only)
 - `/card-info` -> display debug info about a card (player's own cards only)
+- `/move-bottom` -> move a card from your hand to the bottom of the deck (player's own cards only)
 - `/rez` -> Rez a card ignoring all costs (Corp only)
 - `/rez-all` -> Rez all installed cards, e.g. at game end to show what you had (Corp only)
 
@@ -58,7 +59,7 @@ The game server periodically gets restarted to deploy code for new features or b
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
 * **Additional costs to run, break subs, etc:** Ruhr Valley, Midway Station Grid, Interrupt 0, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Other unique complicated effects:** Disrupter, Inazuma, Satellite Grid, Surveillance Sweep, RSVP, *et al*
+* **Other unique complicated effects:** Disrupter, Inazuma, Surveillance Sweep, RSVP, *et al*
 
 ##### Hosting
 Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop, Street Peddler). Please communicate with your opponent when using the ability to host something that's already installed so they understand what is happening and why. 
