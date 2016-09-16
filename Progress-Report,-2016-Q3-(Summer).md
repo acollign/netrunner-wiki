@@ -14,7 +14,7 @@ More interested in simply learning to use the site? We also have a great [Jintek
 
 ### Simultaneous triggers
 
-runner-install (Replicator/Bazaar gif) ![Replicator + Bazaar](https://gfycat.com/WhimsicalBrilliantAcornbarnacle)
+runner-install (Replicator/Bazaar gif) [Don't stare for too long.](https://gfycat.com/WhimsicalBrilliantAcornbarnacle)
 
 successful-run
 
