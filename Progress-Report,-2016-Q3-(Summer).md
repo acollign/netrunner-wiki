@@ -5,7 +5,7 @@ Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quar
 [Jinteki.net](http://www.jinteki.net) is a service for playing Android: Netrunner in a browser. It requires no installation to play, is compatible with most operating systems and modern browsers, and includes an interactive deck-builder, chat room, and automation of most game rules and cards.
 
 ### New Contributors
-Thanks to the new developers who added to the platform this quarter: _______!
+Thanks to the new developers who added to the platform this quarter: carlsondc, Devencire, and Hoclor!
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
@@ -13,9 +13,20 @@ More interested in simply learning to use the site? We also have a great [Jintek
 
 ### Major System Changes
 
-#### NAPD MWL 1.1 and FAQ 3.1
+#### Never Trust the Client
 
-#### Never trust the client
+There's a saying in client-server software development: "Never trust the client." When one computer system (the client) sends commands to a central authority computer (the server), a well-designed server will make sure to validate every part of the message received from the client, in recognition of how easy it is for a malicious user to send fake or altered messages from a compromised client. Video games have dealt with this issue for decades; a first-person shooter client will be programmed to not allow a gun to fire if it is out of ammo, but if the server doesn't double-check messages coming from the client, a hacker can send illicit "fire gun" messages to trick the server into letting the player fire even when the client wouldn't allow the action. In Jinteki.net, our clients (your web browser) send commands like "play card X", "select card Y", and "run server Z" to our game logic server.
+
+Until recently, our game logic server assumed that all commands coming from the client were valid, because it's much faster to program a server under this assumption, and there are relatively few incentives for someone to cheat on our service. But the potential was there. A JavaScript hacker could easily change our client-side code to do lots of malicious behavior... for example, sending a command "`play-card {:title "Hedge Fund", :cost 0}`". A server that trusts the client will take the `:cost` of the transmitted card, deduct the player's credits by that amount, and then invoke the card's programmed logic... in this case, creating a Hedge Fund that gained 9cr but cost 0cr to play. Card __behavior__ can't be changed this way, only its __data__, but this allowed easy hacks to change card play costs, trash costs, agenda point values, and more. 
+
+Trusting the client also means sending the entire game state to the client and allowing it to decide what to reveal to the player. If a first-person shooter sends all information about the entire game to a client, it has to trust the client to not reveal positions of non-visible enemies... but a client can easily be compromised to read this information and show it, in what is usually called a "wall hack". Likewise, we historically sent the entire game state to each player in a game, and wrote the client to draw unrezzed corp cards, the opponent's deck, and the opponent's hand face-down. Those cards' information was still in the state, though, and a JavaScript hacker could once again violate the rules of the game by inspecting that state to see the contents of cards in servers, in the opponent's hand, on top of R&D... the potential abuses are endless and game-breaking.
+
+So what do we do? We Never Trust the Client. nealterrell rewrote the game logic server to fix two security issues:
+
+1. Don't trust the card sent by the client as part of a command. Instead load the server-side version of that card and use it. This goes for deckbuilding (don't trust the decklist sent at the start of the game; reload each card in the deck from the database, based on its card number) and for in-game commands, like the Hedge Fund example above, which would load the appropriate data for Hedge Fund straight from the server's copy of the player's hand. 
+2. Don't send private information to a player if they don't have a game-rules reason to know it. The runner does not have a right to know any identifiable information about an unrezzed Corp card, so we construct a special state for the Runner that strips out all information about such a "private" card except the card's identifier (a unique integer that is different each game) and its zone (to allow it to be drawn and targeted by the UI). This means constructing three different states for each command handled by the game server (Corp's, Runner's, Spectators'), but fixes any potential abuse from peeking at private information through the game state.
+
+We have no evidence that anyone was cheating prior to these upgrades, but this is the proper way to program a client-server game, so it's about time we got around to it.
 
 #### Simultaneous Triggers
 
@@ -23,23 +34,39 @@ runner-install (Replicator/Bazaar gif) [Don't stare for too long.](https://gfyca
 
 successful-run
 
+#### Agenda overhaul (kevkcc #1847)
+
+#### More Prevention Effects
+
+Prevention effects are the only real "interrupt" mechanism in Android: Netrunner. Many Progress Reports have chronicled our implementations of the game's "prevent/avoid" effects, including:
+
+1. Damage prevention (Plascrete Carapace)
+2. Tag avoidance (New Angeles City Hall)
+3. Trash prevention (Fall Guy)
+
+What's missing? Take a minute...
+
+
+
+Perhaps you guessed it:
+
+1. Jack-out prevention. Normally you can just trust the Runner to not hit Jack Out after running through an Inazuma, but Labyrinthine Servers requires the ability to interrupt an active attempt to jack out. kevkcc implemented jack-out prevention just for this amazing card!
+2. Exposure prevention. mtgred tasked nealterrell with implementing this feature via Zaibatsu Loyalty and Underway Grid. __WORLDS DECK ALERT???__
+
+
+#### FIR and corp hosting
 
 #### Report Error button
 
 #### SSCI and Show Hands to Spectators
 
-#### Jack-Out (kevkcc) and Expose (neal) prevention
 
-
-#### FIR and corp hosting
-
-
-#### Agenda overhaul (kevkcc #1847)
 
 
 ### Other Improvements and Automations
 
-Subliminal Messaging (kevkcc)
+* FAQ 3.1 changes to searching.
+* Subliminal Messaging (kevkcc)
 
 /counter rework
 
