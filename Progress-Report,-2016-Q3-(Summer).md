@@ -1,4 +1,4 @@
-Welcome to the Jinteki.net open-source progress report for Q2 2016. In this quarterly report, we will highlight some of the recent changes to the Jinteki.net Android: Netrunner platform.
+Welcome to the Jinteki.net open-source progress report for Q3 2016. In this quarterly report, we will highlight some of the recent changes to the Jinteki.net Android: Netrunner platform.
 
 #### About Jinteki.net
 
@@ -46,15 +46,35 @@ Prevention effects are the only real "interrupt" mechanism in Android: Netrunner
 
 What's missing? Take a minute...
 
-
-
 Perhaps you guessed it:
 
 1. Jack-out prevention. Normally you can just trust the Runner to not hit Jack Out after running through an Inazuma, but Labyrinthine Servers requires the ability to interrupt an active attempt to jack out. kevkcc implemented jack-out prevention just for this amazing card!
 2. Exposure prevention. mtgred tasked nealterrell with implementing this feature via Zaibatsu Loyalty and Underway Grid. __WORLDS DECK ALERT???__
 
 
-#### FIR and corp hosting
+#### Full Immersion RecStudio and Corp Hosting
+
+Full Immersion RecStudio was an interesting challenge. An immediate example of a similar Runner card is Leprechaun. We implement Leprechaun with two abilities: one to install and host a card from hand (costing 1 click), and another to host an already-installed card onto Leprechaun (costing 0 clicks). The second ability is necessary for interactions with Clone Chip, Retrieval Run, or any other "install a card from somewhere other than the Grip" ability. Corps have similar abilities via Interns, License Acquisition, and Team Sponsorship, but it was decided that Full Immersion RecStudio __could not__ rely on the same trick as Leprechaun to allow a card installed by one of these sources to be "moved" onto FIR. 
+
+I'll give you thirty seconds to think of an incorrect rules interaction that would occur if FIR behaved the same way that Leprechaun does...
+
+...
+
+...
+
+If you mentioned the words "NEH", "Astrolabe" or "Turtlebacks", then you are correct! If the solution for using Interns to install onto FIR involved using Interns to create a new server and then using FIR to host the already-installed card, then we would have incorrect rules interactions with any card that triggers "whenever the Corp creates a server". NEH and Astrolabe are irreversibly wrong (revealing the next card in the draw pile), so we need a proper solution to allow the Corp to use a card ability to install an Asset or Agenda on Full Immersion RecStudio.
+
+Each time a Corp card is installed without specifying a server (through card effects, not the "Install from hand" action), we show a list of servers where the card can be installed. We now also allow rezzed Corp cards to announce that they can _host_ the card-to-be-installed if it meets certain criteria. This allows FIR to show in the list of target locations when installing an Adonis Campaign via Interns, as such:
+
+![](https://cloud.githubusercontent.com/assets/10083341/18610442/53d8f1a6-7cd1-11e6-9355-8fe006d32379.png)
+
+Fun fact of the day: Runner cards can host Runner cards (Djinn), Runner cards can be hosted on Runner cards (Personal Touch), Runner cards can host Corp cards (Film Critic), and Runner cards can be hosted on Corp cards (Parasite); Corp cards can host Corp cards (Worlds Plaza), Corp cards can be hosted on Corp cards (Oversight AI), and Corp cards can host Runner cards (Magnet)... but there are no Corp cards that can be hosted on (installed on) Runner cards.
+
+Neal's example card in this unused design space:
+
+__Segfault__ 1cr<br>
+Operation<br>
+Play only if the runner is tagged. Install Segfault on an __icebreaker__ as a hosted condition counter with the text "Host __icebreaker__ has -3 strength. Trash Segfault if the runner is not tagged."
 
 #### Report Error button
 
