@@ -12,7 +12,7 @@ Interested in contributing? Check out our new [Getting Started With Development]
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
 ### Saintis' code browser
-
+https://saintis.github.io/netrunner-code-viewer/
 
 ### Major System Changes
 
