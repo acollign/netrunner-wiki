@@ -34,7 +34,15 @@ runner-install (Replicator/Bazaar gif) [Don't stare for too long.](https://gfyca
 
 successful-run
 
-#### Agenda overhaul (kevkcc #1847)
+#### Agenda Swapping (kevkcc #1847)
+
+Turntable and Exchange of Information, the banes of JoelCFC25's existence. We have an archive of a dozen issue reports involving these two cards, and if you pay close attention, you can see Joel's descent into madness trying to resolve all the problematic interactions with Mandatory Upgrades, Breaking News, and many other agendas.
+
+Our agendas are coded with an `:effect` behavior that is triggered when the agenda is scored. AstroScript adds an agenda token to itself, Hostile Takeover grants credits and BP, Rebranding Team registers all assets as Advertisements, Superior Cyberwalls registers an increase in barrier strengths, and Mandatory Upgrades registers an increase in available clicks. The first two agendas worked well with Turntable... the others did not. What's the difference?
+
+The first two agendas use their `:effect` to trigger some immediate behavior when scored. These behaviors should __not__ be triggered when an agenda is swapped back to the Corp. The other agendas use `:effect` to register some later behavior... that behavior should be turned off when the agenda is swapped to the Runner, but must be turned back on when returned to the Corp's score area. Because we use `:effect` for both these types of abilities, we can't simply trigger an agenda's `:effect` when it returns to the Corp, because while that would fix Mandatory Upgrades, it would grant 7 more credits and 1 more BP for Hostile Takeover. 
+
+kevkcc solved this problem by giving agendas an explicit `:swapped` ability to trigger when they get swapped from Runner to Corp's scored area, allowing Mandatory Upgrades to re-register its bonus click when returned to the Corp. Paired with a `:leave-play` ability that triggers when swapped from Corp to Runner, we can now accurately code all interactions with Exchange of Information and Turntable correctly.
 
 #### More Prevention Effects
 
