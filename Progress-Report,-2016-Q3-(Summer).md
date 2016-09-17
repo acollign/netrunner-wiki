@@ -11,13 +11,62 @@ Interested in contributing? Check out our new [Getting Started With Development]
 
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
+### Major System Changes
 
-### Simultaneous triggers
+#### NAPD MWL 1.1 and FAQ 3.1
+
+#### Never trust the client
+
+#### Simultaneous Triggers
 
 runner-install (Replicator/Bazaar gif) [Don't stare for too long.](https://gfycat.com/WhimsicalBrilliantAcornbarnacle)
 
 successful-run
 
+
+#### Report Error button
+
+#### SSCI and Show Hands to Spectators
+
+#### Jack-Out (kevkcc) and Expose (neal) prevention
+
+
+#### FIR and corp hosting
+
+
+#### Agenda overhaul (kevkcc #1847)
+
+
+### Other Improvements and Automations
+
+Subliminal Messaging (kevkcc)
+
+/counter rework
+
+/move-bottom
+
+NRDB API 2.0
+
+Announcements
+
+
+#### UI Improvements
+
+Improved messaging when installing corp cards (Devencire, #1692)
+
+Consistent sorting of corp server list (Devencire #1718)
+
+Icons: Security Testing / Patron, Femme (Saintis #1748)
+
+Don't show ID for private games
+
+Forced action menu for ice and agendas outside runs (Saintis #1747)
+
+"Null" message crash
+
+Cards trashed from damage (Saintis)
+
+Adam pull cards from server
 
 ### Contribute
 
