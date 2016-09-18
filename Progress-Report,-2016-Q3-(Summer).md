@@ -12,7 +12,8 @@ Interested in contributing? Check out our new [Getting Started With Development]
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
 ### Saintis' code browser
-https://saintis.github.io/netrunner-code-viewer/
+
+As a small side project Saintis wrote a [Netrunner Code Viewer](https://saintis.github.io/netrunner-code-viewer/) for viewing the card implementation code. Mostly useful when you want to find a `carddef` without scrolling through the source files. There are some extensions in progress, so watch that space (and feel free to contribute as well).
 
 ### Major System Changes
 
@@ -135,6 +136,7 @@ JoelCFC25 and nealterrell decided that option 1 would require too much labor to 
 * Identify the cards trashed from damage in the chat log. (Saintis)
 * Pull Adam's directives from the server when starting a game, so they don't have to be in the decklist anymore. Allows Adam decks to correctly contain 4x of his directives. (Saintis)
 * Admins can now broadcast a message to all active games, alerting them when the server is going to be restarted. (nealterrell)
+* Action panel always shows on Agendas so that the click to advance behaviour is the same as for advanceable Assets - useful for those of us who are paranoid and worried that the opponent can tell a Junebug from a Government Takeover based on number of clicks. (Saintis)
 
 ### Contribute
 
