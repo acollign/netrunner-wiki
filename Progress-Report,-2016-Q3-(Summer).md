@@ -89,6 +89,10 @@ Play only if the runner is tagged. Install Segfault on an __icebreaker__ as a ho
 
 #### Report Error button
 
+The unfortunate reality of our small community is that we don't have enough volunteer hours to thoroughly test the myriad ways that Netrunner cards can interact with each other. We do our best to maintain a large unit-testing library, but there will always be issues that slip through the cracks. That's why the "Report Error on GitHub" button that you occasionally see in a game is so important; with one simple click of the mouse, you can file a report about an in-game crashing error that (usually) contains enough information for our devs to get started on a fix. __Please use it!__
+
+![](https://cloud.githubusercontent.com/assets/10083341/16174764/3a9667fa-3587-11e6-814b-86800f78fc95.PNG)
+
 #### SSCI and Show Hands to Spectators
 
 
@@ -100,34 +104,37 @@ Play only if the runner is tagged. Install Segfault on an __icebreaker__ as a ho
 * Subliminal Messaging now prompts the user to add to hand automatically (kevkcc)
 
 #### "Reorder" cards rework
-* Cards that involved a reordering of the top cards of the deck have long been a bit annoying to play since dragging cards from the temporary zone is rather unintuitive and tedious. Nealterrell thus reworked Indexing and Making an Entrance to allow the user to perform this ordering via prompts (with a final prompt at the end asking for confirmation) and kevkcc extended this system to Rolodex, Data Hound, Shiro, Spy Camera, CBI Raid and Invasion of Privacy
+Cards that involved a reordering of the top cards of the deck have long been a bit annoying to play since dragging cards from the temporary zone is rather unintuitive and tedious. Nealterrell thus reworked Indexing and Making an Entrance to allow the user to perform this ordering via prompts (with a final prompt at the end asking for confirmation) and kevkcc extended this system to Rolodex, Data Hound, Shiro, Spy Camera, CBI Raid and Invasion of Privacy
 
-/counter rework
+![](https://cloud.githubusercontent.com/assets/10083341/16887297/08c284b8-4a8e-11e6-918d-6840dc9d224a.png)
 
-/move-bottom
+_Finalizing an Indexing run._
 
-NRDB API 2.0
+#### New commands
 
-Announcements
+* `/move-bottom`: move targeted card to the bottom of R&D/Stack.
+* `/counter`: not a new command, but now specifies the type of counter to add. If no type is specified, it is inferred if possible. Types: `ad`(vancement), `ag`(enda), `c`(redit), `p`(ower), `v`(irus). Inference rules: match whatever counter is already on the card if any; otherwise advancement on unscored agenda, agenda on scored agendas, virus on Runner cards with virus subtype, otherwise type must be specified.
 
+#### NRDB API 2.0
 
-#### UI Improvements
+Suppose your software relies on the data format of some external resource, like NetrunnerDB's list of cards. Further suppose that resource needs to change the way it represents its data to better meet its own long-term needs. You can adapt to this change in one of two ways:
 
-Improved messaging when installing corp cards (Devencire, #1692)
+1. Change your code to use the new data format, for example, rewrite The Personal Touch to target cards with a `:keyword` of `Icebreaker` (NRDB 2.0) instead of a `:subtype` of `Icebreaker` (NRDB 1.0). 
+2. Write an adapter to transform the new data format to the old data format, leaving the game logic untouched.
 
-Consistent sorting of corp server list (Devencire #1718)
+JoelCFC25 and nealterrell decided that option 1 would require too much labor to implement, as it would require rewrites of hundreds of card behaviors and would be prone to error. We felt it was better to go with option 2, with a software layer that transforms new NRDB keys to old ones, even though it will require future developers to know both sets of keywords. zaroth and mtgred further iterated on nealterrell's initial "fetch" script, and helped migrate 100% of card and set checking to the new NRDB APi format. zaroth himself was a big contributor to NRDB's decisions about the API!
 
-Icons: Security Testing / Patron, Femme (Saintis #1748)
+#### UI improvements
 
-Don't show ID for private games
-
-Forced action menu for ice and agendas outside runs (Saintis #1747)
-
-"Null" message crash
-
-Cards trashed from damage (Saintis)
-
-Adam pull cards from server
+* Improvements to the chat log when installing Corp cards, distinguishing between "in" vs "protecting" a server. (Devencire)
+* Consistent sorting of Corp server list for installs, sorting remotes by number and not by name ("Server 10" is alphabetically less than "Server 2" but not numerically). (Devencire)
+* Icons on Security Testing, Patron, and Temujin Contract to identify their server targets; also on Femme Fatale. (Saintis)
+* Password-protected games will no longer reveal their players' factions or identities in the game list. (neaterrell)
+* Stop misclicks on ice from rezzing them outside of a run, ruining your surprise! (Saintis)
+* Typing just "Null" into chat was freezing the UI, but rather than track down exactly WHY, just server-mangle any message of just `"Null"` to `"Null "`. (nealterrell)
+* Identify the cards trashed from damage in the chat log. (Saintis)
+* Pull Adam's directives from the server when starting a game, so they don't have to be in the decklist anymore. Allows Adam decks to correctly contain 4x of his directives. (Saintis)
+* Admins can now broadcast a message to all active games, alerting them when the server is going to be restarted. (nealterrell)
 
 ### Contribute
 
