@@ -138,9 +138,19 @@ JoelCFC25 and nealterrell decided that option 1 would require too much labor to 
 * Typing just "Null" into chat was freezing the UI, but rather than track down exactly WHY, server-mangle any message of just `"Null"` to `"Null "`. (nealterrell)
 * Identify the cards trashed from damage in the chat log. (Saintis)
 * Pull Adam's directives from the server when starting a game, so they don't have to be in the decklist anymore. Allows Adam decks to correctly contain 4x of his directives. (Saintis)
+* Targeted Marketing and Salem's Hospitality use an autocomplete text box to name a card. (nealterrell)
 * Admins can now broadcast a message to all active games, alerting them when the server is going to be restarted. (nealterrell)
 * Action panel always shows on Agendas so that the click to advance behaviour is the same as for advanceable Assets - useful for those of us who are paranoid and worried that the opponent can tell a Junebug from a Government Takeover based on number of clicks. (Saintis)
 * The creator of a game can choose to expose both players' hands to spectators, useful for streamers and learners. (nealterrell)
+
+#### Notable new card implementations
+
+We've gotten through most of our backlog of unimplemented cards thanks to the sustained heroic efforts of JoelCFC25. We don't project any problems with spoiled cards and will be implementing new packs as the developers find time. A few recent cards were particularly challenging or interesting to implement, however:
+
+* The Black File, Enforcing Loyalty, Algo Trading, Financial Collapse, Obelus (JoelCFC25)
+* Rumor Mill, Paperclip, Data Breach
+
+As of time of this writing, we are at [__98.0%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Blood Money_!
 
 ### Contribute
 
