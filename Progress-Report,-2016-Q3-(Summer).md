@@ -40,7 +40,7 @@ Last quarter we debuted a system for manually choosing the resolution order for 
 
     Example animation: [Don't stare for too long.](https://gfycat.com/WhimsicalBrilliantAcornbarnacle) If Technical Writers were in play, you wouldn't ever be asked to resolve one manually; they would silently gain credits when each install finished. Also, the initial install did not ask whether Bazaar or Replicator should be used first, because Bazaar is silent if there are no other copies of the installed card in your hand. Replicator resolves, adds the new Spy Camera to grip, then Bazaar resolves automatically, seeing that there is now a new Spy Camera to install. Beautiful!
 
-2. Successful-run: LOTS of handlers here, and we're still dealing with some issues related to this upgrade. Many handlers are silent (Desperado, Temujin Contract), but others require interaction (Silhouette). Temjin Contract in particular exposed a lot of issues with the initial implementation, leading to the legendary bugfix pull request #1953.
+2. Successful-run: LOTS of handlers here, and we're still dealing with some issues related to this upgrade. Many handlers are silent (Desperado, Temujin Contract), but others require interaction (Silhouette, Laramy Fisk, Equivocation). Temjin Contract in particular exposed a lot of issues with the initial implementation, leading to the legendary bugfix pull request #1953.
 
 #### Agenda Swapping
 
@@ -148,7 +148,7 @@ JoelCFC25 and nealterrell decided that option 1 would require too much labor to 
 We've gotten through most of our backlog of unimplemented cards thanks to the sustained heroic efforts of JoelCFC25. We don't project any problems with spoiled cards and will be implementing new packs as the developers find time. A few recent cards were particularly challenging or interesting to implement, however:
 
 * The Black File, Enforcing Loyalty, Algo Trading, Financial Collapse, Obelus (JoelCFC25)
-* Rumor Mill, Paperclip, Data Breach
+* Rumor Mill, Paperclip, Data Breach (nealterrell)
 
 As of time of this writing, we are at [__98.0%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Blood Money_!
 
