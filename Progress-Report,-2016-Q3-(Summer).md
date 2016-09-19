@@ -11,9 +11,9 @@ Interested in contributing? Check out our new [Getting Started With Development]
 
 More interested in simply learning to use the site? We also have a great [Jinteki.net guide](https://github.com/mtgred/netrunner/wiki/Jinteki.net-Guide) put together by darlingsensei. Help keep it current by adding new items or removing outdated information.
 
-### Saintis' code browser
+### Saintis' Code Browser
 
-As a small side project Saintis wrote a [Netrunner Code Viewer](https://saintis.github.io/netrunner-code-viewer/) for viewing the card implementation code. Mostly useful when you want to find a `carddef` without scrolling through the source files. There are some extensions in progress, so watch that space (and feel free to contribute as well).
+As a small side project, Saintis wrote a [Netrunner Code Viewer](https://saintis.github.io/netrunner-code-viewer/) for viewing the implementations of all our Netrunner cards. We think it's a great way for Clojure beginners to get a feel for how cards are structured in our project, without having to dive in head first. There are some extensions in progress, so watch that space (and feel free to contribute as well).
 
 ### Major System Changes
 
@@ -34,11 +34,15 @@ We have no evidence that anyone was cheating prior to these upgrades, but this i
 
 #### Simultaneous Triggers
 
-runner-install (Replicator/Bazaar gif) [Don't stare for too long.](https://gfycat.com/WhimsicalBrilliantAcornbarnacle)
+Last quarter we debuted a system for manually choosing the resolution order for simultaneous triggers, applying it to the agenda-scored and agenda-stolen event triggers. The system was generally a success and fixed a lot of long standing issues with automating cards like Leela Patel and Gang Sign. Not every trigger requires fine-tuned control over resolution order, so we have been slowly deploying the system to specific triggers when we recognize the need. This quarter we implemented simultaneous trigger resolution for:
 
-successful-run
+1. Runner-install: for all you Spy Camera addicts. You generally want your Replicator to resolve before your Bazaar... but at the same time, you DON'T want to manually order your Technical Writers. For this extension, nealterrell added "silent" and "interactive" ability flags. If a group of cards are all listening for a particular event and at least one is marked "interactive", then the player gets a prompt to order the effects. If none of the handlers are interactive, then the system resolves one at a time automatically. If a prompt is shown (because both Replicator and Bazaar are interactive), then there are some cards that do not need to be in the list, because they have no interactions in that window, like Technical Writer. These cards are "silent" and will be resolved automatically after all the manually-ordered effects.
 
-#### Agenda Swapping (kevkcc #1847)
+    Example animation: [Don't stare for too long.](https://gfycat.com/WhimsicalBrilliantAcornbarnacle) If Technical Writers were in play, you wouldn't ever be asked to resolve one manually; they would silently gain credits when each install finished. Also, the initial install did not ask whether Bazaar or Replicator should be used first, because Bazaar is silent if there are no other copies of the installed card in your hand. Replicator resolves, adds the new Spy Camera to grip, then Bazaar resolves automatically, seeing that there is now a new Spy Camera to install. Beautiful!
+
+2. Successful-run: LOTS of handlers here, and we're still dealing with some issues related to this upgrade. Many handlers are silent (Desperado, Temujin Contract), but others require interaction (Silhouette). Temjin Contract in particular exposed a lot of issues with the initial implementation, leading to the legendary bugfix pull request #1953.
+
+#### Agenda Swapping
 
 Turntable and Exchange of Information, the banes of JoelCFC25's existence. We have an archive of a dozen issue reports involving these two cards, and if you pay close attention, you can see Joel's descent into madness trying to resolve all the problematic interactions with Mandatory Upgrades, Breaking News, and many other agendas.
 
@@ -82,28 +86,25 @@ Each time a Corp card is installed without specifying a server (through card eff
 
 Fun fact of the day: Runner cards can host Runner cards (Djinn), Runner cards can be hosted on Runner cards (Personal Touch), Runner cards can host Corp cards (Film Critic), and Runner cards can be hosted on Corp cards (Parasite); Corp cards can host Corp cards (Worlds Plaza), Corp cards can be hosted on Corp cards (Oversight AI), and Corp cards can host Runner cards (Magnet)... but there are no Corp cards that can be hosted on (installed on) Runner cards.
 
-Neal's example card in this unused design space:
+An example card in this unused design space:
 
 __Segfault__ 1cr<br>
 Operation<br>
 Play only if the runner is tagged. Install Segfault on an __icebreaker__ as a hosted condition counter with the text "Host __icebreaker__ has -3 strength. Trash Segfault if the runner is not tagged."
 
-#### Report Error button
+#### Report Error Button
 
 The unfortunate reality of our small community is that we don't have enough volunteer hours to thoroughly test the myriad ways that Netrunner cards can interact with each other. We do our best to maintain a large unit-testing library, but there will always be issues that slip through the cracks. That's why the "Report Error on GitHub" button that you occasionally see in a game is so important; with one simple click of the mouse, you can file a report about an in-game crashing error that (usually) contains enough information for our devs to get started on a fix. __Please use it!__
 
 ![](https://cloud.githubusercontent.com/assets/10083341/16174764/3a9667fa-3587-11e6-814b-86800f78fc95.PNG)
 
-#### SSCI and Show Hands to Spectators
-
-
-
-
 ### Other Improvements and Automations
 
 * FAQ 3.1 changes to searching.
 * Subliminal Messaging now prompts the user to add to hand automatically. (kevkcc)
-* Identity base link is now loaded from card information (straight from Netrunner DB) so you no longer have to wait for the card logic to be written to get the base link on new identities. (Saintis)
+* Identity base link is now loaded from card information (straight from Netrunner DB) so newly-spoiled identities will have their correct link strength even before their logic is coded. (Saintis)
+* A Fan Site that has been swapped to the Corp with Exchange of Information will not return to the Runner's score area when another agenda is scored. @artturipi insists there are reasons you would want to do this, but we remain skeptical. (Hoclor)
+* 24/7 News Cycle can be played with only one agenda scored. (Hoclor)
 
 #### "Reorder" cards rework
 Cards that involved a reordering of the top cards of the deck have long been a bit annoying to play since dragging cards from the temporary zone is rather unintuitive and tedious. Nealterrell thus reworked Indexing and Making an Entrance to allow the user to perform this ordering via prompts (with a final prompt at the end asking for confirmation) and kevkcc extended this system to Rolodex, Data Hound, Shiro, Spy Camera, CBI Raid and Invasion of Privacy
@@ -124,20 +125,22 @@ Suppose your software relies on the data format of some external resource, like 
 1. Change your code to use the new data format, for example, rewrite The Personal Touch to target cards with a `:keyword` of `Icebreaker` (NRDB 2.0) instead of a `:subtype` of `Icebreaker` (NRDB 1.0). 
 2. Write an adapter to transform the new data format to the old data format, leaving the game logic untouched.
 
-JoelCFC25 and nealterrell decided that option 1 would require too much labor to implement, as it would require rewrites of hundreds of card behaviors and would be prone to error. We felt it was better to go with option 2, with a software layer that transforms new NRDB keys to old ones, even though it will require future developers to know both sets of keywords. zaroth and mtgred further iterated on nealterrell's initial "fetch" script, and helped migrate 100% of card and set checking to the new NRDB APi format. zaroth himself was a big contributor to NRDB's decisions about the API!
+JoelCFC25 and nealterrell decided that option 1 would require too much labor to implement, as it would require rewrites of hundreds of card behaviors and would be prone to error. We felt it was better to go with option 2, with a software layer that transforms new NRDB keys to old ones, even though it will require future developers to know both sets of keywords. zaroth and mtgred further iterated on nealterrell's initial "fetch" script, and helped migrate 100% of card and set checking to the new NRDB API format. zaroth himself was a big contributor to NRDB's decisions about the API!
 
 #### UI improvements
 
+* Game titles can be up to 100 characters long. Don't go overboard. (carlsondc)
 * Improvements to the chat log when installing Corp cards, distinguishing between "in" vs "protecting" a server. (Devencire)
 * Consistent sorting of Corp server list for installs, sorting remotes by number and not by name ("Server 10" is alphabetically less than "Server 2" but not numerically). (Devencire)
 * Icons on Security Testing, Patron, and Temujin Contract to identify their server targets; also on Femme Fatale. (Saintis)
 * Password-protected games will no longer reveal their players' factions or identities in the game list. (neaterrell)
 * Stop misclicks on ice from rezzing them outside of a run, ruining your surprise! (Saintis)
-* Typing just "Null" into chat was freezing the UI, but rather than track down exactly WHY, just server-mangle any message of just `"Null"` to `"Null "`. (nealterrell)
+* Typing just "Null" into chat was freezing the UI, but rather than track down exactly WHY, server-mangle any message of just `"Null"` to `"Null "`. (nealterrell)
 * Identify the cards trashed from damage in the chat log. (Saintis)
 * Pull Adam's directives from the server when starting a game, so they don't have to be in the decklist anymore. Allows Adam decks to correctly contain 4x of his directives. (Saintis)
 * Admins can now broadcast a message to all active games, alerting them when the server is going to be restarted. (nealterrell)
 * Action panel always shows on Agendas so that the click to advance behaviour is the same as for advanceable Assets - useful for those of us who are paranoid and worried that the opponent can tell a Junebug from a Government Takeover based on number of clicks. (Saintis)
+* The creator of a game can choose to expose both players' hands to spectators, useful for streamers and learners. (nealterrell)
 
 ### Contribute
 
