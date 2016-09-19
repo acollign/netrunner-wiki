@@ -102,7 +102,8 @@ The unfortunate reality of our small community is that we don't have enough volu
 ### Other Improvements and Automations
 
 * FAQ 3.1 changes to searching.
-* Subliminal Messaging now prompts the user to add to hand automatically (kevkcc)
+* Subliminal Messaging now prompts the user to add to hand automatically. (kevkcc)
+* Identity base link is now loaded from card information (straight from Netrunner DB) so you no longer have to wait for the card logic to be written to get the base link on new identities. (Saintis)
 
 #### "Reorder" cards rework
 Cards that involved a reordering of the top cards of the deck have long been a bit annoying to play since dragging cards from the temporary zone is rather unintuitive and tedious. Nealterrell thus reworked Indexing and Making an Entrance to allow the user to perform this ordering via prompts (with a final prompt at the end asking for confirmation) and kevkcc extended this system to Rolodex, Data Hound, Shiro, Spy Camera, CBI Raid and Invasion of Privacy
