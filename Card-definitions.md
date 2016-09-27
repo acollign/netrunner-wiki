@@ -1,4 +1,4 @@
-A card definitions is an ability definition (see [[Abilities]]) that may contain extra keys.
+A card definition (`card-def`) is an ability definition (see [[Abilities]]) that may contain extra keys.
 
 The normal ability keys (`:req`, `:effect` etc.) are normally used when the card is activated.
 
