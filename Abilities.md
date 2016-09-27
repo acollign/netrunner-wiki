@@ -13,7 +13,7 @@ Note that "5-function" is used to refer to the 5-argument functions used through
 **COMMON KEYS**
 - `:req` -- a 5-function that must return true or false. If false, the ability will not be resolved.
 - `:cost` -- a vector of costs to charge, for example `[:credit 1 :click 1]`. If the costs cannot be paid, the ability will not be resolved.
-- `:msg` -- either a string or a 5-function that returns a string. Prints to the log when the ability is finished. Note that "`player` uses `card title` to " will be prefixed and a "." will b suffixed to the message.
+- `:msg` -- either a string or a 5-function that returns a string. Prints to the log when the ability is finished. Note that "`player` uses `card title` to " will be prefixed and a "." will be suffixed to the message.
 - `:effect` -- a 5-function that will be called if the ability will be resolved (if `:req` is true or not present, costs can be paid, and any prompts are resolved.)
 - `:player` -- manually specifies which player the ability should affect, rather than leave it implicit.
 
