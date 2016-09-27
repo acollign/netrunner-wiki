@@ -45,3 +45,5 @@ Note that "5-function" is used to refer to the 5-argument functions used through
                be any value, preferably a unique keyword.
 - `:optional` -- shows a 'Yes/No' prompt to let the user decide whether to resolve the ability.
 - `:end-turn` -- if the ability is resolved, then this ability map will be resolved at the end of the turn.
+- `:show-discard` -- if `true` the discard panel will open when this ability resolves. Normally used with a prompt targeting the discard.
+- `:delayed-completion` -- if `true` it signals that the ability will manually trigger `effect-completed`. If `false` it signals that `effect-completed` can be triggered directly even if using `:psi`, `:trace`, `:optional` or `:prompt`. See [Pull Request #1582](https://github.com/mtgred/netrunner/pull/1582) for details.
