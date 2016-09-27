@@ -13,6 +13,7 @@ Additional information can be found in:
 * [[Macros (effect vs. req)]]
 * [[Abilities]]
 * [[Event hooks]]
+* [[Card definitions]]
 
 ### Progress reports
 
