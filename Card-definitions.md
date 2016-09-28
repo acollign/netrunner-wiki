@@ -28,6 +28,7 @@ Some of the extra keys are explained below.
 - `:strength-bonus` -- 5-function that returns the integer to increase the strength of the ICE by
 - `:trash-effect` -- ability to trigger when the card is trashed. Has an extra key `:while-unrezzed` that specifies if the ability should trigger even if the card is not rezzed
 - `:rez-req` -- 5-function that specifies the requirements to be able to rez the card.
+- `:can-host` -- a 5-function invoked to determine if the card is eligible to host a given `target` card during a corp-install process in which no server was indicated. Returns true if the card can host the target.
 
 **AGENDA SPECIFIC KEYS**
 - `:advancement-cost-bonus` -- 5-function that returns an integer to adjust the advancement cost of the agenda with
@@ -41,11 +42,11 @@ Some of the extra keys are explained below.
 **RUNNER SPECIFIC KEYS**
 - `:install-cost-bonus` -- 5-function that returns the additional costs that has to be paid to install this card
 - `:strength-bonus` -- 5-function that returns the integer to increase the strength of the icebreaker by
+- `:hosting` -- a targeting map (see [[Abilities]] section "Prompts") for selecting a host for the given card as it is being installed. Used by Parasite, The Personal Touch.
 
 **OTHER KEYS**
 - `:additional-cost` -- vector of additional costs to activate this card
-- `:can-host`
+
 - `:flags`
-- `:hosting`
 - `:move-zone` -- 5-function to resolve when the card moves zone. Resolved even if not active
-- `:suppress`
+- `:suppress`-- a map from event keywords to a 5-function that allows one card to prevent another card from receiving a particular event. The `targets` passed to the 5-function are the card that wants to receive the event (as `target`), and then the other targets normally passed to the event in question. If the 5-function returns true, then the target card will not be notified of the event.
