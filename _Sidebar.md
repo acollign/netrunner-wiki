@@ -1,9 +1,9 @@
 [[Jinteki.net Guide]]
 
 **Dev Pages**
-* [[Getting Started with Development]]
-* [[Development Tips and Tricks]]
-* [[Macros (effect vs. req)]]
+* [[Getting Started|Getting Started with Development]]
+* [[Tips and Tricks|Development Tips and Tricks]]
+* [[Macros|Macros (effect vs. req)]]
 * [[Abilities]]
 * [[Event hooks]]
 * [[Card definitions]]
