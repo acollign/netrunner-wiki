@@ -26,6 +26,7 @@ Some of the extra keys are explained below.
 - `:derez-effect` -- ability to trigger when the card is derezzed
 - `:init` -- specifies where the card will be installed, e.g. `{:root "HQ"}`
 - `:strength-bonus` -- 5-function that returns the integer to increase the strength of the ICE by
+- `:subroutines` -- a vector of abilities that are the subroutines of the ICE
 - `:trash-effect` -- ability to trigger when the card is trashed. Has an extra key `:while-unrezzed` that specifies if the ability should trigger even if the card is not rezzed
 - `:rez-req` -- 5-function that specifies the requirements to be able to rez the card.
 - `:can-host` -- a 5-function invoked to determine if the card is eligible to host a given `target` card during a corp-install process in which no server was indicated. Returns true if the card can host the target.
