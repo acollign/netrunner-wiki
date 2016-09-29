@@ -8,4 +8,4 @@
 * [[Event hooks]]
 * [[Card definitions]]
 
-[[Dev Progress Reports]]
+[[Progress Reports]]
