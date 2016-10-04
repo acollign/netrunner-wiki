@@ -7,5 +7,6 @@
 * [[Abilities]]
 * [[Event hooks]]
 * [[Card definitions]]
+* [[Externs]]
 
 **[[Progress Reports]]**
