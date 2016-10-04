@@ -14,6 +14,7 @@ Additional information can be found in:
 * [[Abilities]]
 * [[Event hooks]]
 * [[Card definitions]]
+* [[Externs]]
 
 ### Progress reports
 
