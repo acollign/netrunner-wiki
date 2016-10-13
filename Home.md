@@ -15,6 +15,7 @@ Additional information can be found in:
 * [[Event hooks]]
 * [[Card definitions]]
 * [[Externs]]
+* [[Test server]]
 
 ### Progress reports
 
