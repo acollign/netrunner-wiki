@@ -225,3 +225,7 @@ The main communication channel between developers, besides GitHub, is the [team'
 ## Good Starting Issues
 
 If you want to look for some of the easier issues to get started, look through our GitHub issues for [issues labeled **easy**](https://github.com/mtgred/netrunner/labels/easy). These usually don't require in-depth codebase knowledge, and changes required to fix them shouldn't involve more than 1-3 source files.
+
+## Pull requests and branches
+
+There are two main branches in this repository, `master` and `dev`. **TODO**
