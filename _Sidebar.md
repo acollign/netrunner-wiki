@@ -8,5 +8,6 @@
 * [[Event hooks]]
 * [[Card definitions]]
 * [[Externs]]
+* [[Test server]]
 
 **[[Progress Reports]]**
