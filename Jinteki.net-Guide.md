@@ -58,8 +58,8 @@ The game server periodically gets restarted to deploy code for new features or b
 ### Gameplay Limitations
 While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
 
-* **Additional costs to run, break subs, etc:** Ruhr Valley, Midway Station Grid, Interrupt 0, Enhanced Login Protocol, Donut Taganes, *et al*
-* **Other unique complicated effects:** Disrupter, Inazuma, Surveillance Sweep, RSVP, *et al*
+* **Additional costs to break subs, play events, etc:** Midway Station Grid, Interrupt 0, Donut Taganes, Student Loans, *et al*
+* **Other unique complicated effects:** Disrupter, Inazuma, Surveillance Sweep, Media Blitz, RSVP, Raman Rai, *et al*
 
 ##### Hosting
 Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop, Street Peddler). Please communicate with your opponent when using the ability to host something that's already installed so they understand what is happening and why. 
@@ -79,9 +79,7 @@ The Netrunner community has always been an outstanding place to game and Jinteki
 * Say a farewell before leaving the game (GG is always appreciated)
 * Leave a note in general chat for your opponent if you disconnected or had to leave
 * Indicate when you are taking a long pause to think so your opponent doesn’t think you disconnected
-* Allow your opponent to jack out instead of firing an end the run, unless it would alter the game state
 * Check with your opponent before firing subroutines that alter the game state (trash & damage ones especially)
 * Inform your opponent of your reasoning before adjusting resources manually
 * ***Please*** **avoid complaining about opponents in general chat**
-* Add a description like, “PRIVATE” to your game if it’s not for anyone to join
 * Remember that the site is a free, fan-made endeavor and act accordingly
