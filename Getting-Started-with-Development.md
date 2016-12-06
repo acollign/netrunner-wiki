@@ -125,8 +125,7 @@ Launch MongoDB _(possibly with --dbpath option specifying card data directory)_ 
 
 ```
 $ mongod
-$ cd data
-$ coffee fetch.coffee
+$ npm run fetch
 ```
 
 On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
@@ -161,7 +160,7 @@ $ java -jar target/netrunner-0.1.0-SNAPSHOT-standalone.jar
 Launch the Node server:
 
 ```
-$ coffee server.coffee
+$ npm run start
 ```
 
 ## Automated Environment
