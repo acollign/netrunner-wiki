@@ -38,11 +38,11 @@ A Neal and Joel tag-team effort to beautify the Medium and Nerve Agent code, whi
 
 
 #### Notable new card implementations
-erbridge: Omar Keung, automatic Crypsis counter removal after use
-Joel: Raman Rai _(yes, really)_, Credit Crash, Fumiko Yamamori
-Neal: Top Hat, Baba Yaga
-mattchainsaw: the long-awaited Enhanced Login Protocol!
-kevkcc: Frantic Coding
+* **erbridge:** Omar Keung, automatic Crypsis counter removal after use
+* **Joel:** Raman Rai _(yes, really)_, Credit Crash, Fumiko Yamamori
+* **Neal:** Top Hat, Baba Yaga
+* **mattchainsaw:** the long-awaited Enhanced Login Protocol!
+* **kevkcc:** Frantic Coding
 
 As of time of this writing, we are at [__98.0%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Martial Law_!
 
