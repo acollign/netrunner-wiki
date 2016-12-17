@@ -40,7 +40,7 @@ Sounds are currently tied to these in-game events:
 Alongside sounds, our early December deploy included a new My Account page for logged-in users to adjust a few _minor_ account settings. nealterrell resurrected domtancredi's older work on a profile page to implement this modest group of settings. For now, My Account will let you:
 
 * Change your avatar via a link to Gravatar
-* Enable or disable sounds (saved as a local browser setting via JavaScript localStorage)
+* Enable or disable sounds (saved as a local browser setting via JavaScript localStorage) and adjust their volume
 * Choose a background image for the gameboard from a few presets
 * Choose to show or hide your opponents' alt-art card images (new users, or streamers catering to new users, should turn off alt-art)
 
@@ -54,7 +54,9 @@ _Alternate and World Champion 2015 artwork for Haas-Bioroid: Engineering the Fut
 
 #### Workflow changes
 
-Improvements to Node scripts, module updates, deployment to dev server
+A lot of work this quarter went into features that you'll never notice on our production server. Zaroth, erbridge, and domtancredi collaborated heavily to configure a developer's test server, where new features and ideas can be tried in a production-like environment prior to merging into our master codebase. (You'd be shocked how many submissions work fine on local developer machines but fail when deployed to live.) We use a [Puppet](https://github.com/zaroth/betajin-pupfiles) configuration maintained by Zaroth which downloads and installs all the packages needed to run a Jinteki instance; this configuration is deployed to a machine commissioned by domtancredi at [our dev server URL](http://jinteki.zaroth.net). Contributors can submit code to our "dev" branch on GitHub, and once submitted a project collaborator can deploy the submitted code to the dev server with a simple shell script.
+
+The dev server itself runs a separate database from the live site, but otherwise is perfectly fine to play on. We only recommend using it if the main site is down for some reason, as like all "in development" projects, the code running on dev is more likely to be unstable or incomplete. 
 
 ### Other Improvements and Automations
 
@@ -74,12 +76,12 @@ A Neal and Joel tag-team effort to beautify the Medium and Nerve Agent code, whi
 
 #### Notable new card implementations
 * **erbridge:** Omar Keung
-* **Joel:** Raman Rai _(yes, really)_, Credit Crash, Fumiko Yamamori
-* **Neal:** Top Hat, Baba Yaga
+* **JoelCFC25:** Raman Rai _(yes, really)_, Credit Crash, Fumiko Yamamori
+* **nealterrell:** Top Hat, Baba Yaga
 * **mattchainsaw:** the long-awaited Enhanced Login Protocol!
 * **kevkcc:** Frantic Coding
 
-As of time of this writing, we are at [__98.0%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Martial Law_!
+As of time of this writing, we are at [__98.4%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Martial Law_!
 
 ### Contribute
 
