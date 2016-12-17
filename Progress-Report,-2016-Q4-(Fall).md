@@ -64,6 +64,7 @@ The dev server itself runs a separate database from the live site, but otherwise
 * ELP
 * Edward Kim and trashable operations (benhosp)
 * Omni-drive memory refund (poi2000)
+* Frantic Coding and Accelerated Beta Test will not trash cards at the top of your draw pile if installing a card from their effect causes a shuffle of your deck, i.e., Frantic Paige and ABT Foundry now work correctly.
 
 #### Implementation warnings
 
