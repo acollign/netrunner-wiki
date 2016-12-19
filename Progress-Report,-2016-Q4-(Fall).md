@@ -50,7 +50,25 @@ We also implemented an alt-art editor for users who have donated to the site. In
 
 _Alternate and World Champion 2015 artwork for Haas-Bioroid: Engineering the Future_
 
-#### Agenda access rework (Saintis, #1985)
+#### Agenda access rework
+
+One of the most problematic cards on the site has historically been The Future Perfect. With difficult interactions with the on-access trigger, Film Critic, and Imp, this is one agenda that just never worked right in all cases. When it was first released, we added a special key "`steal-req`", which allowed agendas to specify the only conditions under which they could be stolen "the normal way" (for TFP: if installed). TFP could then disable stealing when it wasn't installed, instead using the on-access trigger to show a psi game that, if equal, directly "stole" the agenda. Unfortunately this simple design was incompatible with Imp, as without a "You accessed The Future Pefect" window (part of "the normal way") there was no UI to use Imp before OR AFTER the psi game.
+
+Enter Film Critic, which to this day remains one of our hackiest card implementations. Film Critic split agenda access into two windows: "You are about to access The Future Perfect", during which Film Critic can be used, and then either TFP's psi game or a normal agenda's "You accessed ____" window with a "Steal" button. Imp could now be used during the "about to access" phase to trash TFP before the psi game fired, but there remained no way of using Imp _after_ a psi game failure.
+
+In a champion pull request that fixed 5 longstanding agenda-access issues, including TFP + Imp, Saintis reworked the agenda access code for greater consistency and rules compliance. A runner who accesses an agenda now follows this flow of logic:
+
+If an agenda has an on-access effect (TFP, Fetal AI, TGTBT, etc.), we show this window prior to access. Film Critic can be used here to avoid this effect:
+
+<img width="192" alt="screen shot 2016-09-22 at 19 37 24" src="https://cloud.githubusercontent.com/assets/13198563/18759329/5410c7c8-80fc-11e6-964f-b92391d0a3ec.png">
+
+After the agenda has been "accessed" (or if there was no access effect), the "steal" prompt is shown. This is where Imp can be used to trash the agenda instead of stealing it, or Film Critic used to avoid stealing:
+
+<img width="192" alt="screen shot 2016-09-22 at 19 38 03" src="https://cloud.githubusercontent.com/assets/13198563/18759380/8a8b4e54-80fc-11e6-8220-d7835cb37d5f.png">
+
+If the runner loses the TFP psi game, we show this screen. Imp can finally be used here:
+
+<img width="190" alt="screen shot 2016-09-22 at 19 37 44" src="https://cloud.githubusercontent.com/assets/13198563/18759436/c862bb90-80fc-11e6-9e80-198984c4a5ce.png">
 
 #### Workflow changes
 
