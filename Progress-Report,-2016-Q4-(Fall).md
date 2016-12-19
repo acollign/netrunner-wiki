@@ -5,7 +5,7 @@ Welcome to the Jinteki.net open-source progress report for Q4 2016. In this quar
 [Jinteki.net](http://www.jinteki.net) is a service for playing Android: Netrunner in a browser. It requires no installation to play, is compatible with most operating systems and modern browsers, and includes an interactive deck-builder, chat room, and automation of most game rules and cards.
 
 ### New Contributors
-Thanks to the new developers who added to the platform this quarter: benhosp, DeepSpawn, dylancwood, erbridge, kevinpowe, kleer1, mattchainsaw, poi2000
+Thanks to the new developers who added to the platform this quarter: benhosp, DeepSpawn, dylancwood, erbridge, kevinpowe, kleer1, kyzen, mattchainsaw, and poi2000!
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
