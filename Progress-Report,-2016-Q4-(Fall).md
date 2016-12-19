@@ -35,9 +35,9 @@ Sounds are currently tied to these in-game events:
 * Run successful
 * Purge viruses
 
-#### My Account
+#### My Account / Settings
 
-Alongside sounds, our early December deploy included a new My Account page for logged-in users to adjust a few _minor_ account settings. nealterrell resurrected domtancredi's older work on a profile page to implement this modest group of settings. For now, My Account will let you:
+Alongside sounds, our early December deploy included a new My Account / Settings page for logged-in users to adjust a few _minor_ account settings. nealterrell resurrected domtancredi's older work on a profile page to implement this modest group of settings. For now, My Account will let you:
 
 * Change your avatar via a link to Gravatar
 * Enable or disable sounds (saved as a local browser setting via JavaScript localStorage) and adjust their volume
@@ -90,6 +90,10 @@ The dev server itself runs a separate database from the live site, but otherwise
 #### Implementation warnings
 
 Saintis added warnings to the "toast" area (upper right corner) when hovering over a card whose implementation is not fully defined in the game engine. These implementation warnings should help clarify when a particular rule is not enforced by the site, and will hopefully reduce Joel's daily "please review the card status document" message count by a few.
+
+<img width="378" alt="screen shot 2016-09-10 at 13 07 42" src="https://cloud.githubusercontent.com/assets/13198563/18410081/49ad2d24-7758-11e6-9942-115c3e727573.png">
+
+_Implementation warning for Jeeves Model Bioroids_
 
 #### Medium + Nerve Agent
 A Neal and Joel tag-team effort to beautify the Medium and Nerve Agent code, which was a nasty pile of spaghetti-like workarounds. These cards now prompt the user with a default selection of the maximum number of additional accesses (did you know you can choose less than the maximum amount to access?) and perform their effects during a new "pre-access" event in the game engine. Users can now benefit from Nerve Agent counters when non-run access from Gang Sign or Raymond Flint occurs.
