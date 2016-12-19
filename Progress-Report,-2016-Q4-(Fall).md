@@ -5,7 +5,7 @@ Welcome to the Jinteki.net open-source progress report for Q4 2016. In this quar
 [Jinteki.net](http://www.jinteki.net) is a service for playing Android: Netrunner in a browser. It requires no installation to play, is compatible with most operating systems and modern browsers, and includes an interactive deck-builder, chat room, and automation of most game rules and cards.
 
 ### New Contributors
-Thanks to the new developers who added to the platform this quarter: benhosp, DeepSpawn, dylancwood, erbridge, kevinpowe, kleer1, kyzen, mattchainsaw, and poi2000!
+Thanks to the new developers who added to the platform this quarter: benhosp, DeepSpawn, dylancwood, erbridge, kevinpowe, kleer1, kyzen, mattchainsaw, poi2000, and shazzner!
 
 Interested in contributing? Check out our new [Getting Started With Development](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development) guide, pieced together by queueseven, JoelCFC25, and mtgred! nealterrell also recorded some "[live coding](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)" streams to introduce our engine while implementing new cards.
 
@@ -78,11 +78,14 @@ The dev server itself runs a separate database from the live site, but otherwise
 
 ### Other Improvements and Automations
 
-* Adam Directives before game start
-* ELP
-* Edward Kim and trashable operations (benhosp)
-* Omni-drive memory refund (poi2000)
-* Frantic Coding and Accelerated Beta Test will not trash cards at the top of your draw pile if installing a card from their effect causes a shuffle of your deck, i.e., Frantic Paige and ABT Foundry now work correctly.
+* Adam Directives are now chosen before game start (Saintis)
+* Enhanced Logic Protocol is finally automated! (mattchainsaw)
+* Edward Kim will automatically trash any trashable operations (benhosp)
+* Omni-drive will correctly refund memory of hosted cards (poi2000)
+* Frantic Coding and Accelerated Beta Test will not trash cards at the top of your draw pile if installing a card from their effect causes a shuffle of your deck, i.e., Frantic Paige and ABT Foundry now work correctly (nealterrell)
+* Old Hollywood Grid now works on accesses outside of runs (Quest Completed, Gang Sign) (kevkcc)
+* Account Siphon credits cannot be used to avoid its tags using New Angeles City Hall (nealterrell)
+* Ark Lockdown will not remove cards from the heap if Blacklist is rezzed (JoelCFC25)
 
 #### Implementation warnings
 
@@ -93,14 +96,15 @@ A Neal and Joel tag-team effort to beautify the Medium and Nerve Agent code, whi
 
 #### UI improvements
 
-
+erbridge made a big behind-the-scenes revamp to the gameboard layout using HTML flexboxes. Besides making the code cleaner and easier to maintain, he also fixed several longstanding UI complaints regarding multiple upgrades in central servers and cramped hosting on Worlds Plaza and Full Immersion RecStudio.
 
 #### Notable new card implementations
 * **erbridge:** Omar Keung
 * **JoelCFC25:** Raman Rai _(yes, really)_, Credit Crash, Fumiko Yamamori
 * **nealterrell:** Top Hat, Baba Yaga
-* **mattchainsaw:** the long-awaited Enhanced Login Protocol!
+* **mattchainsaw:** Enhanced Login Protocol
 * **kevkcc:** Frantic Coding
+* **shazzner:** Reaver
 
 As of time of this writing, we are at [__98.4%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Martial Law_!
 
