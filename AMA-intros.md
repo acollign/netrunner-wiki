@@ -13,4 +13,4 @@ Frequent contributors:
 Other notables:
 
 * /u/queueseven ([GitHub](https://github.com/queueseven)), Germany.
-* /u/kevkcc (([GitHub](https://github.com/kevkcc)), Richmond, Canada.
+* /u/kevkcc (([GitHub](https://github.com/kevkcc)), Vancouver, Canada. Software Engineer. Communications student.  Card implementations, minor engine development, unit test champion. Simply a fan of the game.
