@@ -31,6 +31,8 @@ You need the following dependencies installed:
 - [ZeroMQ](http://zeromq.org/)
 - A C++ compiler (g++ on Linux, Visual Studio on Windows)
 
+*[Here's a guide for Windows specifically](https://github.com/mtgred/netrunner/wiki/Setting-up-Jnet-Development-on-Windows)*
+
 ## Git
 
 If you want to contribute, you should fork the mtgred/netrunner repository on github. 
