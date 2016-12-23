@@ -1,5 +1,3 @@
-# Setting up Jnet Development on Windows
-
 Here's the steps and specific programs I had to install in order to get the dev environment for Jinteki.net running on a new Windows 10 laptop (Home Edition). There's nothing different from the general Development Instructions, but some additions specific for Windows.
 
 ## Cmder
