@@ -110,7 +110,7 @@ erbridge made a big behind-the-scenes revamp to the gameboard layout using HTML 
 * **kevkcc:** Frantic Coding
 * **shazzner:** Reaver
 
-As of time of this writing, we are at [__98.4%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) card automation through _Martial Law_!
+As of time of this writing, we are at [__98.4%__ card automation](https://docs.google.com/spreadsheets/d/1ICv19cNjSaW9C-DoEEGH3iFt09PBTob4CAutGex0gnE/pubhtml) through _Martial Law_!
 
 ### Contribute
 
