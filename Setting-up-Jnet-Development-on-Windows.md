@@ -9,7 +9,7 @@ Sure, PowerShell is pretty good, but you can't beat [Cmder](http://cmder.net/). 
 Be sure to use a local-only, global .gitignore file. You can set this up now. [Here's what I'm using at the moment.](https://gist.github.com/mvelic/4a5ad6127c2789012b53263fac517a7f) You would put this in the root of your User Directory and tell git where it is.
 
 ```
-git config --global core.excludesfile="%UserProfile%\.gitignore"
+git config --global core.excludesfile "%UserProfile%\.gitignore"
 ```
 
 ## Java
