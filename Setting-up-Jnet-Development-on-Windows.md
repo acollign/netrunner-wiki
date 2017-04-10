@@ -78,7 +78,7 @@ npm run fetch
 lein cljsbuild auto dev
 
 # 3. Compile/watch CSS files
-stylus -w src/css -o resource/public/css/
+stylus -w src/css -o resources/public/css/
 
 # 4. Compile server side Clojure files, then Launch game server
 Lein uberjar
