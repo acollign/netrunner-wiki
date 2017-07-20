@@ -122,48 +122,65 @@ Install JavaScript dependencies:
 ```
 $ bower install
 ```
----
-Launch MongoDB _(possibly with --dbpath option specifying card data directory)_ and fetch card data:
+## Get Up and Running
+**1. Launch MongoDB** _(possibly with --dbpath option specifying card data directory)_ and fetch card data:
 
 ```
 $ mongod
 $ npm run fetch
 ```
 
+This data fetch only needs to be performed if it's your first time building the project OR new card data has been made available on NetrunnerDB and you want to update your local data (e.g., a new data pack). 
+
 On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
 
 If you get time-out errors (`ETIMEDOUT`) while running `coffee fetch.coffee` the data is still being downloaded if you see the card numbers being output in the terminal window. Just rerun the `fetch.coffee` until all cards are downloaded (no more numbers being printed).
 
 ---
-Compile and watch client side Clojurescript files:
+**2. [OPTIONAL] Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
 
 ```
 $ lein cljsbuild auto dev
 ```
-
-Compile and watch CSS files:
+---
+**3. [OPTIONAL] Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
 
 ```
 $ stylus -w src/css -o resources/public/css/
 ```
 ---
-Compile server side Clojure files:
-
+**4. Compile server side Clojure files**
 ```
 $ lein uberjar
 ```
 ---
-Launch game server:
+**5. Launch game server:**
 
 ```
 $ java -jar target/netrunner-0.1.0-SNAPSHOT-standalone.jar
 ```
+
 ---
-Launch the Node server:
+**6. Launch the Node server**
 
 ```
 $ npm run start
 ```
+---
+**7. Run browser(s)**
+
+Open one or more browser sessions and visit: http://localhost:1042
+
+### Minimalist Alternative to Steps 4 and 5
+
+Instead of building the production JAR files and running them with Java, a much faster way of launching the game server is to run the REPL (read-eval-print-loop) directly from the command line: 
+
+```
+$ lein repl
+```
+
+This compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Inside the REPL, do `(future-call dev)` to launch the game server. Once you have a game initiated, you can modify card code and reload it with `(load-file "src/clj/game/cards.clj")` and very quickly see changes reflected in an ongoing game by simply trashing/discarding a copy of the card in question and reinstalling it or playing it again to see the new behavior.
+
 
 ## Automated Environment
 
@@ -191,11 +208,6 @@ Cursive uses a default time out of 60 seconds when trying to connect to the REPL
 
 Right click the file in the editor, `REPL -> Switch REPL NS to current file` or run `(in-ns 'game.core)` to switch the namespace
 
-## Using Emacs with Cider
-
-If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
-
-## Get going
 
 > How do I run the tests?
 
@@ -208,6 +220,10 @@ You find the game state in `@game-states`. You probably want to run `(def state 
 > So, I have changed a card, now what?
 
 Run `(load-file "src/clj/game/cards.clj")` to reload all cards. Note that if the card you changed is already in play, you have to play it again before you see your code changes.
+
+## Using Emacs with Cider
+
+If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
 
 ## Videos
 
