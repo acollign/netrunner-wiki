@@ -12,6 +12,7 @@ Additional information can be found in:
 * [[Development Tips and Tricks]]
 * [[Macros (effect vs. req)]]
 * [[Abilities]]
+* Understanding Delayed Completion: [Part 1](https://github.com/mtgred/netrunner/pull/1494) and [Part 2](https://github.com/mtgred/netrunner/pull/1582)
 * [[Event hooks]]
 * [[Card definitions]]
 * [[Externs]]
