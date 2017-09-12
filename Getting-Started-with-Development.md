@@ -246,3 +246,9 @@ If you want to look for some of the easier issues to get started, look through o
 ## Pull requests and branches
 
 There are two main branches in this repository, `master` and `dev`. **TODO**
+
+## Continuous Integration
+
+The project is configured to integrate with [CircleCI](https://circleci.com). Create a CircleCI account and create a new project linked to your Github fork of this project. CircleCI will automatically build and run tests when you push changes to your repo.
+
+The current configuration uses CircleCI v1.0. Configure your CircleCI project settings to use `Ubuntu 12.04 (Precise)` in `Project Settings > Build Environment > OS to use for builds`. If you fail to modify the default build OS, you will receive errors when attempting to stop `mongodb`.
