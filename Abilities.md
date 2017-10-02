@@ -19,11 +19,11 @@ Note that "5-function" is used to refer to the 5-argument functions used through
 
 **PROMPT KEYS**
 - `:choices` -- this key signals a prompt of some kind. Can be:
-      * a 5-function returning a vector of cards or strings -- user chooses one option. Called a 'choice' prompt.
-      * the keyword `:credit` -- user chooses an integer up to their current credit amount.
-      * a map of `:counter` to a counter type (e.g. `:credit`, `:power`,...) -- user chooses an integer up to the number of the specified counter on the given card.
-      * a map of `:number` to a 5-function returning an integer -- user chooses an integer up to the value supplied by the 5-function.
-      * a map of `:req` to a 1-argument function returning `true` or `false`. Triggers a 'select' prompt with targeting cursor; only cards that cause the 1-argument function to return `true` will be allowed.
+    * a 5-function returning a vector of cards or strings -- user chooses one option. Called a 'choice' prompt.
+    * the keyword `:credit` -- user chooses an integer up to their current credit amount.
+    * a map of `:counter` to a counter type (e.g. `:credit`, `:power`,...) -- user chooses an integer up to the number of the specified counter on the given card.
+    * a map of `:number` to a 5-function returning an integer -- user chooses an integer up to the value supplied by the 5-function.
+    * a map of `:req` to a 1-argument function returning `true` or `false`. Triggers a 'select' prompt with targeting cursor; only cards that cause the 1-argument function to return `true` will be allowed.
 - `:prompt` -- a string or 5-function returning a string to display in the prompt menu.
 - `:priority` -- a numeric value, or `true` (equivalent to 1). Prompts are inserted into the prompt queue and sorted based on priority, with higher priorities coming first. The sort is stable, so if two prompts have the same priority, the prompt that was inserted first will remain first after the sort. You should rarely need to use a priority larger than 1.
 - `:not-distinct` -- `true` if the prompt should not collapse `:choices` entries of the same string to one button. Defaults to `false`.
