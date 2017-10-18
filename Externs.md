@@ -12,9 +12,9 @@ These files are referenced in the compilation settings in the `project.clj`, and
 
 ## Generating
 
-Externs for dependency libraries have been generated using http://michaelmclellan.me/javascript-externs-generator/.
+Externs for dependency libraries have been generated using http://jmmk.github.io/javascript-externs-generator/.
 
-To use the generator, first start the frontend server locally. Then load all of the external libraries into the generator using their paths from `layout.jade` (e.g. `http://localhost:1042/lib/jquery/jquery.min.js`), and press "Load". Once they are all loaded, type in the global to export (the one used by the `cljs` code, e.g. `$`), and press "Extern!". Copy the result and save it to a file named after the global (see "File Structure" above). Repeat for the remaining globals.
+To use the generator, first start the netrunner frontend server locally. Then load all of the external libraries into the generator using their paths from `layout.pug` (e.g. `http://localhost:1042/lib/jquery/jquery.min.js`), and press "Load". Once they are all loaded, type in the global to export (the one used by the `cljs` code, e.g. `$`), and press "Extern!". Copy the result and save it to a file named after the global (see "File Structure" above). Repeat for the remaining globals.
 
 Remember to update the `project.clj` if there are any new (or removed) files.
 
