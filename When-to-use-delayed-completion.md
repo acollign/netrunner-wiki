@@ -58,8 +58,9 @@ We can wait for `tag-runner` to complete by using `when-completed`. This macro t
                                      (gain state :corp :click 2)))}
 
       my-trace {:trace {:base 2
-                        :successful {:effect (req (when-completed (tag-runner state side 1)
-                                                                  (resolve-ability state side damage-or-gain card nil)))}}}]
+                        :successful {:effect (req (when-completed 
+                                                    (tag-runner state side 1)
+                                                    (resolve-ability state side damage-or-gain card nil)))}}}]
   {:effect (effect (gain :credit 2)
                    (resolve-ability my-trace card nil))})
 ```
@@ -77,8 +78,9 @@ Because the root effect of this card (with the `gain`) "continues" into another 
                                      (gain state :corp :click 2)))}
       my-trace {:trace {:base 2
                         :successful {:delayed-completion true
-                                     :effect (req (when-completed (tag-runner state side 1)
-                                                                  (resolve-ability state side damage-or-gain card nil)))}}}]
+                                     :effect (req (when-completed 
+                                                    (tag-runner state side 1)
+                                                    (resolve-ability state side damage-or-gain card nil)))}}}]
   {:delayed-completion true
    :effect (effect (gain :credit 2)
                    (resolve-ability my-trace card nil))})
@@ -103,8 +105,9 @@ We can use this function as such:
                                     (gain state :corp ::click 2)))}
       my-trace {:trace {:base 2
                         :successful {:delayed-completion true
-                                     :effect (req (when-completed (tag-runner state side 1)
-                                                                  (continue-ability state side damage-or-gain card nil)))}}}]
+                                     :effect (req (when-completed 
+                                                    (tag-runner state side 1)
+                                                    (continue-ability state side damage-or-gain card nil)))}}}]
   {:delayed-completion true
    :effect (effect (gain :credit 2)
                    (continue-ability my-trace card nil))})
@@ -134,8 +137,9 @@ The final code (minus any log messages) for our card is then:
                                         (effect-completed state side eid))))}
       my-trace {:trace {:base 2
                         :successful {:delayed-completion true
-                                     :effect (req (when-completed (tag-runner state side 1)
-                                                                  (continue-ability state side damage-or-gain card nil)))}}}]
+                                     :effect (req (when-completed 
+                                                    (tag-runner state side 1)
+                                                    (continue-ability state side damage-or-gain card nil)))}}}]
   {:delayed-completion true
    :effect (effect (gain :credit 2)
                    (continue-ability my-trace card nil))})
