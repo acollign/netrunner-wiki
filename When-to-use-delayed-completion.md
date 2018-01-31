@@ -88,7 +88,7 @@ Because the root effect of this card (with the `gain`) "continues" into another 
 
 Any ability that marks itself `:delayed-completion` is responsible for ensuring that the function `effect-completed` is triggered when the ability has fully resolved itself, including any chained effects or delayable actions. This card is "complete" in one of three different ways:
 
-1. The trace fails.
+1. The trace fails. (automatically handled by the engine)
 2. The trace succeeds, damage is dealt, and the damage routine completes.
 3. The trace succeeds, and clicks are gained.
 
