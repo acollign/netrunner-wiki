@@ -9,5 +9,6 @@
 * [[Card definitions]]
 * [[Externs]]
 * [[Test server]]
+* [[Delayed completion|When to use delayed completion]]
 
 **[[Progress Reports]]**
