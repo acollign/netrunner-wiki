@@ -24,7 +24,7 @@ You need the following dependencies installed:
 - [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
 - [Leiningen (version 2+)](http://leiningen.org/)
 - [MongoDB](https://www.mongodb.org/)
-- [Coffeescript](http://coffeescript.org/) (`npm install -g coffee-script`)
+- [Coffeescript](http://coffeescript.org/) (`npm install -g coffeescript`)
 - [Bower](http://bower.io/) (`npm install -g bower`)
 - [Stylus](https://learnboost.github.io/stylus/) (`npm install -g stylus`)
 - [Python 2.7](https://www.python.org/)
