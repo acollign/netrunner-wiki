@@ -65,11 +65,11 @@ We can wait for `tag-runner` to complete by using `when-completed`. This macro t
                    (resolve-ability my-trace card nil))})
 ```
 
-We can use `tagged` because `damage-or-rez` won't be invoked until `tag-runner` completes, so `tagged` will be accurately calculated. `when-completed` ensures that `tag-runner` finishes before we resolve the chained `damage-or-rez` ability.
+We can use `tagged` because `damage-or-gain` won't be invoked until `tag-runner` completes, so `tagged` will be accurately calculated. `when-completed` ensures that `tag-runner` finishes before we resolve the chained `damage-or-gain` ability.
 
 ### Using `:delayed-completion`
 
-Because the root effect of this card (with the `gain`) "continues" into another ability, the effect itself is not actually complete until the chained ability resolves. Whenever this situation comes up, we must mark the root ability with the `:delayed-completion true` key, which informs the engine of this situation. This must also be done any time an effect triggers a delayable action. The root ability continues into another ability; `my-trace` invokes a delayable action; `damage-or-rez` also invokes a delayable action (`if` might call `damage` which is delayable) -- all these abilities need `:delayed-completion true`.
+Because the root effect of this card (with the `gain`) "continues" into another ability, the effect itself is not actually complete until the chained ability resolves. Whenever this situation comes up, we must mark the root ability with the `:delayed-completion true` key, which informs the engine of this situation. This must also be done any time an effect triggers a delayable action. The root ability continues into another ability; `my-trace` invokes a delayable action; `damage-or-gain` also invokes a delayable action (`if` might call `damage` which is delayable) -- all these abilities need `:delayed-completion true`.
 
 ```clojure
 (let [damage-or-gain {:delayed-completion true
