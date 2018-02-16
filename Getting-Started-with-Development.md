@@ -1,4 +1,4 @@
-This page contains all the information you need to get started with developing as well as useful tips (see also [this issue](https://github.com/mtgred/netrunner/issues/328)).
+This page contains all the information you need to get started with developing as well as useful tips.
 
 ## Language
 
@@ -24,12 +24,8 @@ You need the following dependencies installed:
 - [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
 - [Leiningen (version 2+)](http://leiningen.org/)
 - [MongoDB](https://www.mongodb.org/)
-- [Coffeescript](http://coffeescript.org/) (`npm install -g coffeescript`)
 - [Bower](http://bower.io/) (`npm install -g bower`)
 - [Stylus](https://learnboost.github.io/stylus/) (`npm install -g stylus`)
-- [Python 2.7](https://www.python.org/)
-- [ZeroMQ](http://zeromq.org/)
-- A C++ compiler (g++ on Linux, Visual Studio on Windows)
 
 *[Here's a guide for Windows specifically](https://github.com/mtgred/netrunner/wiki/Setting-up-Jnet-Development-on-Windows)*
 
@@ -82,38 +78,10 @@ git config --global core.excludesfile '~/.gitignore'
 
 ## Installation
 
-Install Node.js dependencies:
+Install Clojure dependencies:
 
 ```
-$ npm install
-```
-
-> `npm install` throws errors when trying to compile modules on Windows :-(
-
-You have to specify the `--msvs_version` flag. So, if you use Visual Studio 2013, run
-```
-npm install --msvs_version=2013 
-```
-> I'm still getting errors like `error: ‘NewSymbol’ is not a member of ‘v8::String’` when `npm` tries to compile `gyp` on Windows :-(
-
-There's a problem with the engine.io node module that depends on an old version of the ws module. See [this](https://github.com/Automattic/engine.io-client/issues/376) and [this](https://github.com/Automattic/socket.io/issues/2057) issue for more information.
-
-> `npm install` throws errors on MacOS that complain about `zmq`
-
-To be able to install and find `libzmq`, first install [Homebrew](http://brew.sh), then use it to install `zeromq` and `pkg-config`: 
-
-
-```
-$ brew install zeromq
-$ brew install pkg-config
-```
-
-> `npm install` fails on Linux: npm WARN This failure might be due to the use of legacy binary "node"
-
-Install the nodejs-legacy package:
-
-```
-sudo apt-get install nodejs-legacy
+lein deps
 ```
 
 ---
@@ -123,55 +91,57 @@ Install JavaScript dependencies:
 $ bower install
 ```
 ## Get Up and Running
-**1. Launch MongoDB** _(possibly with --dbpath option specifying card data directory)_ and fetch card data:
+**1. Launch MongoDB** _(possibly with --dbpath option specifying card data directory)_
 
 ```
 $ mongod
-$ npm run fetch
+```
+
+On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
+
+**2. Fetch card data from NetrunnerDB**
+
+```
+$ lein fetch
 ```
 
 This data fetch only needs to be performed if it's your first time building the project OR new card data has been made available on NetrunnerDB and you want to update your local data (e.g., a new data pack). 
 
-On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
-
-If you get time-out errors (`ETIMEDOUT`) while running `coffee fetch.coffee` the data is still being downloaded if you see the card numbers being output in the terminal window. Just rerun the `fetch.coffee` until all cards are downloaded (no more numbers being printed).
+If you don't want card images to be downloaded (such as on a testing environment), you can run `lein fetch --no-card-images`.
 
 ---
-**2. [OPTIONAL] Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
+**3. [OPTIONAL] Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
 
 ```
 $ lein cljsbuild auto dev
 ```
 ---
-**3. [OPTIONAL] Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
+**4. [OPTIONAL] Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
 
 ```
 $ stylus -w src/css -o resources/public/css/
 ```
 ---
-**4. Compile server side Clojure files**
+**5. Compile server side Clojure files**
 ```
 $ lein uberjar
 ```
 ---
-**5. Launch game server:**
+**6. Launch server:**
 
-```
-$ java -jar target/netrunner-standalone.jar
-```
+EITHER:
 
----
-**6. Launch the Node server**
+1. `java -jar target/netrunner-standalone.jar` -- boot up server in production mode (requires `lein cljsbuild once prod` first)
+2. `lein run` -- alternative to above
+3. `lein run dev` -- start server in dev mode
+3. `lein repl` -- start server in dev mode, and open a REPL prompt. **(RECOMMENDED, SEE BELOW.)**
 
-```
-$ npm run start
-```
 ---
 **7. Run browser(s)**
 
 Open one or more browser sessions and visit: http://localhost:1042
 
-### Minimalist Alternative to Steps 4 and 5
+### Minimalist Alternative to Steps 5 and 6
 
 Instead of building the production JAR files and running them with Java, a much faster way of launching the game server is to run the REPL (read-eval-print-loop) directly from the command line: 
 
@@ -211,11 +181,18 @@ Right click the file in the editor, `REPL -> Switch REPL NS to current file` or 
 
 > How do I run the tests?
 
-Run `lein test test.all` from the command line.
+Run `lein test` from the command line.
 
 > I have the REPL up and running, now what?
 
-You find the game state in `@game-states`. You probably want to run `(def state (second (first @game-states)))` as soon as you started your game so you can easily access its state now via `@state`.
+Go to your browser and start a game. Now, from the REPL prompt, run
+
+```
+(use 'web.lobby)
+(def state (:state (second (last @all-games))))
+```
+
+You can now access the state of your game as you are playing it by using the variable `@state`. For example, try running `(get-in @state [:corp :hand])` to see the corp's current hand.
 
 > So, I have changed a card, now what?
 
