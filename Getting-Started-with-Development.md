@@ -188,7 +188,6 @@ Run `lein test` from the command line.
 Go to your browser and start a game. Now, from the REPL prompt, run
 
 ```
-(use 'web.lobby)
 (def state (:state (second (last @all-games))))
 ```
 
