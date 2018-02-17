@@ -31,8 +31,6 @@ Once that's complete, you can close down your admin prompt, and open up a regula
 ```
 npm install -g bower
 
-npm install -g coffee-script
-
 npm install -g stylus
 ```
 
@@ -48,19 +46,11 @@ I also had to go into the `data` directory and `mkdir db`
 
 Install the [latest version](http://leiningen-win-installer.djpowell.net/). I used `leiningen-installer-1.0`
 
-## ZeroMQ
-
-Install the [latest version](http://zeromq.org/distro:microsoft-windows). I used `ZeroMQ-4.0.4-miru1.0-x64`
-
-**Note:** my antivirus didn't like the distribution site. Haven't noticed anything thus far, but be warned.
-
 ## Install NPM and Javascript Stuff
 
 Open a Cmder terminal and go to your repo. Then run the following:
 
 ```
-npm install
-
 bower install
 ```
 
@@ -73,20 +63,18 @@ Here's what you've been waiting for - be sure to run each of these in its own Cm
 mongod --dbpath ./data
 
 # 2. Download the card data, then Compile/watch Clojure files
-npm run fetch
+lein fetch
 
 lein cljsbuild auto dev
 
 # 3. Compile/watch CSS files
 stylus -w src/css -o resources/public/css/
 
-# 4. Compile server side Clojure files, then Launch game server
-Lein uberjar
+# 4. Compile server side Clojure files
+lein uberjar
 
-java -jar target/netrunner-standalone.jar
-
-# 5. Launch Node Server
-npm run start
+# 5. Launch server in dev mode
+lein repl
 ```
 
 You should now be able to [visit Jnet locally](http://localhost:1042) in your browser.
