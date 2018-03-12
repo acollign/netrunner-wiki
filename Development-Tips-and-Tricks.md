@@ -11,11 +11,15 @@ When you modify a function or a card, simply reload the function or the `cards.c
 
     (load-file "src/clj/game/cards.clj")
 
-For cards already installed you have to drag it back to hand and install it again to reflect the new code. No need to refresh the browser, you can keep the game state.
+For cards already installed you have to drag it back to hand and install it again to reflect the new code. No need to refresh the browser, you can keep the game state. Changes to core game functions will require restarting the REPL.
 
-To inspect the content of clojure data structure, `prn` is handy. You can add `prn` in your functions or inside the `(req )` macro in card definitions you want to inspect.
+To inspect the content of Clojure data structures, `prn` is handy. You can add `prn` in your functions or inside the `(req )` macro in card definitions you want to inspect.
 
-Once a game is started, execute `(def state (:state (second (first @all-games))))`. You can then use `state` to inspect the current game state, the same as if you were in a card our core function. Execute the def again when you make a new game.
+Once a game is started, execute:
+
+    (def state (:state (second (first @all-games))))
+
+You can then use `state` to inspect the current game state, the same as if you were in a card our core function. Execute the def again when you make a new game.
 
 As an example, you can then run
 
@@ -25,7 +29,7 @@ to list all installed corp cards.
 
 #### Client
 
-To modify the client side, `Figwheel` is super awesome. Run `lein figwheel` and `stylus -w src/css -o resources/public/css/`. When you save a cljs or styl file, the Clojurescript or Stylus are automatically compiled and sent to the connected browsers. No need to refresh anything, you keep the game state. When you have an error in a cljs file, the UI might disappear. Don't panic! As soon as the error is corrected the UI will reappear. No need to reload anything.
+To modify the client side, `Figwheel` is awesome. Run `lein figwheel` and `stylus -w src/css -o resources/public/css/`. When you save a .cljs or .styl file, the Clojurescript or Stylus is automatically compiled and sent to the connected browsers. No need to refresh anything, you keep the game state. When you have an error in a .cljs file, the UI might disappear. Don't panic! As soon as the error is corrected the UI will reappear. No need to reload anything.
 
 #### Tests
 
