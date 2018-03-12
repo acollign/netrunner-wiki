@@ -2,9 +2,7 @@
 
 #### Launching the Game Server
 
-After starting the REPL with `lein repl`, launch the game server by doing:
-
-    (future-call dev) 
+Start the REPL with `lein repl`.
 
 
 #### Server
@@ -17,7 +15,7 @@ For cards already installed you have to drag it back to hand and install it agai
 
 To inspect the content of clojure data structure, `prn` is handy. You can add `prn` in your functions or inside the `(req )` macro in card definitions you want to inspect.
 
-Once a game is started, execute `(def state (second (first @game-states)))`. You can then use `state` to inspect the current game state, the same as if you were in a card our core function. Execute the def again when you make a new game.
+Once a game is started, execute `(def state (:state (second (first @all-games))))`. You can then use `state` to inspect the current game state, the same as if you were in a card our core function. Execute the def again when you make a new game.
 
 As an example, you can then run
 
@@ -31,6 +29,8 @@ To modify the client side, `Figwheel` is super awesome. Run `lein figwheel` and 
 
 #### Tests
 
-To run the unit tests: `lein test test.all`
+To run the unit tests: `lein test`
 
-To combine test and repl run: `lein clean && lein test test.all && lein repl`. This makes sure no compiled files are left from a branch switch or similar, and only starts the repl if all the tests pass.
+Tests are in the `game-test` namespace. To run selected unit tests: `lein test game-test.cards.agendas`
+
+To combine test and repl run: `lein clean && lein test && lein repl`. This makes sure no compiled files are left from a branch switch or similar, and only starts the repl if all the tests pass.
