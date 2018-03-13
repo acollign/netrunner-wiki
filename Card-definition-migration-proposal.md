@@ -45,3 +45,11 @@ Examples
            :on-uninstall corp-select-a-card-to-rez}
  :abilities [ trash-to-draw ]}
 ```
+
+```clojure
+"Zona Sul Shipping" (currently broken interaction with Apocalypse?)
+{:events {:runner-turn-begins add-counter}
+ :actions {:on-activate initialize-watch-for-tagged
+           :on-deactivate remove-watch-for-tagged}
+ :abilities [ trash-and-gain-credits ]}
+```
