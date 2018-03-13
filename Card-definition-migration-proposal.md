@@ -38,3 +38,10 @@ Examples
  :derezzed-events {:runner-turn-ends corp-rez-toast}
  :abilities [gain-credits-ability]}
 ```
+
+```clojure
+"Muertos Gang Member"
+{:actions {:on-install select-a-card-to-derez
+           :on-uninstall corp-select-a-card-to-rez}
+ :abilities [ trash-to-draw ]}
+```
