@@ -6,21 +6,27 @@ Events related to click actions taken on Corp or Runner's turn.
 #### Corp
     :corp-click-credit
     :corp-click-draw
+    :pre-corp-draw
     :corp-draw
+    :post-corp-draw
     :advance
     :pre-corp-install
     :corp-install
     :server-created
     :pre-purge
     :purge
+    :pre-play-instant
     :play-operation
 
 #### Runner
     :runner-click-draw
+    :pre-runner-draw
     :runner-draw
+    :post-runner-draw
     :runner-spent-click
     :pre-install
     :runner-install
+    :pre-play-instant
     :play-event
 
 ### Runs
@@ -57,6 +63,13 @@ Events related to the start and end of player turns
     :successful-trace
     :unsuccessful-trace
     :pre-tag
+    :pre-resolve-tag
+    :runner-gain-tag
+
+### Bad publiticy
+    :pre-bad-publicity
+    :pre-resolve-bad-publicity
+    :corp-gain-bad-publicity
 
 ### Agendas, stealing and scoring
     :pre-advancement-cost
@@ -64,6 +77,8 @@ Events related to the start and end of player turns
     :pre-steal-cost
     :agenda-stolen
     :agenda-scored
+    :corp-forfeit-agenda
+    :runner-forfeit-agenda
 
 ### ICE strength and subtypes
     :pre-ice-strength
@@ -74,17 +89,35 @@ Events related to the start and end of player turns
     :pre-breaker-strength
     :breaker-strength-changed
 
-### Others
+### Winning and Losing
+    :corp-loss
+    :runner-loss
+
+### Rezzing
     :pre-rez
     :pre-rez-cost
     :rez
+
+### Damage
     :pre-damage
+    :prevented-damage
+    :pre-resolve-damage
     :damage
+
+### Trashing
     :pre-trash
+    :corp-trash
     :runner-trash
+
+### Purging
+    :pre-purge
+    :purge
+
+### Expose
+    :pre-expose
     :expose
+
+### Others
     :counter-added
     :card-moved
-    :corp-loss
-    :runner-loss
     :psi-game
