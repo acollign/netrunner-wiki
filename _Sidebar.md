@@ -10,6 +10,6 @@
 * [[Externs]]
 * [[Test server]]
 * [[Delayed completion|When to use delayed completion]]
-* [[Working on your First Contribution|Working-on-your-first-card-contribution!]]
+* [[Your First Card Contribution|Working-on-your-first-card-contribution!]]
 
 **[[Progress Reports]]**
