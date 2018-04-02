@@ -39,7 +39,7 @@ Tests are in the `game-test` namespace. To run selected unit tests: `lein test g
 
 To combine test and repl run: `lein clean && lein test && lein repl`. This makes sure no compiled files are left from a branch switch or similar, and only starts the repl if all the tests pass.
 
-####Fetching cards while NRDB is down
+#### Fetching cards while NRDB is down
 
 Josh updated the `fetch` script to read from local json files in this branch: https://github.com/jwarwick/netrunner/tree/local_nrdb
 
