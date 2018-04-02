@@ -47,3 +47,4 @@ To use it, you first need to fetch this branch of the json files: https://github
 
 It has the latest card info which isn't integrated into the `master` branch.
 Then fetch John's branch and run `lein fetch --local <wherever you cloned the other project to>`
+Then checkout your `master` branch again and do development there.
