@@ -45,7 +45,11 @@ John updated the `fetch` script to read from local json files in this branch: ht
 
 Ensure mongod is running, then:
 `git clone https://github.com/gereons/netrunner-cards-json.git`
+
 `git remote add jwarwick https://github.com/jwarwick/netrunner.git`
+
 `git fetch jwarwick`
+
 `git checkout jwarwick/local_nrdb`
-`lein fetch --local <path to netrunner-cards-json> --no-card-images
+
+`lein fetch --local <path to netrunner-cards-json> --no-card-images`
