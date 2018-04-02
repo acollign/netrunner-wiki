@@ -43,6 +43,9 @@ To combine test and repl run: `lein clean && lein test && lein repl`. This makes
 
 John updated the `fetch` script to read from local json files in this branch: https://github.com/jwarwick/netrunner/tree/local_nrdb
 
-To use it, you first need to fetch this branch of the json files: `git fetch https://github.com/gereons/netrunner-cards-json.git`
-
-It has the latest card info which isn't integrated into the `master` branch. Then fetch John's branch and run `lein fetch --local <wherever you cloned the other project to>`. Then checkout your `master` branch again and do development there.
+Ensure mongod is running, then:
+`git clone https://github.com/gereons/netrunner-cards-json.git`
+`git remote add jwarwick https://github.com/jwarwick/netrunner.git`
+`git fetch jwarwick`
+`git checkout jwarwick/local_nrdb`
+`lein fetch --local <path to netrunner-cards-json> --no-card-images
