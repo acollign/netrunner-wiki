@@ -41,7 +41,7 @@ To combine test and repl run: `lein clean && lein test && lein repl`. This makes
 
 #### Fetching cards while NRDB is down
 
-Josh updated the `fetch` script to read from local json files in this branch: https://github.com/jwarwick/netrunner/tree/local_nrdb
+John updated the `fetch` script to read from local json files in this branch: https://github.com/jwarwick/netrunner/tree/local_nrdb
 
 To use it, you first need to fetch this branch of the json files: https://github.com/gereons/netrunner-cards-json.git
 
