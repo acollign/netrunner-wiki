@@ -54,4 +54,4 @@ Ensure mongod is running, then:
 
 `lein fetch --local <path to netrunner-cards-json> --no-card-images`
 
-`git checkout <your own branch to begin work again>
+`git checkout <your own branch to begin work again>`
