@@ -1,6 +1,6 @@
 1. Put your name next to the card in the master card implementation issue https://github.com/mtgred/netrunner/issues/3253
 1. Make a feature branch from your master branch
-1. Find similarly working card
+1. Find similarly working card(s) for code comparison
 1. Implement changes in */src/clj/game/cards by adding a new card entry and editing it.
 1. Test, iterate
 1. Push fork to github (`origin`)
