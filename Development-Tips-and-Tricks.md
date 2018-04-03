@@ -53,3 +53,5 @@ Ensure mongod is running, then:
 `git checkout jwarwick/local_nrdb`
 
 `lein fetch --local <path to netrunner-cards-json> --no-card-images`
+
+`git checkout <your own branch to begin work again>
