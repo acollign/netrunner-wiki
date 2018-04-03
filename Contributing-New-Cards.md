@@ -2,8 +2,7 @@
 #### Basic Steps to Implementing a New Card
 1. If this is your first time, ask around what might be best for you to try implementing either on the pack issue (below) or in the slack channel.
 1. Put your name next to the card in the master card implementation issue https://github.com/mtgred/netrunner/issues/3253
-1. Make a feature branch from your master branch
-     1. fdf
+1. Make a feature branch from your master branch (one branch per card)
 1. Find similarly working card(s) for code comparison
 1. Implement changes in */src/clj/game/cards by adding a new card entry and editing it.
 1. Test, iterate
