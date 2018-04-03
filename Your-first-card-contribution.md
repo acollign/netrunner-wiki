@@ -9,3 +9,5 @@
 1. Wait for @nealterrell to explain how to fix all the `delayed-completion` stuff
 1. Fix those bugs, push to origin again (which will get picked up by the PR)
 1. Once the PR gets approved and merged into `master`, click the checkbox in the Issue
+
+If NRDB is down or NRDB doesn't have the card you are working on yet, you'll need to lein fetch the cards locally https://github.com/mtgred/netrunner/wiki/Development-Tips-and-Tricks#fetching-cards-while-nrdb-is-down-wip
