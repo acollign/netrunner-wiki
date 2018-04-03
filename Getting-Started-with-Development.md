@@ -31,7 +31,7 @@ You need the following dependencies installed:
 
 ## Git
 
-If you want to contribute, you should fork the mtgred/netrunner repository on github. 
+If you want to contribute, you should fork the mtgred/netrunner repository on github. For a review of basic git commands, visit http://rogerdudler.github.io/git-guide/
 
 After cloning your own fork on your machine, configure mtgred/netrunner as a remote.
 
