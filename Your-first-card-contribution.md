@@ -1,4 +1,4 @@
-1. Put your name next to the card in the master card implementation issue
+1. Put your name next to the card in the master card implementation issue https://github.com/mtgred/netrunner/issues/3253
 2. Make a feature branch from your master branch
 3. Implement, test, re-implement, re-test, iterate
 4. Push fork to github (`origin`)
