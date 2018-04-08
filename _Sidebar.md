@@ -7,6 +7,7 @@
 * [[Abilities]]
 * [[Event hooks]]
 * [[Card definitions]]
+* [[Tests]]
 * [[Externs]]
 * [[Test server]]
 * [[Delayed completion|When to use delayed completion]]
