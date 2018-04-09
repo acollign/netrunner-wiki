@@ -83,8 +83,15 @@ great, so here's a short description of the most-used ones.
     * `refresh`: pass in a card, and it'll get the latest "version" of that card from the game state. Necessary when
         modifying counter values, rez status and other such stuff.
     * `prompt-choice` and `prompt-select`: These are used when the game prompts the user to make a decision: either
-        a "Yes" or "No" to trigger an optional ability, or select a card from a zone. Knowing which to use requires
-        finesse I don't have yet, so I generally have to try both, lol.
+        a "Yes" or "No" to trigger an optional ability, or select a card from a zone. Each takes a `side` 
+        parameter to indicate which side is interacting with the prompt, and a parameter to choose or select 
+        depending on the prompt type.
+        * `prompt-choice` is used when the prompt in question gives you a list of items to choose from,
+          for example choosing whether to run "R&D" or "HQ" etc. In this case the second parameter will be a 
+          string matching the string found on the button on the GUI or in the `:choices` map of the prompt.
+        * `prompt-select` is used when the prompt gives you a targeting reticule to select a card. In this case
+          the second parameter should be a `card` item that you can get with `find-card` or the relevant
+          `get-program`, `get-ice` etc.
 * `new-game`: This function initializes a new game, setting up the corp and runner and allowing you to determine certain
     pre-game criteria such as mulligans or NEXT Design's ice placement. It has two necessary parameters, `corp` and
     `runner`, which are usually built by `default-corp` and `default-runner` but can also be built by `make-deck`.
@@ -110,6 +117,7 @@ great, so here's a short description of the most-used ones.
     Spends clicks and credits necessary to play it.
 * `card-ability`: 5-function of state, side, card, ability, and optional targets that uses the ability by position,
     pointed at whichever targets are specified (as needed).
+* `get-[...]`: There are several helper functions defined in the test `core` file that let you get cards in the rig or in servers by position. Each takes `state` and `pos`, the second which is a number indicating the index of the installed card (so first installed resource could be got with `(get-resource state 0)`). Some also offer a function just taking in `state` which returns _all_ the relevant cards (e.g. `(get-program state)` to retrieve all installed programs).
 
 Corp:
 
