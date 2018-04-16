@@ -20,7 +20,7 @@ There are several options available, including:
 
 You need the following dependencies installed:
 
-- [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (for MacOS, download the full [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
+- [Java8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (for MacOS, download the full [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
 - [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
 - [Leiningen (version 2+)](http://leiningen.org/)
 - [MongoDB](https://www.mongodb.org/)
@@ -28,6 +28,13 @@ You need the following dependencies installed:
 - [Stylus](https://learnboost.github.io/stylus/) (`npm install -g stylus`)
 
 *[Here's a guide for Windows specifically](https://github.com/mtgred/netrunner/wiki/Setting-up-Jnet-Development-on-Windows)*
+
+## Note on Java
+You should use Java8/JDK8.  Newer machines tend to come with Java10 which is initially a problem.
+
+There are compile time issues with Java9 and 10 with our Clojure project that can be resolved - however produce impacts to Java8 users ... so you would have to maintain your own project.clj file and not commit it to the main project.  
+
+The issue looks to be addressed in Clojurescript 1.10 but not in Clojure (yet) ... so use JDK8 ;0
 
 ## Git
 
