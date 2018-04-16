@@ -34,13 +34,13 @@ You can install nearly everything through Homebrew except the NPM modules
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Then:
-`brew tap caskroom/versions`
-`brew cask info java8`
-`brew cask install java8`
-`brew install clojure`
-`brew install node`
-`brew install mongo`
-`brew install leiningen`
+* `brew tap caskroom/versions`
+* `brew cask info java8`
+* `brew cask install java8`
+* `brew install clojure`
+* `brew install node`
+* `brew install mongo`
+* `brew install leiningen`
 
 ## Note on Java
 You should use Java8/JDK8.  Newer machines tend to come with Java10 which is initially a problem.
