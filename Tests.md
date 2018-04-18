@@ -102,7 +102,7 @@ regardless of the implementation of `play-and-score`, I gain the correct amount.
 (get-corp)))` and later `play-and-score` is changed to use credits, the test would fail even tho the card is correctly
 written.
 
-[happy-path]: (https://en.wikipedia.org/wiki/Happy_path)
+[happy-path]: https://en.wikipedia.org/wiki/Happy_path
 
 WORK IN PROGRESS
 
