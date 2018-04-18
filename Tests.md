@@ -15,10 +15,12 @@ wish to test for `agendas`). If you wish to only run a single test, `lein test :
 game-test.cards.agendas/fifteen-minutes` (once again substituting whatever test you wish to test for
 `agendas/fifteen-minutes`).
 
-If you want to get fancy with it, [lein-test-refresh](https://github.com/jakemcc/lein-test-refresh) will automatically
+If you want to get fancy with it, [lein-test-refresh][lein-test-refresh] will automatically
 rerun the entire testing suite or only changed tests (as determined by the `:test-refresh` map you have in your
 profiles.clj). Word of warning, if you change a non-test file, you have to restart test-refresh; but as long as you're
 only writing tests, it'll work as expected.
+
+[lein-test-refresh]: https://github.com/jakemcc/lein-test-refresh
 
 # How to write tests
 
@@ -51,7 +53,7 @@ out.
     this way, you can better verify that your card doesn't just function how you expect it does, but functions under
     high-complexity situations.
 
-## Short-form documentation
+## Short-form description
 
 Clojure's basic testing system works like this: you write top-level `deftest` functions and fill them with asserts
 (pretty much only `is`, in our case). You can wrap functionality blocks in `testing` calls, writing a short comment
@@ -71,7 +73,40 @@ being played (so, corp always goes first, corp has 3 clicks and runner has 4, et
 default_, `do-game` is the same as a regular game you'd play yourself.
 
 However, the functions and macros needed to make that work can take some time to learn and the docs in the code aren't
-great, so here's a short description of the most-used ones.
+great, so I've included a short description of the most-used ones at the end of this page.
+
+## Card examples
+
+We'll walk through the thought-process for writing a couple different tests. These will start off simple and grow more
+complex. For each, I'll post the whole test up front, and then talk about the decisions made to help get you into the
+necessary mindset.
+
+### Hostile Takeover
+
+```clojure
+(deftest hostile-takeover
+  ;; Hostile Takeover
+  (do-game
+    (new-game (default-corp [(qty "Hostile Takeover" 1)])
+              (default-runner))
+    (let [credits (:credit (get-corp))
+          bp (:bad-publicity (get-corp))]
+      (play-and-score state "Hostile Takeover")
+      (is (= (+ 7 credits) (:credit (get-corp)) "Gain 7 credits")
+      (is (= (+ 1 bp) (:bad-publicity (get-corp))) "Take 1 bad publicity"))))
+```
+
+This one's pretty simple: we're just testing the [happy path][happy-path]. Start a new game, play Hostile Takeover from
+hand and score it, and then verify that we gain 7 credits and 1 bad publicity. I use a `let` binding to make sure that
+regardless of the implementation of `play-and-score`, I gain the correct amount. If I instead wrote `(= 12 (:credit
+(get-corp)))` and later `play-and-score` is changed to use credits, the test would fail even tho the card is correctly
+written.
+
+[happy-path]: (https://en.wikipedia.org/wiki/Happy_path)
+
+WORK IN PROGRESS
+
+## Documentation
 
 ### Set up
 
@@ -83,11 +118,11 @@ great, so here's a short description of the most-used ones.
     * `refresh`: pass in a card, and it'll get the latest "version" of that card from the game state. Necessary when
         modifying counter values, rez status and other such stuff.
     * `prompt-choice` and `prompt-select`: These are used when the game prompts the user to make a decision: either
-        a "Yes" or "No" to trigger an optional ability, or select a card from a zone. Each takes a `side` 
-        parameter to indicate which side is interacting with the prompt, and a parameter to choose or select 
+        a "Yes" or "No" to trigger an optional ability, or select a card from a zone. Each takes a `side`
+        parameter to indicate which side is interacting with the prompt, and a parameter to choose or select
         depending on the prompt type.
         * `prompt-choice` is used when the prompt in question gives you a list of items to choose from,
-          for example choosing whether to run "R&D" or "HQ" etc. In this case the second parameter will be a 
+          for example choosing whether to run "R&D" or "HQ" etc. In this case the second parameter will be a
           string matching the string found on the button on the GUI or in the `:choices` map of the prompt.
         * `prompt-select` is used when the prompt gives you a targeting reticule to select a card. In this case
           the second parameter should be a `card` item that you can get with `find-card` or the relevant
@@ -140,26 +175,3 @@ Runner:
     each player for triggered abilities at what used to be phase 4.3.
 * `play-run-event`: 3-function of state, card, and server that plays the event aimed at the server, and advances the run
     timing to the replace-access trigger.
-
-## Card examples
-
-We'll walk through the thought-process for writing a couple different tests. These will start off simple and grow more
-complex. For each, I'll post the whole test up front, and then talk about the decisions made to help get you into the
-necessary mindset.
-
-### Hostile Takeover
-
-```clojure
-(deftest hostile-takeover
-  ;; Hostile Takeover
-  (do-game
-    (new-game (default-corp [(qty "Hostile Takeover" 1)])
-              (default-runner))
-    (play-and-score state "Hostile Takeover")
-    (is (= 12 (:credit (get-corp))) "Gain 7 credits")
-    (is (= 1 (:bad-publicity (get-corp))) "Take 1 bad publicity")))
-```
-
-This one's pretty simple: 
-
-WORK IN PROGRESS
