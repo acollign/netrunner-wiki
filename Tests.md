@@ -104,6 +104,57 @@ written.
 
 [happy-path]: https://en.wikipedia.org/wiki/Happy_path
 
+### Graft
+
+```clojure
+(deftest graft
+  ;; Graft
+  (letfn [(graft-test [[number-of-picks deck-size]]
+    (let [cards ["Ice Wall" "Fire Wall" "Orion"]]
+      (do-game
+        (new-game (default-corp [(qty "Graft" 1) (qty "Ice Wall" 1)
+                                 (qty "Fire Wall" 1) (qty "Orion" 1)])
+                  (default-runner))
+        (starting-hand state :corp ["Graft"])
+        (play-and-score state "Graft")
+        (dotimes [current-pick number-of-picks]
+          (prompt-choice :corp (find-card (nth cards current-pick) (:deck (get-corp)))))
+        (is (= number-of-picks (count (:hand (get-corp)))))
+        (is (= deck-size (count (:deck (get-corp))))))))]
+    (doall (map graft-test
+                [[0 3]
+                [1 2]
+                [2 1]
+                [3 0]]))))
+```
+
+Here's one where we edge test: instead of creating a new game and testing within that single game, we write a function
+that creates a game and check conditions for us, instead of doing so manually. How does this work? Let's step through
+it. The `letfn` creates a new temporary function `graft-test` that takes two parameters, `number-of-picks` and
+`deck-size`. (These are used at the end of the of the function to check the results.) The `let` creates a list of cards
+I will be selecting from by name as the ability of Graft. Then the actual game test is set up: create a new game with
+both Graft and the previously determined cards to be selected, start the game with only Graft in hand, and play and
+score Graft.
+
+Once this set up is complete, we loop with `dotimes` equal to the passed in `number-of-picks` and select the `nth` card
+from the `let`-bound list of cards we created at the beginning. How does this work? First, `current-pick` is the counter
+variable of the loop, incrementing each time and second, `nth` selects the element of a given list at the index
+provided. (Remember that Clojure is 0-based, so `dotimes` starts at 0, and "Ice Wall" in `cards` is at index 0.) So in
+short we use the name selected from the list to choose that card from the deck and loop. Then we compare how many cards
+we have in hand to the number of times we looped as decided by `number-of-picks` and compare the size of the deck to the
+other parameter `deck-size`. Because, if Graft works as it's supposed to, as the cards are chosen, they're moved out of
+the deck and into the hand. Perfect!
+
+After all of that is finished, our final step is to _actually_ use that function. `map` takes a function (in this case
+the previously written `graft-test`) and a list, and applies the function to each item on the list one at a time.
+Because Clojure is great, map is lazy (which means it won't actually run the function until we want an answer from it)
+but that doesn't help because we don't want an answer later on, we want one _now_, so we use `doall` to force map to
+actually process each function call. What do we pass in? The pair of numbers we determined earlier: `number-of-picks`
+and `deck-size`. As already determined, we want to check that Graft works at each chosen number of picks, so we choose
+all possible numbers for both sides: how many to pick and how big the deck should be after.
+
+Easy-peasy, right?
+
 WORK IN PROGRESS
 
 ## Documentation
