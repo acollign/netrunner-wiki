@@ -71,7 +71,7 @@ So what did I learn / re-remember / questions
 
 So the second attempt for the re-write would be:
 ```
-{:interactive true
+{:interactive (req true)
  :optional {:req (req (first-event? state side :successful-run))
             :prompt "Use Find the Truth to look at the top card of R&D?"
             :yes-ability {:prompt (req (str "The top card of R&D is " (-> corp :deck first :title)))
