@@ -67,13 +67,14 @@ So what did I learn / re-remember / questions
 1. We don't need a :no-ability if we just want the effect to complete when the user hits no.  Some other cards have this wrong already.  No harm - just extra code.
 2. In two locations I added the `:delayed-completion` key.  Was this needed? The original trigger for the card was `:successful-run` which called `resolve-ability` for the card which was our flow of prompts without "real" effects.  So I don't think they are needed.   Any thoughts?
 3.  I think the :req check for seeing is this is the first successful run this turn should also be cleaned up to use other smaller existing functions. 
+4. Finally the yea-ability :prompt got changed to threading macro which makes it easier to understand... less brackets nesting
 
 So the second attempt for the re-write would be:
 ```
 {:interactive true
  :optional {:req (req (first-event? state side :successful-run))
             :prompt "Use Find the Truth to look at the top card of R&D?"
-            :yes-ability {:prompt (req (str "The top card of R&D is " (:title (first (:deck corp)))))
+            :yes-ability {:prompt (req (str "The top card of R&D is " (-> corp :deck first :title)))
                           :msg "look at the top card of R&D"
                           :choices ["OK"]
                           :effect (effect (effect-completed eid))}}}
