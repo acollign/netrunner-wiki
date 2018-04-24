@@ -100,13 +100,6 @@ So the second attempt for the re-write would be:
                           :effect (effect (effect-completed eid))}}}
 ```
 
-Finally here is the relevant flow of function calls which should help:
-1. register-successful-run
-2. trigger-event-simult for event :successful-run  - noting Find the Truth's :interactive key would be used if the runner needed to be offered a choice of card effect ordering
-3. Find the Truth is invoked using` resolve-ability` and a new `eid` is created
-4. This calls resolve-ability-eid
-5. resolve-ability-eid 
-TBD
 
 
 
