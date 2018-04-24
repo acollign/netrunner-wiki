@@ -1,3 +1,5 @@
+(I have augmented this with corrections/comments made by @nealterrell while preserving his comments right at the bottom)
+
 This is mostly written to refresh my memory.  In applying a fix to Find the Truth whereby we needed to wait for its effect to complete before allowing other effects, I had to make sure its reveal effect was completed before other things in the engine could fire.
 
 I think this might be of interest as the effects fires a prompt which requires user interaction - and thus fits the delayed completion criteria... but as you will see the passing around the event data happens automatically in the engine without extra code or knowledge from the developer (thankfully!).  Elsewhere we use the `continue-ability` macro to pass the `eid` (Event ID) around.
@@ -68,14 +70,16 @@ What was the yes-ability code block in my card:
  :effect (effect (effect-completed eid))}
 ```
 
-This code block again invokes a prompt with a message telling the player what the top card of R&D is.  We only gives the player one choice OK which is used to clear the prompt.  No matter what the choice we then invoke the effect which is to run the `effect-completed` function for this `eid`.
+This code block again invokes a prompt with a message telling the player what the top card of R&D is.  We only gives the player one choice OK which is used to clear the prompt.  No matter what the choice we then invoke the effect which is to run the `effect-completed` function for this `eid`.  After a check with Neal, the `effect-completed` inside the `yes-ability` is unnecessary. `effect-completed` is __only__ called manually if its owning ability is `:delayed-completion`, which the yes-ability is not (because it is finished as soon as its prompt is dismissed). The `effect` of this ability is really a no-op. 
 
 And then we are all done!
 
 So what did I learn / re-remember / questions
-1. We don't need a :no-ability if we just want the effect to complete when the user hits no.  Some other cards have this wrong already.  No harm - just extra code.
+1. We don't need a :no-ability if we just want the effect to complete when the user hits no.  Some other cards have this wrong already.  No harm - just extra code.  
 
-2. In two locations I added the `:delayed-completion` key.  Looking around some more in the code this was useless and does nothing in this instance.  When each pass through the function `resolve-ability-eid` is done we call a function called `complete-ability` whose job it is to complete the effect.  This has some funky logic in it which is the main place where we check for the `:delayed-completion` key and other keys like so:
+2. We did not need the effect-completed function inside the yes-ability since we are really just using the prompt to pause the game engine.
+
+3. In two locations I added the `:delayed-completion` key.  Looking around some more in the code this was useless and does nothing in this instance.  When each pass through the function `resolve-ability-eid` is done we call a function called `complete-ability` whose job it is to complete the effect.  This has some funky logic in it which is the main place where we check for the `:delayed-completion` key and other keys like so:
 
 ```
   (when (or (and **(not choices)** **(not optional)** (not psi) (not trace) (not delayed-completion))
@@ -85,21 +89,19 @@ So what did I learn / re-remember / questions
 
 What we can see here is that for a code block with the :optional key we will not complete the effect (unless `:delayed-completion false `is set), nor will we when there are :choices in the ability which is the `:yes-effect `for Find the Truth.  
 
-3.  I think the :req check for seeing is this is the first successful run this turn should also be cleaned up to use other smaller existing functions. 
+4.  I think the :req check for seeing is this is the first successful run this turn should also be cleaned up to use other smaller existing functions. 
 
-4. Finally the yes-ability :prompt got changed to threading macro which makes it easier to understand... less brackets nesting
+5. Finally the yes-ability :prompt got changed to threading macro which makes it easier to understand... less brackets nesting.  I decided to leave the req macro outside of the threading here to be more similar to existing code.
 
-So the second attempt for the re-write would be:
+So the second attempt for the re-write is:
 ```clojure
 {:interactive (req true)
  :optional {:req (req (first-event? state side :successful-run))
             :prompt "Use Find the Truth to look at the top card of R&D?"
             :yes-ability {:prompt (req (->> corp :deck first :title (str "The top card of R&D is ")))
                           :msg "look at the top card of R&D"
-                          :choices ["OK"]
-                          :effect (effect (effect-completed eid))}}}
+                          :choices ["OK"]}}}
 ```
-
 ### Comments
 
 #### nealterrell
@@ -110,4 +112,3 @@ The "second attempt" is the correct code. A few notes:
 * `:delayed-completion` is also ignored inside an `:optional`'s ability. The optional's ability is not a true ability; it is never resolved, and the only keys we use are `:prompt` (to display a message to the user), `:req` (to determine if the optional should be shown at all), and then `:yes-ability`, `:no-ability`, and a third "do this afterwards either way" ability that I forget right now (Someone fill this in later.)  __Anything else__ is ignored here. 
 * As you saw, an optional will be marked complete when the corresponding yes/no-ability is marked complete. If yes or no doesn't exist and the user chooses that option, the engine will mark the optional complete automatically.
 * The `effect-completed` inside the `yes-ability` is unnecessary. `effect-completed` is __only__ called manually if its owning ability is `:delayed-completion`, which the yes-ability is not (because it is finished as soon as its prompt is dismissed). The `effect` of this ability is really a no-op. The `effect-completed` doesn't harm anything, but it's not necessary either. Ideally we would get the compiler to issue warnings/errors for this use, but I don't know how to do that.
-
