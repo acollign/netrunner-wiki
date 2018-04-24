@@ -1,6 +1,15 @@
-This is mostly written to refresh my memory.  In applying a fix to Find the Truth I had to make sure its reveal effect was completed before other things in the engine could fire.
+This is mostly written to refresh my memory.  In applying a fix to Find the Truth whereby we needed to wait for its effect to complete before allowing other effects, I had to make sure its reveal effect was completed before other things in the engine could fire.
 
 I think this might be of interest as the effects fires a prompt which requires user interaction - and thus fits the delayed completion criteria... but as you will see the passing around the event data happens automatically in the engine without extra code or knowledge from the developer (thankfully!).  Elsewhere we use the `continue-ability` macro to pass the `eid` (Event ID) around.
+
+First - important to note that the event that triggers Find the Truth is `:successful-run `and this event itself is wait-completed via the `when-completed` macro.  So any cards responding to this event, will have to complete their functions before anything else happens in the game.  
+
+Here is the core from register-successful-run which is handling this:
+```
+(when-completed (trigger-event-simult state side :successful-run nil (first (get-in @state [:run :server])))
+```
+
+This means we don't want the Find the Truth to be fire and forget.  We need to make sure it is all done before progressing.
 
 Here is the relevant part of the first re-write which fires on the :successful-run events happening:
 ```
@@ -65,22 +74,39 @@ And then we are all done!
 
 So what did I learn / re-remember / questions
 1. We don't need a :no-ability if we just want the effect to complete when the user hits no.  Some other cards have this wrong already.  No harm - just extra code.
-2. In two locations I added the `:delayed-completion` key.  Was this needed? The original trigger for the card was `:successful-run` which called `resolve-ability` for the card which was our flow of prompts without "real" effects.  So I don't think they are needed.   Any thoughts?
+
+2. In two locations I added the `:delayed-completion` key.  Looking around some more in the code this was useless and does nothing in this instance.  When each pass through the function `resolve-ability-eid` is done we call a function called `complete-ability` whose job it is to complete the effect.  This has some funky logic in it which is the main place where we check for the `:delayed-completion` key and other keys like so:
+
+```
+  (when (or (and **(not choices)** **(not optional)** (not psi) (not trace) (not delayed-completion))
+            (and (or optional psi choices trace) (false? delayed-completion)))
+    (effect-completed state side eid card)))
+```
+
+What we can see here is that for a code block with the :optional key we will not complete the effect (unless `:delayed-completion false `is set), nor will we when there are :choices in the ability which is the `:yes-effect `for Find the Truth.  
+
 3.  I think the :req check for seeing is this is the first successful run this turn should also be cleaned up to use other smaller existing functions. 
-4. Finally the yea-ability :prompt got changed to threading macro which makes it easier to understand... less brackets nesting
+
+4. Finally the yes-ability :prompt got changed to threading macro which makes it easier to understand... less brackets nesting
 
 So the second attempt for the re-write would be:
 ```
 {:interactive (req true)
  :optional {:req (req (first-event? state side :successful-run))
             :prompt "Use Find the Truth to look at the top card of R&D?"
-            :yes-ability {:prompt (req (str "The top card of R&D is " (-> corp :deck first :title)))
+            :yes-ability {:prompt (req (->> corp :deck first :title (str "The top card of R&D is ")))
                           :msg "look at the top card of R&D"
                           :choices ["OK"]
                           :effect (effect (effect-completed eid))}}}
 ```
 
-
+Finally here is the relevant flow of function calls which should help:
+1. register-successful-run
+2. trigger-event-simult for event :successful-run  - noting Find the Truth's :interactive key would be used if the runner needed to be offered a choice of card effect ordering
+3. Find the Truth is invoked using` resolve-ability` and a new `eid` is created
+4. This calls resolve-ability-eid
+5. resolve-ability-eid 
+TBD
 
 
 
