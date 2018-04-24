@@ -4,7 +4,7 @@ I think this might be of interest as the effects fires a prompt which requires u
 
 First - important to note that the event that triggers Find the Truth is `:successful-run `and this event itself is wait-completed via the `when-completed` macro.  So any cards responding to this event, will have to complete their functions before anything else happens in the game.  
 
-Here is the core from register-successful-run which is handling this:
+Here is the code from register-successful-run which is handling this:
 ```
 (when-completed (trigger-event-simult state side :successful-run nil (first (get-in @state [:run :server])))
 ```
