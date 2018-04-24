@@ -90,7 +90,7 @@ What we can see here is that for a code block with the :optional key we will not
 4. Finally the yes-ability :prompt got changed to threading macro which makes it easier to understand... less brackets nesting
 
 So the second attempt for the re-write would be:
-```
+```clojure
 {:interactive (req true)
  :optional {:req (req (first-event? state side :successful-run))
             :prompt "Use Find the Truth to look at the top card of R&D?"
@@ -100,6 +100,14 @@ So the second attempt for the re-write would be:
                           :effect (effect (effect-completed eid))}}}
 ```
 
+### Comments
 
+#### nealterrell
 
+The "second attempt" is the correct code. A few notes:
+
+* `:delayed-completion` is ignored when used alongside `:optional`. Optionals are already recognized as being delayable actions.
+* `:delayed-completion` is also ignored inside an `:optional`'s ability. The optional's ability is not a true ability; it is never resolved, and the only keys we use are `:prompt` (to display a message to the user), `:req` (to determine if the optional should be shown at all), and then `:yes-ability`, `:no-ability`, and a third "do this afterwards either way" ability that I forget right now (Someone fill this in later.)  __Anything else__ is ignored here. 
+* As you saw, an optional will be marked complete when the corresponding yes/no-ability is marked complete. If yes or no doesn't exist and the user chooses that option, the engine will mark the optional complete automatically.
+* The `effect-completed` inside the `yes-ability` is unnecessary. `effect-completed` is __only__ called manually if its owning ability is `:delayed-completion`, which the yes-ability is not (because it is finished as soon as its prompt is dismissed). The `effect` of this ability is really a no-op. The `effect-completed` doesn't harm anything, but it's not necessary either. Ideally we would get the compiler to issue warnings/errors for this use, but I don't know how to do that.
 
