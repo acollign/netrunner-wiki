@@ -11,6 +11,7 @@
 * [[Externs]]
 * [[Test server]]
 * [[Delayed completion|When to use delayed completion]]
+* [[Prompts and delayed completion|Prompts,-Optional-Effects,-and-Delayed-Completion]]
 * [[Your First Card Contribution|Contributing-New-Cards]]
 
 **[[Progress Reports]]**
