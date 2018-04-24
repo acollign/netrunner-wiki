@@ -7,14 +7,14 @@ I think this might be of interest as the effects fires a prompt which requires u
 First - important to note that the event that triggers Find the Truth is `:successful-run `and this event itself is wait-completed via the `when-completed` macro.  So any cards responding to this event, will have to complete their functions before anything else happens in the game.  
 
 Here is the code from register-successful-run which is handling this:
-```
+```clojure
 (when-completed (trigger-event-simult state side :successful-run nil (first (get-in @state [:run :server])))
 ```
 
 This means we don't want the Find the Truth to be fire and forget.  We need to make sure it is all done before progressing.
 
 Here is the relevant part of the first re-write which fires on the :successful-run events happening:
-```
+```clojure
 {:interactive (req true)
  :optional {:delayed-completion true
             :req (req (= 1 (count (get-in @state [:runner :register :successful-run]))))
@@ -37,7 +37,7 @@ As you can see so far we are passing the `eid` around in the prompt function wit
 
 The check-optional code looks like this assuming it finds this `:optional` key
 
-```
+```clojure
 (if (can-trigger? state side optional card targets)
       (optional-ability state (or (:player optional) side) eid card (:prompt optional) optional targets)
       (effect-completed state side eid card))
@@ -47,7 +47,7 @@ So if the effect cannot be triggered the `effect-completed `code is invoked and 
 
 `optional-ability` asks the user if they want to invoke the card effect and has two branches based on the user selecting yes or no.  Let's cover the NO version first.  The function checks if we have defined a :no-ability key and if so invokes that code, and if not it completes the effect with this code here:
 
-```
+```clojure
 (if-let [no-ability (:no-ability ability)]
   (resolve-ability state side (assoc no-ability :eid eid) card targets)
   (effect-completed state side eid card))
@@ -62,7 +62,7 @@ How about the yes-ability?  Well, this ability must exist in the first place, an
 
 What was the yes-ability code block in my card:
 
-```
+```clojure
 {:delayed-completion true
  :prompt (req (str "The top card of R&D is " (:title (first (:deck corp)))))
  :msg "look at the top card of R&D"
