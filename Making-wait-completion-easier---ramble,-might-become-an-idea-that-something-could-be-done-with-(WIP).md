@@ -55,8 +55,8 @@ Could we use a macro to insert all the needed bits into this pipeline, such that
 ```
 
 A few things to take care of:
-* Insert delayed-completion into the parent code block via macro of other.  A few ways we could handle this.  An :effect pipeline could be named something like :pipe-effect and remove the need for :delayed-completion keys at all
-* Not all effects can take an eid so when-completed with break.  I think it would be quite trivial to sort this out.  Either tell the macro the list of awaitable functions, or upgrade the functions to take an eid.  Or call the functions via another layer which will dump the eid.
+* Insert delayed-completion into the parent code block via macro of other.  A few ways we could handle this.  An :effect pipeline could be named something like :pipe-effect to differentiate from :effect, and remove the need for :delayed-completion keys at all
+* Not all effects can take an eid so when-completed will break them.  I think it would be quite trivial to sort this out.  Either tell the macro the list of awaitable functions, or upgrade the functions to take an eid.  Or call the functions via another layer which will dump the eid.
 * For a pipeline of length n, insert the when-completed macro into all forms - depending on the approach taken above.
 * Insert effect-completed at the end of the macro expansion
 
