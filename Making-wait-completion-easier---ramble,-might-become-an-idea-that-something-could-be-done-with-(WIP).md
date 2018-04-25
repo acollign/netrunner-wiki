@@ -17,7 +17,47 @@ The current set of tools to handle wait-completed or delay-completed effect is n
 * But we don't want to block the game - i.e. make it all sync.
 
 **Ideas/Ramble**
-* When we call `tag` or `damage` in an effect the calling function does not know if this might be async, so we have to mark it as such via :delayed-completion
+* When we call `tag` or `damage` in an effect the calling function does not know if this might be async, so we have to mark it as such via :delayed-completion.  This stops the calling function itself being completed and means a later function will need to call `effect-completed`
 * When we call a prompt such as :optional, :psi (psi-game), :choices, or :trace we know this is async so we can do this
 * So a great start might be to wrap other things we know are (maybe) async like `tag` and `damage`.  These effects `know` they might be async - not the caller so why should the calling effect have to know this?
 * A difference so consider is that there might be no async or user interaction.  But cards which can cause these to be async must have pre-registered that effect in the state... so the function can handle it.
+
+###Awaitable functions.  
+Anything that takes an `eid` as an argument.  Examples are:
+* corp-install
+* resolve-ability
+* damage
+* trash
+* trash-cards
+* handle-access
+* tag
+* expose
+
+These can be waited on using `when-completed` and with the parent code block being marked :``delayed-completion to the `eid` has to resolve in full.
+
+### Idea - an effect pipeline
+I think most card resolutions actually want a pipeline of effects to happen, and it would never be a detriment if an effect was a single `eid` end-to-end.  An example using function names shown as a vector:
+
+```clojure
+{:effect (effect [show-wait-prompt tag damage trash close-wait-prompt])}
+```
+
+Could we use a macro to insert all the needed bits into this pipeline, such that it would expand into:
+
+```clojure
+{:delayed-completion true
+ :effect (effect (when-completed show-wait-prompt
+                   (when-completed tag
+                     (when-completed damage
+                       (when-completed trash
+                         (when-completed close-wait-prompt
+                           effect-completed))))))
+```
+
+A few things to take care of:
+* Insert delayed-completion into the parent code block via macro of other.  A few ways we could handle this.  An :effect pipeline could be named something like :pipe-effect and remove the need for :delayed-completion keys at all
+* Not all effects can take an eid so when-completed with break.  I think it would be quite trivial to sort this out.  Either tell the macro the list of awaitable functions, or upgrade the functions to take an eid.  Or call the functions via another layer which will dump the eid.
+* For a pipeline of length n, insert the when-completed macro into all forms - depending on the approach taken above.
+* Insert effect-completed at the end of the macro expansion
+
+
