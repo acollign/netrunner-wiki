@@ -96,6 +96,18 @@ And then inform git of this file via:
 git config --global core.excludesfile '~/.gitignore'
 ```
 
+### Suggested new branch workflow:
+1. `git pull upstream master`
+1. `git checkout -b features`
+1. `echo "cool feature" > feature.txt`
+1. `git commit -am "Added cool feature"`
+1. `git checkout master`
+1. `git pull upstream master`
+1. `git checkout feature`
+1. `git rebase master`
+1. `git push origin feature`
+
+
 ## Installation
 
 Install Clojure dependencies:
