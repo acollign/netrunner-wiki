@@ -121,3 +121,4 @@ Events related to the start and end of player turns
     :counter-added
     :card-moved
     :psi-game
+    :as-agenda
