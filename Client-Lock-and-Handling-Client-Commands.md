@@ -43,7 +43,7 @@ Some logs showing how this looks server side:
 "public-diffs-corp" [{:runner {:rig {:program [0 {:counter {:virus 2}}]}, :credit 5}, :eid 61, :log [:+ {:user "__system__", :text "wozzit uses Cache to gain 1 [Credits]."}]} {}]
 "public-diffs-runner" [{:runner {:rig {:program [0 {:counter {:virus 2}}]}, :credit 5}, :eid 61, :log [:+ {:user "__system__", :text "wozzit uses Cache to gain 1 [Credits]."}]} {}]
 
-**Ideas to Improve This**
+**Options / Though Process to Improve This**
 1. Add an request-id that the client sends to the server.  When the action is resolved, pass this request-id back to the client which will make it unblock.  This would require that id to flow through handle-game-action, handle-action, resolve-ability, and differ related functions.  This would be for every game effect interaction - multiple per ability, vs eid on the server side.
 
 2. Server side locking (in addition to client side).  This would require the server to lock on a game effect request and ignore subsequent requests until it passes a response back for this game only!!  This would still require some data to pass through handle-game-action, handle-action, resolve-ability, and differ related functions so the server knows when the request is completed.  The client would lock on sending a request too.  In the diff message some data will tell the client when to unlock.  
@@ -58,4 +58,10 @@ Some logs showing how this looks server side:
     **(add-something-in-here which differ can pass back)**
     ((commands command) state side args)
 ```
+
+**What I went with?**
+* Create and track an action id (:aid) for each player 
+* This is incremented by 1 with each call for the side to handle-action
+* This is sent to the client
+* The client checks for each new game state.  If its own side :aid has changed it can clear the lock safely.
    
