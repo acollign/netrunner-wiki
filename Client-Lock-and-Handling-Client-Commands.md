@@ -46,9 +46,9 @@ Some logs showing how this looks server side:
 **Ideas to Improve This**
 1. Add an request-id that the client sends to the server.  When the action is resolved, pass this request-id back to the client which will make it unblock.  This would require that id to flow through handle-game-action, handle-action, resolve-ability, and differ related functions.  This would be for every game effect interaction - multiple per ability, vs eid on the server side.
 
-2. Server side locking (in addition to client side).  This would require the server to lock on a game effect request and ignore subsequent requests until it passes a response back for this game only!!  This would still require some data to pass through handle-game-action, handle-action, resolve-ability, and differ related functions so the server knows when the request is completed.  The client would lock on sending a request too.  In the diff message some data will tell the client when to unlock.  Number 2 seems easier.  No ID to track.
+2. Server side locking (in addition to client side).  This would require the server to lock on a game effect request and ignore subsequent requests until it passes a response back for this game only!!  This would still require some data to pass through handle-game-action, handle-action, resolve-ability, and differ related functions so the server knows when the request is completed.  The client would lock on sending a request too.  In the diff message some data will tell the client when to unlock.  
 
-3. When we invoke handle-action we have an argument which says which side the command if for.  We can add that to @game-state - and it will get passed back to the client which can use that to determine if it should clear lock.  Handling the action is not 100% instant but vvvvvvvv close.
+3. When we invoke handle-action we have an argument which says which side the command if for.  We can add that to @game-state - and it will get passed back to the client which can use that to determine if it should clear lock.  Handling the action is not 100% instant but vvvvvvvv close.  We will need a piece of data to change on each request sent back to the client so it knows this diff is in response to something it did.  Something like an eid... maybe a rid
 
 ```clojure
 (defn handle-action
