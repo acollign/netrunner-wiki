@@ -1,4 +1,4 @@
-Game requests from the client to server - and the corresponding response are completely de-coupled and asynchronous.  This is mostly fine - however it is possible during network latency for a client to send the same command multiple times before the first one has resolve.
+Game requests from the client to server - and the corresponding response are completely de-coupled and asynchronous.  This is mostly fine - however it is possible during network latency for a client to send the same command multiple times before the first one has resolved.
 
 We handle this to some extent today via a client lock mechanism.  This is implemented in the gameboard.cljs file as follows:
 ```clojure
@@ -43,7 +43,7 @@ Some logs showing how this looks server side:
 "public-diffs-corp" [{:runner {:rig {:program [0 {:counter {:virus 2}}]}, :credit 5}, :eid 61, :log [:+ {:user "__system__", :text "wozzit uses Cache to gain 1 [Credits]."}]} {}]
 "public-diffs-runner" [{:runner {:rig {:program [0 {:counter {:virus 2}}]}, :credit 5}, :eid 61, :log [:+ {:user "__system__", :text "wozzit uses Cache to gain 1 [Credits]."}]} {}]
 
-**Options / Though Process to Improve This**
+**Options / Thought Process to Improve This**
 1. Add an request-id that the client sends to the server.  When the action is resolved, pass this request-id back to the client which will make it unblock.  This would require that id to flow through handle-game-action, handle-action, resolve-ability, and differ related functions.  This would be for every game effect interaction - multiple per ability, vs eid on the server side.
 
 2. Server side locking (in addition to client side).  This would require the server to lock on a game effect request and ignore subsequent requests until it passes a response back for this game only!!  This would still require some data to pass through handle-game-action, handle-action, resolve-ability, and differ related functions so the server knows when the request is completed.  The client would lock on sending a request too.  In the diff message some data will tell the client when to unlock.  
