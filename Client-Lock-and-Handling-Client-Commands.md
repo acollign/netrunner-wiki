@@ -50,7 +50,11 @@ Some logs showing how this looks server side:
 
 Number 2 seems easier.  No ID to track.
 
-To make this more fun we also have a long list of commands which the client can send which it locks on.  A scan of these makes it seem wise to continue to lock on all of them - though maybe messages could be pulled out.
+To make this more fun we also have a long list of commands which the client can send which it locks on.  A scan of these makes it seem wise to continue to lock on all of them.  In which case a solution would impact all of them.
+
+Idea:
+3. Just improve where we see a problem - such as "Ability"-core/play-ability where people tend to click too fast
+
 ```clojure
 (def commands
   {"concede" core/concede
