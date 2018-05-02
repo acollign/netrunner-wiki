@@ -24,7 +24,7 @@ We handle this to some extent today via a client lock mechanism.  This is implem
 ```
 How does this work?
 * We initialise an atom set to false meaning the client can take actions
-* The send-command function will send a command to the server if lock = false, and the set lock to true
+* The send-command function will send a command to the server if lock = false, and then set lock to true
 * The send-command function will not set a command if lock=true
 * The lock is cleared on reception of new state from the server.  However this state change does not necessarily correspond to a command send from THIS client.  Any game state change will clear the lock.
 
