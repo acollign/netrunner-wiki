@@ -15,7 +15,7 @@ Additional information can be found in:
 * Understanding Delayed Completion: [Part 1](https://github.com/mtgred/netrunner/pull/1494) and [Part 2](https://github.com/mtgred/netrunner/pull/1582), and [[When to use delayed completion]]
 * [[Event hooks]]
 * [[Card definitions]]
-* [[Client-Lock-&-Handling-client-commands]]
+* [[Client Lock & Handling client commands]]
 * [[Writing Tests|Tests]]
 * [[Externs]]
 * [[Test server]]
