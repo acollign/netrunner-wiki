@@ -46,50 +46,16 @@ Some logs showing how this looks server side:
 **Ideas to Improve This**
 1. Add an request-id that the client sends to the server.  When the action is resolved, pass this request-id back to the client which will make it unblock.  This would require that id to flow through handle-game-action, handle-action, resolve-ability, and differ related functions.  This would be for every game effect interaction - multiple per ability, vs eid on the server side.
 
-2. Server side locking (in addition to client side).  This would require the server to lock on a game effect request and ignore subsequent requests until it passes a response back for this game only!!  This would still require some data to pass through handle-game-action, handle-action, resolve-ability, and differ related functions so the server knows when the request is completed.  The client would lock on sending a request too.  In the diff message some data will tell the client when to unlock.
+2. Server side locking (in addition to client side).  This would require the server to lock on a game effect request and ignore subsequent requests until it passes a response back for this game only!!  This would still require some data to pass through handle-game-action, handle-action, resolve-ability, and differ related functions so the server knows when the request is completed.  The client would lock on sending a request too.  In the diff message some data will tell the client when to unlock.  Number 2 seems easier.  No ID to track.
 
-Number 2 seems easier.  No ID to track.
-
-To make this more fun we also have a long list of commands which the client can send which it locks on.  A scan of these makes it seem wise to continue to lock on all of them.  In which case a solution would impact all of them.
-
-Idea:
-3. Just improve where we see a problem - such as "Ability"-core/play-ability where people tend to click too fast
+3. When we invoke handle-action we have an argument which says which side the command if for.  We can add that to @game-state - and it will get passed back to the client which can use that to determine if it should clear lock.  Handling the action is not 100% instant but vvvvvvvv close.
 
 ```clojure
-(def commands
-  {"concede" core/concede
-   "system-msg" #(core/system-msg %1 %2 (:msg %3))
-   "change" core/change
-   "move" core/move-card
-   "mulligan" core/mulligan
-   "keep" core/keep-hand
-   "start-turn" core/start-turn
-   "end-phase-12" core/end-phase-12
-   "end-turn" core/end-turn
-   "draw" core/click-draw
-   "credit" core/click-credit
-   "purge" core/do-purge
-   "remove-tag" core/remove-tag
-   "play" core/play
-   "rez" #(core/rez %1 %2 (:card %3) nil)
-   "derez" #(core/derez %1 %2 (:card %3))
-   "run" core/click-run
-   "no-action" core/no-action
-   "corp-phase-43" core/corp-phase-43
-   "continue" core/continue
-   "access" core/successful-run
-   "jack-out" core/jack-out
-   "advance" core/advance
-   "score" #(core/score %1 %2 (game.core/get-card %1 (:card %3)))
-   "choice" core/resolve-prompt
-   "select" core/select
-   "shuffle" core/shuffle-deck
-   "ability" core/play-ability
-   "runner-ability" core/play-runner-ability
-   "subroutine" core/play-subroutine
-   "trash-resource" core/trash-resource
-   "dynamic-ability" core/play-dynamic-ability
-   "toast" core/toast
-   "view-deck" core/view-deck
-   "close-deck" core/close-deck})
+(defn handle-action
+  "Ensures the user is allowed to do command they are trying to do"
+  [user command state side args]
+  (if (not-spectator? state user)
+    **(add-something-in-here which differ can pass back)**
+    ((commands command) state side args)
 ```
+   
