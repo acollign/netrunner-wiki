@@ -97,6 +97,7 @@ git config --global core.excludesfile '~/.gitignore'
 ```
 
 ### Suggested new branch workflow:
+1. `git checkout master`
 1. `git pull upstream master`
 1. `git checkout -b features`
 1. `echo "cool feature" > feature.txt`
