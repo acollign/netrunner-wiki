@@ -1,6 +1,6 @@
 # Progress Reports
 
-* [[2018 Q1 (Spring)|Progress Report, 2018 Q1 (Winter)]]
+* [[2018 Q1 (Winter)|Progress Report, 2018 Q1 (Winter)]]
 * [[2016 Q4 (Fall)|Progress Report, 2016 Q4 (Fall)]]
 * [[2016 Q3 (Summer)|Progress Report, 2016 Q3 (Summer)]]
 * [[2016 Q2 (Spring)|Progress Report, 2016 Q2 (Spring)]]
