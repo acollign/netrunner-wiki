@@ -22,4 +22,4 @@ Additional information can be found in:
 
 ### Progress reports
 
-All progress reports can be accessed from the sidebar. The latest one can be found under [[Progress Report, 2016 Q3 (Summer)]].
+All progress reports can be accessed from the sidebar. The latest one can be found under [[Progress Report%2C 2018 Q1 (Winter)]].
