@@ -4,4 +4,4 @@
 
 [Guide on event handling](https://purelyfunctional.tv/guide/reagent/#events)
 
-[DOM Manipulation] (https://presumably.de/reagent-mysteries-part-3-manipulating-the-dom.html)
+[DOM Manipulation](https://presumably.de/reagent-mysteries-part-3-manipulating-the-dom.html)
