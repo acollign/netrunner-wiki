@@ -8,6 +8,7 @@
 
 ### Arm Wrestling with :key in react lists
 [Fragments in React](https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html)
+
 [Hiccup Support for Fragments](https://github.com/reagent-project/reagent/commit/87b61475e20fb31735ffc03e77eaf78f692879d9)
 
 Long and short: 
