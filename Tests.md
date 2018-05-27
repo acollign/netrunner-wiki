@@ -17,7 +17,7 @@ game-test.cards.agendas/fifteen-minutes` (once again substituting whatever test 
 
 If you want to get fancy with it, [lein-test-refresh][lein-test-refresh] will automatically
 rerun the entire testing suite or only changed tests (as determined by the `:test-refresh` map you have in your
-profiles.clj). Word of warning, if you change a non-test file, you have to restart test-refresh; but as long as you're
+profiles.clj). Word of warning, if you change a non-test or a non-card file, you have to restart test-refresh; but as long as you're
 only writing tests, it'll work as expected.
 
 [lein-test-refresh]: https://github.com/jakemcc/lein-test-refresh
