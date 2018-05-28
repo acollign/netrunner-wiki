@@ -50,6 +50,8 @@ To speed up the process of fixing the game state when something goes awry, use t
 - `/move-bottom` -> move a card from your hand to the bottom of the deck (player's own cards only)
 - `/rez` -> Rez a card ignoring all costs (Corp only)
 - `/rez-all` -> Rez all installed cards, e.g. at game end to show what you had (Corp only)
+- `/undo-click` -> Sets the game state back to your prior click
+- `/undo-turn` -> Sets the game state back to before your turn started (requires both players to type)
 
 Although the log will flag the usage of these commands with an orange icon to alert the other player, please use these judiciously and with the consent of your opponent. 
 
