@@ -182,7 +182,7 @@ Instead of building the production JAR files and running them with Java, a much 
 $ lein repl
 ```
 
-This compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Inside the REPL, do `(future-call -main)` to launch the game server. Once you have a game initiated, you can modify card code and reload it with `(load-file "src/clj/game/cards.clj")` and very quickly see changes reflected in an ongoing game by simply trashing/discarding a copy of the card in question and reinstalling it or playing it again to see the new behavior.
+This compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Inside the REPL, do `(future-call -main)` to launch the game server. Once you have a game initiated, you can modify card code and reload it with `(reset-card-defs)` and very quickly see changes reflected in an ongoing game by simply trashing/discarding a copy of the card in question and reinstalling it or playing it again to see the new behavior.
 
 
 ## Automated Environment
@@ -228,7 +228,7 @@ You can now access the state of your game as you are playing it by using the var
 
 > So, I have changed a card, now what?
 
-Run `(load-file "src/clj/game/cards.clj")` to reload all cards. Note that if the card you changed is already in play, you have to play it again before you see your code changes.
+Run `(reset-card-defs)` to reload all cards (or `(reset-card-defs "X")` where X is the card type filename (such as "agendas")). Note that if the card you changed is already in play, you have to play it again before you see your code changes.
 
 ## Using Emacs with Cider
 
