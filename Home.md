@@ -19,6 +19,7 @@ Additional information can be found in:
 * [[Writing Tests|Tests]]
 * [[Externs]]
 * [[Test server]]
+* [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
 
 ### Progress reports
 
