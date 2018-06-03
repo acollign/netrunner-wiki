@@ -12,6 +12,13 @@
 ### Rendering Optimisation
 The legacy OM code often calls directly into the `app-state` or `game-state` atoms which are now Reagent atoms.  Thus when the state of these atoms changes we will re-render those components.  This is really the same as what OM was doing already (*i think*).  Future work will be to optimise this re-rendering but initial migration was a forklift w/o attempting to solve everything at once.
 
+### Future work
+* Client Side Routing via Secretary.  We currently render all parts of the site all the time.  We could avoid doing this for screens the user is not currently in.  This needs some consideration as some `go` loops are in namespaces we would not be rendering so would need to check these don't break.  It should help performance.
+* Rendering optimisations
+* Reduce or kill jQuery.  jQuery is seen as something of an anti-pattern in React as state should flow down from the parent to components and probably things I don't understand too.  We have a lot of it so best to chip away at...
+* Explore if ref swap! can be moved out of our render functions.  Documentation shows we are doing it the right way but it seems a bit wrong to do this every render for a static DOM node.
+* Reduce use of React lifecycle functions.  Reagent documents state some of the use of these is not usually needed and their are more Clojur-isms to handle most.  Given the fork-lift migration and time/sanity/knowledge gaps these were not all tackled.  Though were reduced ;)
+
 ### Component State
 In most cases component local state has been bound to a Reagent atom called `s`.  This is often passed to child components which need to update some state in the parent.  In the old code this was mostly done using core.async
 
