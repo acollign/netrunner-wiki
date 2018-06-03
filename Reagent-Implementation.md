@@ -9,6 +9,9 @@
 
 # Jinteki Implementation Nodes
 
+### Rendering Optimisation
+The legacy OM code often calls directly into the `app-state` or `game-state` atoms which are now Reagent atoms.  Thus when the state of these atoms changes we will re-render those components.  This is really the same as what OM was doing already (*i think*).  Future work will be to optimise this re-rendering but initial migration was a forklift w/o attempting to solve everything at once.
+
 ### Component State
 In most cases component local state has been bound to a Reagent atom called `s`.  This is often passed to child components which need to update some state in the parent.  In the old code this was mostly done using core.async
 
