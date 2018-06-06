@@ -7,7 +7,7 @@ Start the REPL with `lein repl`.
 
 #### Server
 
-When you modify a function or a card, simply reload the function or the `cards.clj` file (_**not agendas/programs/ice/etc.clj**_) to the REPL and it should be reflected in the game engine without having to recreate a new game:
+When you modify a function or a card, simply reset the card definitions in the REPL and it should be reflected in the game engine without having to recreate a new game:
 
     (core/reset-card-defs)
 
