@@ -9,7 +9,7 @@ Start the REPL with `lein repl`.
 
 When you modify a function or a card, simply reload the function or the `cards.clj` file (_**not agendas/programs/ice/etc.clj**_) to the REPL and it should be reflected in the game engine without having to recreate a new game:
 
-    (load-file "src/clj/game/cards.clj")
+    (core/reset-card-defs)
 
 For cards already installed you have to drag it back to hand and install it again to reflect the new code. No need to refresh the browser, you can keep the game state.
 
