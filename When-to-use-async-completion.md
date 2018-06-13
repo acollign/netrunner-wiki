@@ -15,7 +15,7 @@ And that the trace has two effects in sequence:
 Let's implement this card in increments, explaining async effects and when to use them along the way. Things start easily enough.
 
 ```
-{:effect (effect (gain :credit 2))}
+{:effect (effect (gain-credits 2))}
 ```
 
 To initiate the trace, we have to rely on `resolve-ability` to "chain" trigger another ability on top of this one (since an ability can involve an `:effect` or `:trace` but not both). We'll use a `let` to reduce the horizontal nesting of the code, and only code the "give a tag" portion of this effect for the moment.
@@ -23,7 +23,7 @@ To initiate the trace, we have to rely on `resolve-ability` to "chain" trigger a
 ```clojure
 (let [my-trace {:trace {:base 2
                         :successful {:effect (effect (tag-runner 1))}}}]
-{:effect (effect (gain :credit 2)
+{:effect (effect (gain-credits 2)
                  (resolve-ability my-trace card nil))})
 ```
 
@@ -35,7 +35,7 @@ Next we'll implement the "if tagged, do damage", leaving a placeholder for the "
                                                   (if tagged
                                                     (damage state side 1 {:card card})
                                                     *placeholder*))}}}]
-{:effect (effect (gain :credit 2)
+{:effect (effect (gain-credits 2)
                  (resolve-ability my-trace card nil))})
 ```
 
@@ -61,7 +61,7 @@ We can wait for `tag-runner` to complete by using `wait-for`. This macro takes t
                         :successful {:effect (req (wait-for
                                                     (tag-runner state side 1)
                                                     (resolve-ability state side damage-or-gain card nil)))}}}]
-  {:effect (effect (gain :credit 2)
+  {:effect (effect (gain-credits 2)
                    (resolve-ability my-trace card nil))})
 ```
 
@@ -82,7 +82,7 @@ Because the root effect of this card (with the `gain`) "continues" into another 
                                                     (tag-runner state side 1)
                                                     (resolve-ability state side damage-or-gain card nil)))}}}]
   {:async true
-   :effect (effect (gain :credit 2)
+   :effect (effect (gain-credits 2)
                    (resolve-ability my-trace card nil))})
 ```
 
@@ -109,7 +109,7 @@ We can use this function as such:
                                                     (tag-runner state side 1)
                                                     (continue-ability state side damage-or-gain card nil)))}}}]
   {:async true
-   :effect (effect (gain :credit 2)
+   :effect (effect (gain-credits 2)
                    (continue-ability my-trace card nil))})
 ```
 
@@ -141,7 +141,7 @@ The final code (minus any log messages) for our card is then:
                                                     (tag-runner state side 1)
                                                     (continue-ability state side damage-or-gain card nil)))}}}]
   {:async true
-   :effect (effect (gain :credit 2)
+   :effect (effect (gain-credits 2)
                    (continue-ability my-trace card nil))})
 ```
 
