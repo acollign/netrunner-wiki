@@ -10,7 +10,7 @@
 * [[Writing Tests|Tests]]
 * [[Externs]]
 * [[Test server]]
-* [[Delayed completion|When to use delayed completion]]
+* [[Async completion (delayed completion)|When to use async completion]]
 * [[Prompts and delayed completion|Prompts,-Optional-Effects,-and-Delayed-Completion]]
 * [[Your First Card Contribution|Contributing-New-Cards]]
 * [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
