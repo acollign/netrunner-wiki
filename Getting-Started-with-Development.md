@@ -182,7 +182,7 @@ Instead of building the production JAR files and running them with Java, a much 
 $ lein repl
 ```
 
-This compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Inside the REPL, do `(future-call -main)` to launch the game server. Once you have a game initiated, you can modify card code and reload it with `(reset-card-defs)` and very quickly see changes reflected in an ongoing game by simply trashing/discarding a copy of the card in question and reinstalling it or playing it again to see the new behavior.
+This compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Inside the REPL, do `(future-call -main)` to launch the game server. Once you have a game initiated, you can modify card code and reload it with `(core/reset-card-defs)` and very quickly see changes reflected in an ongoing game by simply trashing/discarding a copy of the card in question and reinstalling it or playing it again to see the new behavior.
 
 
 ## Automated Environment
