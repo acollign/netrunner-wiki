@@ -65,6 +65,8 @@ Events related to the start and end of player turns
     :pre-tag
     :pre-resolve-tag
     :runner-gain-tag
+    :runner-lose-tag
+    :avoided-tag
 
 ### Bad publiticy
     :pre-bad-publicity
