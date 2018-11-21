@@ -2,6 +2,8 @@
 
 Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, everything is open to revision and redirection, I probably won't have time in my life to do any of these. 
 
+---
+
 * Finish writing tests for all the cards
 * Unit test core engine logic
 * Separate engine into different namespaces
