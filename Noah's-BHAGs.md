@@ -7,10 +7,19 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * Separate engine into different namespaces
 * Move all card defs to their own files
 * Move all card tests to their own files
+* Integrate with NRDB so that people can log in with their NRDB credentials and have their decks automatically show up
+
 * Serialize game state in such a way that deploying is seamless (games don't disappear when we change servers if we're saving them to the db or disk every action or turn or whatever)
 
+* Create admin portal
+  * See full user list, online users, and current games
+  * Mute or Ban users, delete user messages
+  * Fetch new cards
+  * Update Announcement Board
+  * Send toasts to all active users
+
 * Refactor front-end files to be readable
-  * Do what I did to cardbrowser to all of the other cljs files (especially **gameboard.cljs**)
+  * Do what I did to cardbrowser to all of the other cljs files (especially gameboard.cljs (!))
   * Move isolated logic to new files for clarity and ease
 
 * Move off of Mongo to SQLite or another Relational Database
