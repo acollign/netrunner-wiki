@@ -3,6 +3,7 @@
 Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, everything is open to revision and redirection, I probably won't have time in my life to do any of these. 
 
 ---
+2018-11-21
 
 * Finish writing tests for all the cards
 * Unit test core engine logic
@@ -32,3 +33,21 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
   * Build a Step/Pipeline system for processing the overall game-flow, restricting a given action to whichever step the game state is in at that time
   * Build a common language of actions such that we don't have to specify every single card in fine detail but can offload that work to the base action
   * Include a "automated/manual" toggle for changing between the two stances, to ease/fix game state mess-ups
+
+---
+2018-11-27
+
+* Restructure data reloading architecture to save and read a single card file instead of many
+
+* Create a "Front Page"/Splash screen that's not the chat lobby
+  * Classic menu: "Play" "Card Browser" "Deck Builder" "Chat" "Settings" etc
+  * Show changelog/updates as an overlay
+
+* edn: Move all card text out of card files and into "oracle" text files
+  * Alternatively, put all of the card data back into the set-card files, revert set-card data to printed version (non-errata'd), combine/overwrite when generating "current" version
+
+* Overlay card images in the hover with the oracle text, graphically
+  * Allow showing/hiding this in the options
+  * Do the same for values? Cost/strength/subtypes/etc
+
+* Change subtypes to keyword vectors instead of strings
