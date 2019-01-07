@@ -57,6 +57,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 
 * Add a "Learning" tab to the lobby screen.
 * Add a tutorial that leads a player step-by-step through a sample game as the runner or the corp, showing which buttons to press, how to fix mistakes when playing, what parts of the engine work or don't, etc.
+* Actually implement the deep changes to the core rules that the Nisei Comprehensive Rules brought along (checkpoints, etc).
 
 * Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).
   * Give users a way to view all of their old games. (Because it's all stateless atoms, should be "easy" to handle displaying old games by changing which "state" is being used to display on the screen.)
