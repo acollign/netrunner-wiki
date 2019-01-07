@@ -28,7 +28,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * Move off of Mongo to SQLite or another Relational Database
   * Store all of the card data in the database, so we can run queries with joins and stuff in it, instead of having to pre-process it in the netrunner-data repo
 
-* Convert the engine from a permissive stance to an enforcing stance (cf Jigoku/Rinteki)
+* Convert the engine from a permissive stance to an enforcing stance (cf Jigoku/Ringteki)
   * Instead of allowing players to do p much anything they want whenever they want, limit what's clickable or selectable or moveable based on which part of the game we're in
   * Build a Step/Pipeline system for processing the overall game-flow, restricting a given action to whichever step the game state is in at that time
   * Build a common language of actions such that we don't have to specify every single card in fine detail but can offload that work to the base action
@@ -51,3 +51,12 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
   * Do the same for values? Cost/strength/subtypes/etc
 
 * Change subtypes to keyword vectors instead of strings
+
+---
+2019-01-06
+
+* Add a "Learning" tab to the lobby screen.
+* Add a tutorial that leads a player step-by-step through a sample game as the runner or the corp, showing which buttons to press, how to fix mistakes when playing, what parts of the engine work or don't, etc.
+
+* Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).
+  * Give users a way to view all of their old games. (Because it's all stateless atoms, should be "easy" to handle displaying old games by changing which "state" is being used to display on the screen.)
