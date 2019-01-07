@@ -6,7 +6,7 @@ The main language the whole project is written in is Clojure. Below are a few li
 
 - [Clojure for the Brave and True](http://www.braveclojure.com/) - a nice online crash course of Clojure, written in accessible language
 - [ClojureDocs](https://clojuredocs.org/core-library) - online Clojure documentation
-- [Om](https://github.com/omcljs/om) - ClojureScript interface to Facebook's [React](https://facebook.github.io/react/index.html). Used in many places on the web presentation side.
+- [Reagent](https://reagent-project.github.io/) - ClojureScript interface to Facebook's [React](https://facebook.github.io/react/index.html). Used in many places on the web presentation side.
 - [Hiccup](https://github.com/weavejester/hiccup/wiki/Syntax) and [Ŝablono](https://github.com/r0man/sablono) guides - they describe the HTML templating libraries used in the `.cljs` files.
 
 ## IDE
@@ -234,7 +234,7 @@ Run `(reset-card-defs)` to reload all cards (or `(reset-card-defs "X")` where X 
 
 If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
 
-## Videos
+## Videos (CURRENTLY BEHIND A PAYWALL)
 
 These live-coding videos may help you with some of the basics:
 
@@ -246,7 +246,7 @@ These live-coding videos may help you with some of the basics:
 
 ## Slack channel
 
-The main communication channel between developers, besides GitHub, is the [team's Slack Channel](https://jinteki.slack.com/). To request access, send an email to [mtgred](mailto:mtgred@gmail.com) stating who you are on GitHub and linking two Pull Requests you got accepted into the repository. 
+The main communication channel between developers, besides GitHub, is the [team's Slack Channel](https://jinteki.slack.com/). To request access, send an email to [mtgred](mailto:mtgred@gmail.com) stating who you are on GitHub and linking an open PR. 
 
 ## Good Starting Issues
 
