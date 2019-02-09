@@ -39,6 +39,7 @@ Events related to runs
     :continue
     :jack-out
     :pass-ice
+    ::approach-server
     :pre-access-card
     :access
     :successful-run
