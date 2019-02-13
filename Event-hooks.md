@@ -33,30 +33,44 @@ Events related to click actions taken on Corp or Runner's turn.
 Events related to runs
 
     :run
+    :begin-run
+    :run-big
     :approach-ice
     :encounter-ice
     :no-action
     :continue
     :jack-out
     :pass-ice
-    ::approach-server
-    :pre-access-card
+    :approach-server
+    :no-action
+    :pre-jack-out
+    :jack-out
+    :pre-access
     :access
+    :pre-access-card
+    :post-access-card
+    :end-access-phase
+    :pre-successful-run
     :successful-run
+    :post-successful-run
     :successful-run-ends
     :unsuccessful-run
+    :unsuccessful-run-ends
     :run-ends
 
 ### Turns
 Events related to the start and end of player turns
 
+    :pre-start-game
     :pre-first-turn
     :corp-phase-12 -- when corp enters Step 1.2 between Start Turn and Mandatory Draw
     :corp-turn-begins -- when corp ends Step 1.2
+    :corp-mandatory-draw
     :corp-turn-ends
     :runner-phase-12 -- when runner enters Step 1.2 between Start Turn and Take Clicks
     :runner-turn-begins -- when runner ends Step 1.2 
     :runner-turn-ends
+    :post-runner-turn-ends
 
 ### Tracing and tagging
     :pre-init-trace
@@ -82,15 +96,16 @@ Events related to the start and end of player turns
     :agenda-scored
     :corp-forfeit-agenda
     :runner-forfeit-agenda
+    :no-trash
+    :no-steal
 
-### ICE strength and subtypes
+### Ice and Icebreakers
     :pre-ice-strength
     :ice-strength-changed
     :ice-subtype-changed
-
-### Icebreaker strength
     :pre-breaker-strength
     :breaker-strength-changed
+    :pump-breaker
 
 ### Winning and Losing
     :corp-loss
@@ -120,8 +135,19 @@ Events related to the start and end of player turns
     :pre-expose
     :expose
 
-### Others
+### Counters
+    :advancement-placed
+    :agenda-counter-spent
     :counter-added
-    :card-moved
+
+### Psi Games
     :psi-game
+    :psi-bet-corp
+    :psi-bet-runner
+    :psi-game-done
+
+### Other
+    :card-moved
     :as-agenda
+    :corp-shuffle-deck
+    :runner-shuffle-deck
