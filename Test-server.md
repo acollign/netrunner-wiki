@@ -8,6 +8,8 @@ The public test server can be accessed at http://jinteki.zaroth.net . The databa
 
 The server periodically (every 6 hours, at 6,12,18,24 UTC) pulls fresh code from the `dev` branch in this repository and if it detects any new commits, it performs a complete rebuild (recompile and restart). The rebuild and service maintenance can be also performed via SSH (if you have access), for details on available commands check [the sudoers file](https://github.com/zaroth/betajin-pupfiles/blob/master/modules/jinteki/files/sudoers).
 
+**EDIT:* The server cron job for this has been disabled, as it sometimes causes errors. You can run `crontab -e` to list the cron jobs and re-enable it.
+
 For more information on which features/fixes are good material for the `dev` branch and which are better suited for `master`, see [Pull requests and branches](https://github.com/mtgred/netrunner/wiki/Getting-Started-with-Development#pull-requests-and-branches).
 
 ## Logs
