@@ -143,13 +143,13 @@ This data fetch only needs to be performed if it's your first time building the 
 If you don't want card images to be downloaded (such as on a testing environment), you can run `lein fetch --no-card-images`.
 
 ---
-**3. [OPTIONAL] Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
+**3. Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
 
 ```
-$ lein cljsbuild auto dev
+$ lein cljsbuild once dev
 ```
 ---
-**4. [OPTIONAL] Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
+**4. Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
 
 ```
 $ stylus -w src/css -o resources/public/css/
