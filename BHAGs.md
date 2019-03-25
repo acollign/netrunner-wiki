@@ -6,6 +6,16 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 2018-11-21
 
 * Finish writing tests for all the cards
+  * ~Agendas~
+  * ~Assets~
+  * Events
+  * Ice
+  * Identities
+  * Operations
+  * Programs
+  * Resources
+  * Upgrades
+
 * Unit test core engine logic
 * Separate engine into different namespaces
 * Move all card defs to their own files
