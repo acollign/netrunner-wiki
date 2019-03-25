@@ -37,7 +37,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 ---
 2018-11-27
 
-* Restructure data reloading architecture to save and read a single card file instead of many
+* ~Restructure data reloading architecture to save and read a single card file instead of many~
 
 * Create a "Front Page"/Splash screen that's not the chat lobby
   * Classic menu: "Play" "Card Browser" "Deck Builder" "Chat" "Settings" etc
@@ -61,3 +61,12 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 
 * Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).
   * Give users a way to view all of their old games. (Because it's all stateless atoms, should be "easy" to handle displaying old games by changing which "state" is being used to display on the screen.)
+
+---
+2019-03-25
+
+* Abstract additional costs so players are always prompted for them, removing the need to hardcode prompts.
+* Make run-related functions awaitable.
+* Rewrite registering effects to handle cards moving between zones.
+* Change the way Events are trashed so they stay on the table until runs and related effects are finished.
+* Change req checking to differentiate between play/trigger requirements and resolution requirements.
