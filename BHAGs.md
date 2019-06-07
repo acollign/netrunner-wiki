@@ -18,8 +18,8 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 
 * Unit test core engine logic
 * Separate engine into different namespaces
-* Move all card defs to their own files
-* Move all card tests to their own files
+* ~Move all card defs to their own files~ - Decided against as it's messy and doesn't provide enough utility
+* ~Move all card tests to their own files~ - Decided against as it's messy and doesn't provide enough utility
 * Integrate with NRDB so that people can log in with their NRDB credentials and have their decks automatically show up
 
 * Serialize game state in such a way that deploying is seamless (games don't disappear when we change servers if we're saving them to the db or disk every action or turn or whatever)
