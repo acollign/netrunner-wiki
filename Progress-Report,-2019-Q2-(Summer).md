@@ -4,7 +4,7 @@ This report will only comprise the recent changes since the last server reboot o
 
 # Big Changes
 * **New Feature:** Paying multiple costs is now bundled together
-  * Whenever more than one type of cost has to be paid, the game now shows a single prompt for all costs to be paid simultaneously. Here's the case of stealing an SDS Drone Deployment from a Server with Ben Musashi and Strongbox.
+  * Whenever more than one type of cost has to be paid, the game now shows a single prompt for all costs to be paid simultaneously. Here's the case of stealing an SDS Drone Deployment from a Server with Ben Musashi and Strongbox.<br/>
 <img src="https://user-images.githubusercontent.com/603677/57576409-62b6ac80-742d-11e9-8709-9ef7e0c01a0f.png" width=200><img src="https://user-images.githubusercontent.com/603677/57576410-64807000-742d-11e9-8c76-46f605a84bba.png" width=200>
 
 * **New Feature:** Paying costs from credit providing cards (recurring credits, Patchwork) is now implemented fully!
