@@ -8,11 +8,13 @@ This report will only comprise the recent changes since the last server reboot o
 <img src="https://user-images.githubusercontent.com/603677/57576409-62b6ac80-742d-11e9-8709-9ef7e0c01a0f.png" width=200>
 <img src="https://user-images.githubusercontent.com/603677/57576410-64807000-742d-11e9-8c76-46f605a84bba.png" width=200>
 
-* pay-credits
+* Whenever paying a cost, the game now looks at available credit sources and asks whether you want to use them. So for example, whenever you're pumping a breaker with a Cloak and Net Mercur out, the game will now display this:
 
 # Notable Changes
 * **Bugfix:** Chat box should now auto-scroll correctly
 * **Bugfix:** Deck legality is now displayed correctly together with a reason for illegality
+* **Refactoring:** Accessing cards, forced trashing and access abilities were completely reworked. Accessing a Mumbad Virtual Tour should now be possible without any hiccups!
+* **New Feature:** Several commands were added for further manual changing of the game state: `/install-ice` `/peek n` `/summon n` `/swap-ice` `/swap-installed` (see help for further information)
 
 # Small Changes
 * **Bugfix:** Rejig now applies correct discount
@@ -21,4 +23,8 @@ This report will only comprise the recent changes since the last server reboot o
 * **Bugfix:** Fully Operational now triggers PAD Tap
 * **Cleanup:** Director Haas Pet Project is now printing agenda-scored message correctly
 * **Bugfix:** CtM triggered on Runner cards
-* **Bugfix:** 
+* **Bugfix:** Architect Deployment Test was only working on ICE
+* **Bugfix:** Fixed access step for Khusyuk, Top Hat or Information Sifting interacting with Ash or Eater
+* **Bugfix:** Fixed Showing Off + Bacterial Programming (turning R&D upside down to be able to use existing routines was a fine idea until BP was printed)
+* **Bugfix:** Möbius is not triggering all the time anymore
+* **Bugfix:** Acacia + LLDS Energy Regulator now triggers correctly. Long live the jank!
