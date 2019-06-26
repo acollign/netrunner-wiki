@@ -8,7 +8,13 @@ This report will only comprise the recent changes since the last server reboot o
 <img src="https://user-images.githubusercontent.com/603677/57576409-62b6ac80-742d-11e9-8709-9ef7e0c01a0f.png" width=200>
 <img src="https://user-images.githubusercontent.com/603677/57576410-64807000-742d-11e9-8c76-46f605a84bba.png" width=200>
 
-* Whenever paying a cost, the game now looks at available credit sources and asks whether you want to use them. So for example, whenever you're pumping a breaker with a Cloak and Net Mercur out, the game will now display this:
+* Paying costs from credit providing cards (recurring credits, Patchwork) is now implemented!
+  * Whenever paying a cost, the game now looks at available credit sources and asks whether you want to use them. So for example, whenever you're pumping a breaker with a Cloak and Net Mercur out, the game will now display this:
+![Cloak](https://user-images.githubusercontent.com/1409906/60204308-d4687f80-984e-11e9-8927-4d3eb7c825d2.PNG)
+![Cloak2](https://user-images.githubusercontent.com/1409906/60204314-d8949d00-984e-11e9-88a2-0999d6a6061d.PNG)
+  * The "old ways" of handling recurring credits still work, this is just a more convenient alternative
+  * This works on the following actions: Installing cards, using stealth credits, using paid abilities on programs, credits during the run, trashing cards, playing Events, removing tags, rezzing cards, advancing cards, traces
+    * For a full list of cards, look [here](https://github.com/mtgred/netrunner/pull/4262#issuecomment-497955715)
 
 
 # Notable Changes
@@ -27,5 +33,6 @@ This report will only comprise the recent changes since the last server reboot o
 * **Bugfix:** Architect Deployment Test was only working on ICE
 * **Bugfix:** Fixed access step for Khusyuk, Top Hat or Information Sifting interacting with Ash or Eater
 * **Bugfix:** Fixed Showing Off + Bacterial Programming (turning R&D upside down to be able to use existing routines was a fine idea until BP was printed)
+* **Bugfix:** Mining Accident prompt does not get stuck anymore
 * **Bugfix:** Möbius is not triggering all the time anymore
 * **Bugfix:** Acacia + LLDS Energy Regulator now triggers correctly. Long live the jank!
