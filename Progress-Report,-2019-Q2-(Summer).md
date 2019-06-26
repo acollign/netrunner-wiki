@@ -10,6 +10,7 @@ This report will only comprise the recent changes since the last server reboot o
 
 * Whenever paying a cost, the game now looks at available credit sources and asks whether you want to use them. So for example, whenever you're pumping a breaker with a Cloak and Net Mercur out, the game will now display this:
 
+
 # Notable Changes
 * **Bugfix:** Chat box should now auto-scroll correctly
 * **Bugfix:** Deck legality is now displayed correctly together with a reason for illegality
