@@ -140,7 +140,7 @@ $ lein fetch
 
 This data fetch only needs to be performed if it's your first time building the project OR new card data has been made available on NetrunnerDB and you want to update your local data (e.g., a new data pack). 
 
-If you don't want card images to be downloaded (such as on a testing environment), you can run `lein fetch --no-card-images`.
+If you don't want card images to be downloaded (such as on a testing environment), you can run `lein fetch --no-card-images`. If you have the card data saved locally, use `lein fetch --local ../path/to/data`.
 
 ---
 **3. Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
