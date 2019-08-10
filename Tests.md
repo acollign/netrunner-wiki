@@ -1,3 +1,8 @@
+# WARNING
+THIS IS OUT OF DATE. THE LOGIC BEHIND TEST WRITING STILL HOLDS TRUE, BUT A LOT OF FUNCTIONS ARE CHANGED/DIFFERENT (prompt-choice, prompt-select are both super different now, lol) SO DON'T TRUST IT
+
+# ORIGINAL
+
 When you create a new card, you want to create at least one test to go along with it, that verifies that the card works.
 This allows us to make sure that when we change core functionality or modify a given card, it will continue to work the
 same as it did before the change. In this way, we can guarantee we aren't regressing when fixing bugs or implementing
