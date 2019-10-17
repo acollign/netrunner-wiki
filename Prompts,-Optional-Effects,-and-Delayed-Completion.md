@@ -1,3 +1,5 @@
+# DEPRECATED
+
 (I have augmented this with corrections/comments made by @nealterrell while preserving his comments right at the bottom)
 
 This is mostly written to refresh my memory.  In applying a fix to Find the Truth whereby we needed to wait for its effect to complete before allowing other effects, I had to make sure its reveal effect was completed before other things in the engine could fire.
