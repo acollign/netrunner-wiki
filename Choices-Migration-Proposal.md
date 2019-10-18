@@ -11,5 +11,7 @@ The different kinds of choices in Netrunner are:
 7) Choosing a number: ["choose a number greater than 0"](https://netrunnerdb.com/en/card/26021)
 8) Choosing a card title: ["Name a card."](https://netrunnerdb.com/en/card/06026)
 9) Paying credits to trigger an optional ability: ["If you pay 4 [credits] when..."](https://netrunnerdb.com/en/card/25091)
+10) Selecting a card that has been revealed or looked at (but hasn't changed locations): ["look at the top X cards of your stack. Add 1 of those cards to the bottom of your stack."](https://netrunnerdb.com/en/card/26018)
+11) Rearranging cards: ["you may look at the top 5 cards of R&D and arrange them in any order"](https://netrunnerdb.com/en/card/20039)
 
 The big question becomes, how do we want to make these easier to write and maintain? In my mind, each of these should be a distinct prompt, as they have different needs. Some of these could even been split into multiple sub-types, allowing for useful defaults and lowering confusion.
