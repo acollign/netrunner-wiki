@@ -40,8 +40,11 @@ with regards to the targets issue, an idea i had is to create a context atom in 
    ...}
 ```
 ---
+
 like `(complete-with-result state side target)` and then the sequence-wrapper would do something like `(wait-for (resolve-ability ...) (sequence-wrapper-impl state side (rest abilities) async-result))`
+
 ---
+
 when we call `resolve-ability` on a `:choices` ability, we don't have access to the `target` outside of it. `resolve-prompt` or `select` is called with the clicked-on card (our target), and that's passed into the `resolve-ability`, which then passes it to the `do-effect` which actually calls the `:effect` portion of our code, and then it just... drops it all into the trash lol
 
 so for any `:choices` prompt, we'd have to say `{:choices {:req #(...)} :effect (effect (complete-with-result eid target))}` and then in the caller say `(let [target1 async-result] (sequence-wrapper-impl`, like you've posted above
