@@ -2,5 +2,5 @@ Jinteki.net could offer some options for TOs to manage their synchronous tournam
 
 ## Features
 * Creation of a number of tables by the TO
-* Results from the games are directly sent to the TO
-* Players can ask for a Judge, which sends a request to the TO and whoever is entered as Judge
+* Results from the games are sent directly to the TO
+* Players can ask for a judge, which sends a request to the TO and whoever is entered as judge
