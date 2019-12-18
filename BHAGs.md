@@ -8,10 +8,10 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * Finish writing tests for all the cards
   * ~Agendas~
   * ~Assets~
-  * Events
+  * ~Events~
   * Ice
   * Identities
-  * Operations
+  * ~Operations~
   * Programs
   * Resources
   * Upgrades
