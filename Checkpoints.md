@@ -18,3 +18,6 @@ Things to check:
 - [ ] Memory
 - [ ] Hand size
 - [ ] Run endings
+- [ ] Tags
+- [ ] Bad Publicity
+- [ ] Advancement Counters (Satellite Grid)
