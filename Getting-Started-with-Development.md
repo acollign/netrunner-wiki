@@ -228,7 +228,12 @@ You can now access the state of your game as you are playing it by using the var
 
 > So, I have changed a card, now what?
 
-Run `(reset-card-defs)` to reload all cards (or `(reset-card-defs "X")` where X is the card type filename (such as "agendas")). Note that if the card you changed is already in play, you have to play it again before you see your code changes.
+Evaluate `define-card` with your new card definition in the REPL. For example, to make Akamatsu give 10 MU, evaluate
+```
+(define-card "Akamatsu Mem Chip"
+  {:in-play [:memory 10]})
+```
+If you've made the change to the card definition files, you can also do `(load-file "game/cards/hardware.clj")` to load the definition from there. Note that if the card you changed is already installed, you have to play it again before the changes take effect.
 
 ## Using Emacs with Cider
 
