@@ -1,0 +1,12 @@
+Rough ideas:
+ - Import from Cobra
+ - Create lobbies for each pairing
+ - Start button to make all games start simultaneously
+ - TO can set options for all games in the tournament
+ - Some way to send a message to each lobby
+ - Bind/map cobra names to jnet user names, restrict joining a lobby to those who are within the game
+ - TO creates a lobby: generate lobby code that players use to see the games.
+ - To join a tournament, players choose 2 tournament-format legal decks, which are locked in.
+ - Checkbox for streamers that gives them access as spectators
+ - Some method for the TO to ping players, idk how exactly lol
+ - And make sure cobra player name comparison is case insensitive
