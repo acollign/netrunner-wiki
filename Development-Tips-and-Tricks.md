@@ -37,7 +37,7 @@ To modify the client side, `Figwheel` is awesome. Run `lein figwheel` and `stylu
 
 To run the unit tests: `lein test`
 
-Tests are in the `game-test` namespace. To run selected unit tests: `lein test game-test.cards.agendas`
+Tests are in the `game-test` namespace. To run selected unit tests: `lein test game.cards.agendas-test`
 
 To combine test and repl run: `lein clean && lein test && lein repl`. This makes sure no compiled files are left from a branch switch or similar, and only starts the repl if all the tests pass.
 
