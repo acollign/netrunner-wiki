@@ -3,7 +3,7 @@ There's an urgent need in the Netrunner community moderation of Jinteki.net. The
 # Requirements
 ## 1. Email verification
 
-Issue: #5265
+Issue: [#5265](https://github.com/mtgred/netrunner/issues/5265)
 
 In order to effectively ban toxic users, Jinteki.net needs a stronger identity system. Email verification is widely used as a mechanism to limit the number of additional accounts a malicious user can make. It's possible to circumvent bans by creating new email addresses, but this simple measure effectively raises the bar for malicious users, requiring somewhat onerous email account creation and account validation for sockpuppet accounts.
 
@@ -11,7 +11,7 @@ In order to work, email verification must precede access to chat and game creati
 
 ## 2. Permabans and Appeals
 
-Issue: ##5266
+Issue: [#5266](https://github.com/mtgred/netrunner/issues/5266)
 
 Moderators should be given the ability to ban toxic users. This could be as simple as a form screen where a moderator enters a user name to ban. Security is an important consideration here, as permaban functions are inherently sensitive; specifically, we should take care to validate that the ban comes from a legitimate moderator on the backend.
 
