@@ -7,11 +7,20 @@ In order to effectively ban toxic users, Jinteki.net needs a stronger identity s
 
 In order to work, email verification must precede access to chat and game creation for new players. The simplest possible implementation of this doesn't allow the user to log in if their email address is unverified, and instead presents them with a screen requesting that they verify their email address, along with the option to resend the verification email.
 
+### Issues
+
+ - #1 Build verification API
+ - #2 Prevent unverified users from completing log-in
+ - #3 Add email verification step to sign-up (requires #1)
+
 ## 2. Permabans
 
 Moderators should be given the ability to ban toxic users. This could be as simple as a form screen where a moderator enters a user name to ban. Security is an important consideration here, as permaban functions are inherently sensitive; specifically, we should take care to validate that the ban comes from a legitimate moderator on the backend.
+
+ - #4 Build moderation screen with permaban functionality
 
 ## 3. Appeals
 
 When a banned user attempts to log in, they should be shown a screen notifying them they are banned indefinitely and explaining to them how they can appeal the ban. This is mostly required in case of human error or bugs.
 
+ - #5 Prevent banned users from completing log-in (related to #2)
