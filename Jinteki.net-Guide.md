@@ -56,23 +56,44 @@ To speed up the process of fixing the game state when something goes awry, use t
 Although the log will flag the usage of these commands with an orange icon to alert the other player, please use these judiciously and with the consent of your opponent. 
 
 ### Server Restarts
-The game server periodically gets restarted to deploy code for new features or bug fixes. If you find erratic behavior or features not working as they normally do, make sure to do a forced refresh of the site (<kbd>Ctrl</kbd>-<kbd>F5</kbd> in your browser on PCs, hold <kbd>Shift</kbd> while refreshing on Mac browsers) to retrieve the latest client-side code. 
-### Gameplay Limitations
-While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Using cards that rely on them can be difficult, require manual adjustments, and/or some understanding on the part of your opponent. Examples include: 
+The game server periodically gets restarted to deploy code for new features or bug fixes. If you find erratic behavior or features not working as they normally do, make sure to do a forced refresh of the site (<kbd>Ctrl</kbd>-<kbd>F5</kbd> in your browser on PCs, hold <kbd>Shift</kbd> while refreshing on Mac browsers) to retrieve the latest client-side code.
 
-* **Additional costs to break subs, play events, etc:** Midway Station Grid, Interrupt 0, Donut Taganes, Student Loans, *et al*
-* **Other unique complicated effects:** Disrupter, Inazuma, Surveillance Sweep, Media Blitz, RSVP, Raman Rai, *et al*
+### Gameplay Limitations
+While the system is fairly mature, it is still in development and some kinds of effects aren't yet supported. Hovering over a card that has implementation details will display an orange tooltip in the upper right corner next to the zoomed image of the card.
 
 ##### Hosting
 Cards capable of hosting other cards have both "Click to host from Grip" and "Host an installed card" abilities on them to account for Runner installs done via paid abilities (e.g., Clone Chip, Self-modifying Code, Personal Workshop, Street Peddler). Please communicate with your opponent when using the ability to host something that's already installed so they understand what is happening and why. 
 
 ##### Ordering Simultaneous Effects
-At this time, the only simultaneous triggers that can be resolved in the order of the player's choice are those related to agenda scoring, agenda stealing, and "when your turn begins" effects. This framework will be extended to other parts of the engine over time.
- 
+When multiple conditional abilities are pending at the same time, both players will get the opportunity to select the order their own abilities resolve. This is done by opening a prompt that lists the card title of pending ability. Click on the card title button you wish to resolve, the ability will be fully resolved, and then the original prompt will re-open with that ability removed from the list. Once all abilities of the active player have been resolved, the same process happens with the inactive player and their pending abilities. At the time of writing (November 2020), this has been fully implemented for all relevant card abilities.
+
+##### Runs
+In an effort to limit the number of clicks and waiting for each player, the steps and phases of a run have been trimmed and merged. The "jnet" version of a run is listed below, with changes noted below each step:
+
+1) Initiation
+
+When a run is initiated, the existence of ice will be determined and the run will automatically progress to either "Approach Ice" or "Approach Server" as appropriate. The run cannot be paused here so anything you need to manually adjust before approach must be done before starting the run.
+
+2) Approach Ice
+
+After resolving all "Approach Ice" abilities, there is a single window for handling paid abilities, rezzing, and jacking out. Once both players have pressed "continue", the run automatically moves into either the "Encounter Ice" phase or the "Pass Ice" phase.
+
+3) Encounter Ice
+
+After resolving all "Encounter Ice" abilities, there is a window for handling paid abilities. The Corp player must click "fire unbroken subs" to resolve all unbroken subs. Once both players have pressed "continue", the run automatically moves into the "Pass Ice" phase.
+
+4) Pass Ice
+
+After resolving all "Pass Ice" abilities, the run automatically moves into either the "Approach Ice" or "Approach Server" phase, as appropriate.
+
+5) Approach Server
+
+After resolving all "Approach Server" abilities, there is a single window for handling paid abilities, rezzing, and jacking out. Provided the Runner presses "Access server", the Corp can press either "No further actions" or "Action before access". If they press the former, the run moves into the "Access Cards" phase. If they press the latter, they are given a final chance to rez cards and use paid abilities. This is to help enforce moving into the second paid ability window after the runner has declined to jack out. If the Runner wishes to also use paid abilities here, they should click the "Indicate Action" button near the chat window.
+
 ### Gameplay Tips:
 * Be sure to check available resources, especially credits and MU, before trying to install
-* Clicking the side of a pop up menu will usually dismiss it
-* Try to take recurring credits before doing the action for which they are used
+* Clicking outside of a pop up menu will usually dismiss it
+* All recurring credits, credits hosted on cards (Cold Read, etc), and cards that given at-payment discounts (Patchwork, etc) are implemented by opening a prompt that says "Select a credit-providing card (0 of X credits)". When this happens, click on the card with credits you wish to use, and the credits will be automatically deducted from the card. If you don't want to pay for the whole cost with hosted credits, you can click "Done" early to pay the rest of the cost from your credit pool.
 
 ## Etiquette
 The Netrunner community has always been an outstanding place to game and Jinteki.net is no exception. Here are a few suggestions to make the online play experience more fun for everyone involved.
