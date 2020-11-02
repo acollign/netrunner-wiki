@@ -17,7 +17,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
   * Upgrades
 
 * Unit test core engine logic
-* Separate engine into different namespaces
+* ~Separate engine into different namespaces~
 * ~Move all card defs to their own files~ - Decided against as it's messy and doesn't provide enough utility
 * ~Move all card tests to their own files~ - Decided against as it's messy and doesn't provide enough utility
 * Integrate with NRDB so that people can log in with their NRDB credentials and have their decks automatically show up
@@ -70,7 +70,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * Actually implement the deep changes to the core rules that the Nisei Comprehensive Rules brought along (checkpoints, etc).
 
 * Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).
-  * Give users a way to view all of their old games. (Because it's all stateless atoms, should be "easy" to handle displaying old games by changing which "state" is being used to display on the screen.)
+  * ~Give users a way to view all of their old games.~ Done with messages only.
 
 ---
 2019-03-25
