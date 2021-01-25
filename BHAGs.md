@@ -21,15 +21,16 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * ~Move all card defs to their own files~ - Decided against as it's messy and doesn't provide enough utility
 * ~Move all card tests to their own files~ - Decided against as it's messy and doesn't provide enough utility
 * Integrate with NRDB so that people can log in with their NRDB credentials and have their decks automatically show up
+  * ~Import decks from NRDB~
 
 * Serialize game state in such a way that deploying is seamless (games don't disappear when we change servers if we're saving them to the db or disk every action or turn or whatever)
 
-* Create admin portal
+* ~Create admin portal~
   * See full user list, online users, and current games
   * Mute or Ban users, delete user messages
   * Fetch new cards
-  * Update Announcement Board
-  * Send toasts to all active users
+  * ~Update Announcement Board~
+  * ~Send toasts to all active users~
 
 * Refactor front-end files to be readable
   * Do what I did to cardbrowser to all of the other cljs files (especially gameboard.cljs (!))
@@ -69,8 +70,8 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * Add a tutorial that leads a player step-by-step through a sample game as the runner or the corp, showing which buttons to press, how to fix mistakes when playing, what parts of the engine work or don't, etc.
 * Actually implement the deep changes to the core rules that the Nisei Comprehensive Rules brought along (checkpoints, etc).
 
-* Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).
-  * ~Give users a way to view all of their old games.~ Done with messages only.
+* ~Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).~
+  * ~Give users a way to view all of their old games.~ Done with messages ~only~ for all previous games, full replays for last 15 games.
 
 ---
 2019-03-25
