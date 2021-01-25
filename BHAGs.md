@@ -81,3 +81,8 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * ~Rewrite registering effects to handle cards moving between zones.~
 * ~Change the way Events are trashed so they stay on the table until runs and related effects are finished.~
 * Change req checking to differentiate between play/trigger requirements and resolution requirements.
+
+---
+2021-01-25
+
+* Automate deploys
