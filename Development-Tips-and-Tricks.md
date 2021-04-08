@@ -9,9 +9,7 @@ Start the REPL with `lein repl`.
 
 When you modify a card, use your repl to evaluate the `defcard` block. Because it's a multi-method, all future uses of `card-def` in the engine will use the updated code. For cards already installed you have to drag it back to hand and install it again to reflect the new code. No need to refresh the browser, you can keep the game state.
 
-~Changes to core game functions will require restarting the REPL.~ I don't believe this is true anymore, but it requires more testing.
-
-To inspect the content of Clojure data structures, `prn` is handy. You can add `prn` in your functions or inside the `(req )` macro in card definitions you want to inspect.
+To inspect the content of Clojure data structures, `println` is handy. You can add `println` in your functions or inside the `(req)` macro in card definitions you want to inspect.
 
 Once a game is started, execute:
 
@@ -31,8 +29,6 @@ To modify the client side, `Figwheel` is awesome. Run `lein figwheel` and `stylu
 
 #### Tests
 
-To run the unit tests: `lein test`
-
-Tests are in the `game-test` namespace. To run selected unit tests: `lein test game.cards.agendas-test`
+To run the unit tests: `lein test` To run a selected unit test: `lein test game.cards.agendas-test`
 
 To combine test and repl run: `lein clean && lein test && lein repl`. This makes sure no compiled files are left from a branch switch or similar, and only starts the repl if all the tests pass.
