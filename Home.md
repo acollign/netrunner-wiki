@@ -12,7 +12,6 @@ Additional information can be found in:
 * [[Development Tips and Tricks]]
 * [[Macros (effect vs. req)]]
 * [[Abilities]]
-* Understanding async effects ("delayed completion"): [Part 1](https://github.com/mtgred/netrunner/pull/1494) and [Part 2](https://github.com/mtgred/netrunner/pull/1582), and [[When to use delayed completion]]
 * [[Event hooks]]
 * [[Card definitions]]
 * [[Client Lock and Handling Client Commands]]
