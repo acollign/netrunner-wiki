@@ -19,6 +19,7 @@ Additional information can be found in:
 * [[Externs]]
 * [[Test server]]
 * [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
+* [[Game State API]]
 
 ### Progress reports
 
