@@ -10,5 +10,6 @@
 * [[Externs]]
 * [[Test server]]
 * [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
+* [[Game State API]]
 
 **[[Progress Reports]]**
