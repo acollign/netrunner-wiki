@@ -11,5 +11,6 @@
 * [[Test server]]
 * [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
 * [[Game State API]]
+* [[Prompt and Message Style Guide]]
 
 **[[Progress Reports]]**
