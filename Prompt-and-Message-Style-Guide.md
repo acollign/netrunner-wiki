@@ -13,6 +13,7 @@
   * Card types, subtypes, or other keywords (ice, agenda, bioroid, hardware, virus counter, etc.).
   * Do not capitalize Runner zones (grip, heap)
 * When referring to ice, use "this ice" for self reference and "piece of ice" when referring to another card.
+* When describing the state of a piece of ice, put the description in front of "piece" (i.e. unrezzed piece of ice)
 
 ### Using symbols
 * Use "MU" instead of the MU symbol for any non-gain text (i.e. Cortex Lock)
