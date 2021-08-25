@@ -1,6 +1,6 @@
 _Note:_ In the first version, a user's decklist was available from the `/deck` endpoint. It is now available at `/decklist` and `/deck` returns the card codes that have yet to be drawn from the deck.
 
-Swagger docs: https://app.swaggerhub.com/apis/jinteki/GameAPI/1.0.0
+Swagger docs: https://app.swaggerhub.com/apis-docs/jinteki/GameAPI/1.0.0
 
 Users that create an API Key (in the Settings page) can access some information about the game state via an API. This can be used by Twitch extensions that show decklists.
 
