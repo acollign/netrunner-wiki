@@ -86,3 +86,14 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 2021-01-25
 
 * Automate deploys
+
+---
+2021-08-31
+
+* Ability to Register as TO (?¿)
+* Ability to Create new Lobby and Name it
+* Ability to create X numbers of tables
+* Ability to send a single message to all tables in the lobby at the same time
+* Ability to link players registered in cobra to jinteki
+* Ability to send results to cobra automatically from jinteki
+* Ability to lock the tournament decks
