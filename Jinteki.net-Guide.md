@@ -77,20 +77,24 @@ When a run is initiated, the existence of ice will be determined and the run wil
 2) Approach Ice
 
 After resolving all "Approach Ice" abilities, there is a single window for handling paid abilities and rezzing. Once both players have pressed "continue", the run automatically moves into either the "Encounter Ice" phase or the "Movement" phase. 
+
 Note: Clicking the "Rez Ice" button on the left will automatically press "Continue" for the Corp. As the Corp, if you want to use any abilities after rezzing the ice, you should click on the ice itself and use its sub-menu's "Rez" ability.
 
 3) Encounter Ice
 
 After resolving all "Encounter Ice" abilities, there is a window for handling paid abilities. The Corp player must click "fire unbroken subs" to resolve all unbroken subs. Once both players have pressed "continue", the run automatically moves into the "Movement" phase. 
+
 Note: As the Runner, using any icebreaker's "Match strength and fully break" generated ability will automatically press "Continue".
 
 4) Movement
 
 After resolving all "Pass Ice" abilities, there is a window for the Runner to decide to jack out and for both players to use paid abilities or rez non-ice cards. Once both players have pressed "continue", the run automatically moves into the "Approach ice" phase or "Success" phase depending on the Runner's position in the run. 
-Note: This stop technically combines several distinct steps the movement phase.
+
+Note: This stop technically combines several distinct steps of the Movement Phase (steps 4b-4e as defined in [Comprehensive Rules v1.5](https://nisei.net/wp-content/uploads/2021/08/NISEI-Comprehensive-Rules-v1.5-2021-08-13.pdf)).
 * Paid ability window after pass but before the Runner chooses to jack out or continue
 * The Runner chooses to jack out or continue
 * Paid ability and non-ice rez window before moving to the next phase
+
 If you want to take an action after Pass but before the Runner chooses to jack out you should communicate that with your opponent. As the Corp, if you want to perform actions after knowing if the Runner will continue the run, you should wait for the Runner to press "continue". A message will be put in the chat log when the Runner decides to continue.
 
 5) Success
