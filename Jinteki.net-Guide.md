@@ -68,27 +68,38 @@ Cards capable of hosting other cards have both "Click to host from Grip" and "Ho
 When multiple conditional abilities are pending at the same time, both players will get the opportunity to select the order their own abilities resolve. This is done by opening a prompt that lists the card title of pending ability. Click on the card title button you wish to resolve, the ability will be fully resolved, and then the original prompt will re-open with that ability removed from the list. Once all abilities of the active player have been resolved, the same process happens with the inactive player and their pending abilities. At the time of writing (November 2020), this has been fully implemented for all relevant card abilities.
 
 ##### Runs
-In an effort to limit the number of clicks and waiting for each player, the steps and phases of a run have been trimmed and merged. The "jnet" version of a run is listed below, with changes noted below each step:
+In an effort to limit the number of clicks and waiting for each player, the steps and phases of a run have been trimmed and merged. The "jnet" version of a run is listed below, with changes noted below each phase:
 
 1) Initiation
 
-When a run is initiated, the existence of ice will be determined and the run will automatically progress to either "Approach Ice" or "Approach Server" as appropriate. The run cannot be paused here so anything you need to manually adjust before approach must be done before starting the run.
+When a run is initiated, the existence of ice will be determined and the run will automatically progress to either the "Approach Ice" phase or "Movement" phase as appropriate. The run cannot be paused here so anything you need to manually adjust before approach must be done before starting the run.
 
 2) Approach Ice
 
-After resolving all "Approach Ice" abilities, there is a single window for handling paid abilities, rezzing, and jacking out. Once both players have pressed "continue", the run automatically moves into either the "Encounter Ice" phase or the "Pass Ice" phase.
+After resolving all "Approach Ice" abilities, there is a single window for handling paid abilities and rezzing. Once both players have pressed "continue", the run automatically moves into either the "Encounter Ice" phase or the "Movement" phase. 
+Note: Clicking the "Rez Ice" button on the left will automatically press "Continue" for the Corp. As the Corp, if you want to use any abilities after rezzing the ice, you should click on the ice itself and use its sub-menu's "Rez" ability.
 
 3) Encounter Ice
 
-After resolving all "Encounter Ice" abilities, there is a window for handling paid abilities. The Corp player must click "fire unbroken subs" to resolve all unbroken subs. Once both players have pressed "continue", the run automatically moves into the "Pass Ice" phase.
+After resolving all "Encounter Ice" abilities, there is a window for handling paid abilities. The Corp player must click "fire unbroken subs" to resolve all unbroken subs. Once both players have pressed "continue", the run automatically moves into the "Movement" phase. 
+Note: As the Runner, using any icebreaker's "Match strength and fully break" generated ability will automatically press "Continue".
 
-4) Pass Ice
+4) Movement
 
-After resolving all "Pass Ice" abilities, the run automatically moves into either the "Approach Ice" or "Approach Server" phase, as appropriate.
+After resolving all "Pass Ice" abilities, there is a window for the Runner to decide to jack out and for both players to use paid abilities or rez non-ice cards. Once both players have pressed "continue", the run automatically moves into the "Approach ice" phase or "Success" phase depending on the Runner's position in the run. 
+Note: This stop technically combines several distinct steps the movement phase.
+* Paid ability window after pass but before the Runner chooses to jack out or continue
+* The Runner chooses to jack out or continue
+* Paid ability and non-ice rez window before moving to the next phase
+If you want to take an action after Pass but before the Runner chooses to jack out you should communicate that with your opponent. As the Corp, if you want to perform actions after knowing if the Runner will continue the run, you should wait for the Runner to press "continue". A message will be put in the chat log when the Runner decides to continue.
 
-5) Approach Server
+5) Success
 
-After resolving all "Approach Server" abilities, there is a single window for handling paid abilities, rezzing, and jacking out. Provided the Runner presses "Access server", the Corp can press either "No further actions" or "Action before access". If they press the former, the run moves into the "Access Cards" phase. If they press the latter, they are given a final chance to rez cards and use paid abilities. This is to help enforce moving into the second paid ability window after the runner has declined to jack out. If the Runner wishes to also use paid abilities here, they should click the "Indicate Action" button near the chat window.
+After resolving all "Approach Server" abilities, the Runner will breach the attacked server. After all Breach abilities and accesses have finished the run will end.
+
+6) Run Ends
+
+Like the initiation phase, there are no stops at this point in the timing structure. Any run cleanup will occur in the background and the run will end.
 
 ### Gameplay Tips:
 * Be sure to check available resources, especially credits and MU, before trying to install
