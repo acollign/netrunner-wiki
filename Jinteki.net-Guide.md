@@ -23,6 +23,14 @@ Card data is retrieved from [NetrunnerDB](http://www.netrunnerdb.com), so when n
 
 ## Gameplay
 Jinteki.net gameplay is quite intuitive. Generally clicking on a card will do what you want it to do or give you the options you need. If something doesn’t work or you make a mistake, just adjust resources (credits, clicks, etc.) appropriately and fix the game state. Most actions that can’t be accomplished by clicking on a card can be done by dragging the card image to the appropriate area. If you find a situation that doesn’t fit within the game engine, explain it to your opponent in chat and track it that way.
+
+### Keyboard Commands
+The keyboard can control some basic functionality. List of available keyboard controls:
+- <kbd>Space</kbd> - Performs a default action if there are no controls focused. Otherwise, activates the focused control. Default actions: Clicking for credits, Starting/Ending turns, and continuing a run
+- <kbd>Enter</kbd> - Focuses the chat if there are no controls focused. Otherwise, activates the focused control
+- <kbd>/</kbd> (forward slash) - Focuses the chat and brings up the command menu
+- <kbd>Number keys</kbd> - Activates options in the button panel or card menu. Numbers are mapped to options from top to bottom
+
 ### Console Commands
 To speed up the process of fixing the game state when something goes awry, use the following commands by entering them into your game's chat:
 
