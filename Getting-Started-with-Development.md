@@ -152,7 +152,7 @@ $ lein cljsbuild once dev
 **4. Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
 
 ```
-$ stylus -w src/css -o resources/public/css/
+$ stylus src/css -o resources/public/css/
 ```
 ---
 **5. Compile server side Clojure files**
