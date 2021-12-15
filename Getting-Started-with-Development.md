@@ -7,7 +7,7 @@ The main language the whole project is written in is Clojure. Below are a few li
 - [Clojure for the Brave and True](http://www.braveclojure.com/) - a nice online crash course of Clojure, written in accessible language
 - [ClojureDocs](https://clojuredocs.org/core-library) - online Clojure documentation
 - [Reagent](https://reagent-project.github.io/) - ClojureScript interface to Facebook's [React](https://facebook.github.io/react/index.html). Used in many places on the web presentation side.
-- [Hiccup](https://github.com/weavejester/hiccup/wiki/Syntax) guide - describes the HTML templating libraries used in the `.cljs` files.
+- [Hiccup](https://github.com/weavejester/hiccup/wiki/Syntax) - describes the HTML templating libraries used in the `.cljs` files.
 
 ## IDE
 
