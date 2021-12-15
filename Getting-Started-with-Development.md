@@ -24,8 +24,6 @@ You need the following dependencies installed:
 - [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
 - [Leiningen (version 2+)](http://leiningen.org/)
 - [MongoDB](https://www.mongodb.org/)
-- [Bower](http://bower.io/) (`npm install -g bower`)
-- [Stylus](https://learnboost.github.io/stylus/) (`npm install -g stylus`)
 
 *[Here's a guide for Windows specifically](https://github.com/mtgred/netrunner/wiki/Setting-up-Jnet-Development-on-Windows)*
 
@@ -41,13 +39,6 @@ Then:
 * `brew install node`
 * `brew install mongo`
 * `brew install leiningen`
-
-## Note on Java
-You should use Java8/JDK8.  Newer machines tend to come with Java10 which is initially a problem.
-
-There are compile time issues with Java9 and 10 with our Clojure project that can be resolved - however produce impacts to Java8 users ... so you would have to maintain your own project.clj file and not commit it to the main project.  
-
-The issue looks to be addressed in Clojurescript 1.10 but not in Clojure (yet) ... so use JDK8 ;0
 
 ## Git
 
@@ -73,7 +64,7 @@ To keep your own repository up-to-date, refer to [Syncing a fork](https://help.g
 If you want to start coding a feature or fix a bug, simply use
 
 ```
-git checkout -b your_new_branch_name upstream/master
+git switch -c your_new_branch_name
 ```
 
 to create a local copy of the current `master` branch named `your_new_branch_name` that can easily be merged with a pull request.
@@ -109,22 +100,17 @@ git config --global core.excludesfile '~/.gitignore'
 1. `git push origin feature`
 
 
-## Installation
+## Installation and Running the App
 
-Install Clojure dependencies:
-
-```
-lein deps
-```
-
----
 Install JavaScript dependencies:
 
 ```
-$ bower install
+$ npm ci
 ```
-## Get Up and Running
-**1. Launch MongoDB** _(possibly with --dbpath option specifying card data directory)_
+
+### Launch MongoDB
+
+Possibly with --dbpath option specifying card data directory:
 
 ```
 $ mongod
@@ -132,7 +118,7 @@ $ mongod
 
 On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
 
-**2. Fetch card data from NetrunnerDB**
+### Fetch card data from NetrunnerDB
 
 ```
 $ lein fetch
@@ -142,52 +128,37 @@ This data fetch only needs to be performed if it's your first time building the 
 
 If you don't want card images to be downloaded (such as on a testing environment), you can run `lein fetch --no-card-images`. If you have the card data saved locally, use `lein fetch --local ../path/to/data`.
 
----
-**3. Compile and watch client side ClojureScript** _(only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI)_:
+### Compile client side ClojureScript
+
+Only necessary if this is your first time building the project OR any .cljs files have been edited/modified and you need to update the UI:
 
 ```
-$ lein cljsbuild once dev
+$ npm run cljs:build
 ```
----
-**4. Compile and watch CSS files** _(this step can be skipped if you have no plans to modify CSS/layout items)_:
+
+### Compile CSS files
+
+This step can be skipped if you have no plans to modify CSS/layout items.
 
 ```
-$ stylus src/css -o resources/public/css/
+$ npm run css:build
 ```
----
-**5. Compile server side Clojure files**
+
+### Compile and launch server
+
+Start server in dev mode, and open a REPL prompt:
+
 ```
-$ lein uberjar
+lein repl
 ```
----
-**6. Launch server:**
 
-EITHER:
-
-1. `java -jar target/netrunner-standalone.jar` -- boot up server in production mode (requires `lein cljsbuild once prod` first)
-2. `lein run` -- alternative to above
-3. `lein run dev` -- start server in dev mode
-3. `lein repl` -- start server in dev mode, and open a REPL prompt. **(RECOMMENDED, SEE BELOW.)**
-
----
-**7. Run browser(s)**
+### Visit App in Browser
 
 Open one or more browser sessions and visit: http://localhost:1042
 
-### Minimalist Alternative to Steps 5 and 6
+## Notes on REPL-driven development
 
-Instead of building the production JAR files and running them with Java, a much faster way of launching the game server is to run the REPL (read-eval-print-loop) directly from the command line: 
-
-```
-$ lein repl
-```
-
-This compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Inside the REPL, do `(future-call -main)` to launch the game server. Once you have a game initiated, you can modify card code and reload it with `(core/reset-card-defs)` and very quickly see changes reflected in an ongoing game by simply trashing/discarding a copy of the card in question and reinstalling it or playing it again to see the new behavior.
-
-
-## Automated Environment
-
-To get a local copy running with one command, see https://github.com/astrostl/nrdev
+Using `lein repl` compiles the project if it's out of date, then launches an interactive shell from which you can type and evaluate Clojure commands. Once you have a game initiated, you can modify card code and execute the `defcard` form to load the changed code. To see changes reflected in an ongoing game, simply trash/discard a copy of the card in question and reinstalling it or playing it again to see the new behavior.
 
 ## Setting up IntelliJ IDEA 
 
@@ -228,40 +199,24 @@ You can now access the state of your game as you are playing it by using the var
 
 > So, I have changed a card, now what?
 
-Evaluate `define-card` with your new card definition in the REPL. For example, to make Akamatsu give 10 MU, evaluate
+Evaluate `defcard` with your new card definition in the REPL. For example, to make Akamatsu give 10 MU, evaluate
 ```
-(define-card "Akamatsu Mem Chip"
-  {:in-play [:memory 10]})
+(defcard "Akamatsu Mem Chip"
+  {:constant-effects [(mu+ 10)]})
 ```
-If you've made the change to the card definition files, you can also do `(load-file "game/cards/hardware.clj")` to load the definition from there. Note that if the card you changed is already installed, you have to play it again before the changes take effect.
+Note that if the card you changed is already installed, you have to play it again before the changes take effect.
 
 ## Using Emacs with Cider
 
 If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
 
-## Videos (CURRENTLY BEHIND A PAYWALL)
-
-These live-coding videos may help you with some of the basics:
-
-* [Brief introduction / Implementing Tenma Line](https://www.livecoding.tv/video/jintekinet-intro-tenma-line-12/)
-* [Events system overview / Implementing Utopia Shard](https://www.livecoding.tv/video/jintekinet-events-utopia-shard-12/)
-* [Resolving abilities / Implementing Howler](https://www.livecoding.tv/video/jintekinet-resolving-abilities-howler/)
-* [Testing framework / Fixing a MaxX bug](https://www.livecoding.tv/nealpro/videos/E7eo3-jintekinet-testing-framework-fixing-a-bug)
-* [Synchronized resolution of triggers / Fixing a Bio-Ethics Association bug](https://www.livecoding.tv/nealpro/videos/z8o6Y-jintekinet-resolution-of-simultaneous-triggers)
-
 ## Slack channel
 
-The main communication channel between developers, besides GitHub, is the [team's Slack Channel](https://jinteki.slack.com/). To request access, send an email to [mtgred](mailto:mtgred@gmail.com) stating who you are on GitHub and linking an open PR. 
+The main communication channel between developers, besides GitHub, is the [team's Slack Channel](https://jinteki.slack.com/). To request access, send an email to [NoahTheDuke](mailto:noah.bogart@hey.com) stating who you are on GitHub and linking an open PR. 
 
 ## Good Starting Issues
 
 If you want to look for some of the easier issues to get started, look through our GitHub issues for [issues labeled **easy**](https://github.com/mtgred/netrunner/labels/easy). These usually don't require in-depth codebase knowledge, and changes required to fix them shouldn't involve more than 1-3 source files.
-
-Do note that Pull Requests affecting the user interface will likely take much longer to get accepted.
-
-## Pull requests and branches
-
-There are two main branches in this repository, `master` and `dev`. **TODO**
 
 ## Continuous Integration
 
