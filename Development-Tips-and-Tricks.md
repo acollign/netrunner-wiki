@@ -13,13 +13,13 @@ To inspect the content of Clojure data structures, `println` is handy. You can a
 
 Once a game is started, execute:
 
-    (def state (:state (second (first @all-games))))
+    (def state (:state (second (last (:lobbies @web.app-state/app-state)))))
 
 You can then use `state` to inspect the current game state, the same as if you were in a card our core function. Execute the def again when you make a new game.
 
 As an example, you can then run
 
-    (pprint (core/all-installed state :corp))
+    (pprint (game.core/all-installed state :corp))
 
 to list all installed corp cards.
 
