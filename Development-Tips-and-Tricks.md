@@ -25,7 +25,8 @@ to list all installed corp cards.
 
 #### Client
 
-To modify the client side, `Figwheel` is awesome. Run `lein figwheel` and `stylus -w src/css -o resources/public/css/`. When you save a .cljs or .styl file, the Clojurescript or Stylus is automatically compiled and sent to the connected browsers. No need to refresh anything, you keep the game state. When you have an error in a .cljs file, the UI might disappear. Don't panic! As soon as the error is corrected the UI will reappear. No need to reload anything.
+To watch for CSS changes, run `npm run css:watch`. Also, make sure to run `npm run cljs:watch`. This will start shadow-cljs, which will watch and recompile changes to your `cljs` files. Those changes and css changes will then be automatically injected into your browser, so you should not have to reload anything manually.
+
 
 #### Tests
 
