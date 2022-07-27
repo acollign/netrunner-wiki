@@ -192,10 +192,10 @@ Run `lein test` from the command line.
 Go to your browser and start a game. Now, from the REPL prompt, run
 
 ```
-(def state (:state (second (last @all-games))))
+(def state (:state (second (last (:lobbies @web.app-state/app-state)))))
 ```
 
-You can now access the state of your game as you are playing it by using the variable `@state`. For example, try running `(get-in @state [:corp :hand])` to see the corp's current hand.
+You can now access the state of your game as you are playing it by using the variable `@state`. For example, try running `(get-in @state [:corp :hand])` to see the corp's current hand, or `(->> (get-in @state [:corp :hand]) (map :printed-title))` to filter for the card titles.
 
 > So, I have changed a card, now what?
 
