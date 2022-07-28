@@ -33,7 +33,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
   * ~Send toasts to all active users~
 
 * Refactor front-end files to be readable
-  * Do what I did to cardbrowser to all of the other cljs files (especially gameboard.cljs (!))
+  * ~Do what I did to cardbrowser to all of the other cljs files (especially gameboard.cljs (!))~
   * Move isolated logic to new files for clarity and ease
 
 * Move off of Mongo to SQLite or another Relational Database
@@ -61,7 +61,7 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
   * Allow showing/hiding this in the options
   * Do the same for values? Cost/strength/subtypes/etc
 
-* Change subtypes to keyword vectors instead of strings
+* ~Change subtypes to keyword vectors instead of strings~
 
 ---
 2019-01-06
@@ -69,6 +69,9 @@ Consider this a scratch-pad of ideas I have for jnet. Nothing is permanent, ever
 * Add a "Learning" tab to the lobby screen.
 * Add a tutorial that leads a player step-by-step through a sample game as the runner or the corp, showing which buttons to press, how to fix mistakes when playing, what parts of the engine work or don't, etc.
 * Actually implement the deep changes to the core rules that the Nisei Comprehensive Rules brought along (checkpoints, etc).
+  * ~Checkpoints~ (half done)
+  * Timing windows
+  * Additional costs rules
 
 * ~Save a copy of every single game along with the messages sent by the client to the server using a system such as [this one](http://spootnik.org/entries/2016/12/17/building-an-atomic-database-with-clojure).~
   * ~Give users a way to view all of their old games.~ Done with messages ~only~ for all previous games, full replays for last 15 games.
