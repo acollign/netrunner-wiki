@@ -10,7 +10,6 @@ To get started developing for Jinteki.net see the [[Getting Started with Develop
 
 Additional information can be found in:
 * [[Development Tips and Tricks]]
-* [[Macros (effect vs. req)]]
 * [[Abilities]]
 * [[Event hooks]]
 * [[Card definitions]]
