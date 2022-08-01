@@ -210,6 +210,10 @@ Note that if the card you changed is already installed, you have to play it agai
 
 If you want to use Emacs you have to install clojure-mode and cider. Cider allows you to connect Emacs to a REPL with C-c M-j. To reload a function, it's C-c C-c with the cursor inside the function definition. To reload a file (eg. card.clj) it's C-c C-k.
 
+## Using Visual Studio Code with Calva
+
+Install the extension for https://calva.io/.
+
 ## Slack channel
 
 The main communication channel between developers, besides GitHub, is the [team's Slack Channel](https://jinteki.slack.com/). To request access, send an email to [NoahTheDuke](mailto:noah.bogart@hey.com) stating who you are on GitHub and linking an open PR. 
