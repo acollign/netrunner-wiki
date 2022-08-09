@@ -7,7 +7,6 @@
 * [[Event hooks]]
 * [[Card definitions]]
 * [[Writing Tests|Tests]]
-* [[Externs]]
 * [[Test server]]
 * [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
 * [[Game State API]]
