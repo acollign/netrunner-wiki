@@ -15,8 +15,7 @@ Additional information can be found in:
 * [[Card definitions]]
 * [[Client Lock and Handling Client Commands]]
 * [[Writing Tests|Tests]]
-* [[Test server]]
-* [Reagent Implementation](https://github.com/mtgred/netrunner/wiki/Reagent-Implementation)
+* [[Reagent Implementation]]
 * [[Game State API]]
 * [[Prompt and Message Style Guide]]
 
