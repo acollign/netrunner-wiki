@@ -4,6 +4,8 @@
 
 Start the REPL with `lein repl`.
 
+If you want to use an external debugger, enable the `debugger` profile with `lein with-profile dev,debugger repl` instead and connect to port 5010.
+
 
 #### Server
 
