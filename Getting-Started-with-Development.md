@@ -14,16 +14,16 @@ The main language the whole project is written in is Clojure. Below are a few li
 There are several options available, including:
 
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/) with [Cursive](https://cursiveclojure.com/)
-- Emacs ([Unix](https://www.gnu.org/software/emacs/) | [Windows](https://iplogger.com/2RYE79) | [MacOS](http://emacsformacosx.com/)) with [CIDER](https://github.com/clojure-emacs/cider)
+- Emacs ([Unix](https://www.gnu.org/software/emacs/) | [Windows](https://ftp.gnu.org/gnu/emacs/windows/) | [MacOS](http://emacsformacosx.com/)) with [CIDER](https://github.com/clojure-emacs/cider)
 
 ## Dependencies
 
 You need the following dependencies installed:
 
 - [Java8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (for MacOS, download the full [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
-- [Node.js](https://iplogger.com/2RYE79), Node Package Manager (make sure `npm` is in your `PATH`)
-- [Leiningen (version 2+)](https://iplogger.com/2RYE79)
-- [MongoDB](https://iplogger.com/2RYE79)
+- [Node.js](https://nodejs.org/download/), Node Package Manager (make sure `npm` is in your `PATH`)
+- [Leiningen (version 2+)](http://leiningen.org/)
+- [MongoDB](https://www.mongodb.org/)
 
 *[Here's a guide for Windows specifically](https://github.com/mtgred/netrunner/wiki/Setting-up-Jnet-Development-on-Windows)*
 
@@ -116,7 +116,7 @@ Possibly with --dbpath option specifying card data directory:
 $ mongod
 ```
 
-On Windows, run `mongod.exe`. See [Install MongoDB on Windows](https://iplogger.com/2RYE79).
+On Windows, run `mongod.exe`. See [Install MongoDB on Windows](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/).
 
 ### Fetch card data from NetrunnerDB
 
