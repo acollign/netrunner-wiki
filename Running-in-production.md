@@ -1,6 +1,13 @@
 This page contains all the information you need to bootstrap a production environment using docker.
 
-*Note*: the setup assumes that you are using the local filesystem to store data such as the card images and the database. You can as well decide to use docker volumes instead. See the official [docker volume documentation](https://docs.docker.com/storage/volumes/).
+*Note*: the setup assumes that you are using the local filesystem to store data such as the card images and the database files. You can as well decide to use docker volumes instead. See the official [docker volume documentation](https://docs.docker.com/storage/volumes/).
+
+## Discovering the infrastructure
+
+The infrastructure consits of : 
+- a netrunner `server` that runs the game
+- a public `endpoint` that serves the card images and reverse proxy the `server`
+- a mongodb `database` that stores the data of the `server`
 
 ## Building a production docker image
 
@@ -14,27 +21,27 @@ Building the image takes quite some time as it compiles everything from scratch 
 
 ## Setting authentication secret
 
-To update the authentication secret:
-- edit `docker/prod/prod.edn`
+To update the authentication secret, proceed as follows:
+- with your favorite editor, edit `docker/prod/prod.edn`
 - set the value of the `:web/auth` `:secret` to a long random string
 
 ## Running a production infrastructure
 
 The project provides a docker compose file that can be used to run the server, the `database` and the public `endpoint`.
 
-It is required to update this file to reference your own image. To update proceed as follows:
-- with your favorite editor, open `docker-compose.prod.yml`
+It is required to update this file to reference your own image. To update, proceed as follows :
+- edit `docker-compose.prod.yml`
 - locate the definition of the service called `server`
 - update the image name according the name chosen in the build step above
 
-You can then run the server by issuing the following command
+You can then run the server by issuing the following command :
 ```
 docker compose -f docker-compose.prod.yml up
 ```
 
 ## Populating the database
 
-To populate the `database`, run the following commands
+To populate the `database`, run the following commands :
 
 ```
 $ lein fetch 
@@ -46,7 +53,7 @@ Indexes successfully created.
 
 ## Restarting server
 
-Before you can access the `server`, you need to restart it to avoid an exception
+Before you can access the `server`, you need to restart it to avoid an exception. To restart the `server`, proceed as follows :
 
 ```
 docker compose -f docker-compose.prod.yml restart server
@@ -54,24 +61,24 @@ docker compose -f docker-compose.prod.yml restart server
 
 ## Access the production instance
 
-Netrunner is available at http://localhost:8042
+You can acces Netrunner at [http://localhost:8042](http://localhost:8042).
 
 ## Reducing service exposure
 
-Once the database has been populated, it is possible to remove the ports exposed by the corresponding `database` as follows:
-- with your favorite editor, open `docker-compose.prod.yml`
+Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of docker internal network. To disable the prots, proceed as follows :
+- edit `docker-compose.prod.yml`
 - locate the definition of the service called `database`
-- comment out the port definition
+- comment out the `ports` definition
 
 ## Backuping up and restoring
 
 It is a good practice to back up the `database` and image files.
 
-Based on the official Mongodb documentation, you can simply turn off the database and copy the data folder specified in the docker compose volume section. Other backup strategies can be implemented, simply [read the official Mongodb backup documentation](https://www.mongodb.com/docs/manual/core/backups/).
+Based on the official Mongodb documentation, you can simply turn off the database and copy the data folder specified in the docker compose volume section. Other back up strategies can be implemented, simply [read the official Mongodb backup documentation](https ://www.mongodb.com/docs/manual/core/backups/).
 
 Similarly, you can save the image folder specified in the docker compose file by copying it.
 
-Restoring both database and images consists of copying back the backup to the locations specified in the docker compose file.
+Restoring both `database` and images consists of copying back the backup to the locations specified in the docker compose file.
 
 ## Known issues
 
