@@ -7,7 +7,7 @@ This page contains all the information you need to bootstrap a production enviro
 The infrastructure consits of : 
 - a netrunner `server` that runs the game
 - a public `endpoint` that serves the card images and reverse proxy the `server`
-- a mongodb `database` that stores the data of the `server`
+- a MongoDB `database` that stores the data of the `server`
 
 ## Building a production docker image
 
@@ -74,7 +74,7 @@ Once the `database` has been populated, it is possible to disable the ports so t
 
 It is a good practice to back up the `database` and image files.
 
-Based on the official Mongodb documentation, you can simply turn off the database and copy the data folder specified in the docker compose volume section. Other back up strategies can be implemented, simply [read the official Mongodb backup documentation](https ://www.mongodb.com/docs/manual/core/backups/).
+Based on the official MongoDB documentation, you can simply turn off the database and copy the data folder specified in the docker compose volume section. Other back up strategies can be implemented, simply [read the official MongoDB backup documentation](https ://www.mongodb.com/docs/manual/core/backups/).
 
 Similarly, you can save the image folder specified in the docker compose file by copying it.
 
