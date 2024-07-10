@@ -1,10 +1,10 @@
 This page contains all the information you need to bootstrap a production environment using Docker.
 
-*Note*: the setup assumes that you are using the local filesystem to store data such as the card images and the database files. You can as well decide to use Docker volumes instead. See the official [Docker volume documentation](https://docs.docker.com/storage/volumes/).
+*Note*: the setup assumes that you are using the local file system to store data such as the card images and the database files. You can as well decide to use Docker volumes instead. See the official [Docker volume documentation](https://docs.docker.com/storage/volumes/).
 
 ## Discovering the infrastructure
 
-The infrastructure consits of : 
+The infrastructure consists of :
 - a netrunner `server` that runs the game
 - a public `endpoint` that serves the card images and reverse proxy the `server`
 - a MongoDB `database` that stores the data of the `server`
@@ -61,16 +61,16 @@ docker compose -f docker-compose.prod.yml restart server
 
 ## Access the production instance
 
-You can acces Netrunner at [http://localhost:8042](http://localhost:8042).
+You can access Netrunner at [http://localhost:8042](http://localhost:8042).
 
 ## Reducing service exposure
 
-Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of Docker internal network. To disable the prots, proceed as follows :
+Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of Docker internal network. To disable the ports, proceed as follows :
 - edit `docker-compose.prod.yml`
 - locate the definition of the service called `database`
 - comment out the `ports` definition
 
-## Backuping up and restoring
+## Backing up and restoring
 
 It is a good practice to back up the `database` and image files.
 
