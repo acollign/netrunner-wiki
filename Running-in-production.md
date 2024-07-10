@@ -1,6 +1,6 @@
-This page contains all the information you need to bootstrap a production environment using docker.
+This page contains all the information you need to bootstrap a production environment using Docker.
 
-*Note*: the setup assumes that you are using the local filesystem to store data such as the card images and the database files. You can as well decide to use docker volumes instead. See the official [docker volume documentation](https://docs.docker.com/storage/volumes/).
+*Note*: the setup assumes that you are using the local filesystem to store data such as the card images and the database files. You can as well decide to use Docker volumes instead. See the official [Docker volume documentation](https://docs.docker.com/storage/volumes/).
 
 ## Discovering the infrastructure
 
@@ -9,9 +9,9 @@ The infrastructure consits of :
 - a public `endpoint` that serves the card images and reverse proxy the `server`
 - a MongoDB `database` that stores the data of the `server`
 
-## Building a production docker image
+## Building a production Docker image
 
-To build the production docker image, proceed as follows
+To build the production Docker image, proceed as follows
 
 ```
 docker build -t <your-org>/netrunner . -f docker/prod/Dockerfile
@@ -27,7 +27,7 @@ To update the authentication secret, proceed as follows:
 
 ## Running a production infrastructure
 
-The project provides a docker compose file that can be used to run the server, the `database` and the public `endpoint`.
+The project provides a Docker compose file that can be used to run the server, the `database` and the public `endpoint`.
 
 It is required to update this file to reference your own image. To update, proceed as follows :
 - edit `docker-compose.prod.yml`
@@ -65,7 +65,7 @@ You can acces Netrunner at [http://localhost:8042](http://localhost:8042).
 
 ## Reducing service exposure
 
-Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of docker internal network. To disable the prots, proceed as follows :
+Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of Docker internal network. To disable the prots, proceed as follows :
 - edit `docker-compose.prod.yml`
 - locate the definition of the service called `database`
 - comment out the `ports` definition
@@ -74,11 +74,11 @@ Once the `database` has been populated, it is possible to disable the ports so t
 
 It is a good practice to back up the `database` and image files.
 
-Based on the official MongoDB documentation, you can simply turn off the database and copy the data folder specified in the docker compose volume section. Other back up strategies can be implemented, simply [read the official MongoDB backup documentation](https ://www.mongodb.com/docs/manual/core/backups/).
+Based on the official MongoDB documentation, you can simply turn off the database and copy the data folder specified in the Docker compose volume section. Other back up strategies can be implemented, simply [read the official MongoDB backup documentation](https ://www.mongodb.com/docs/manual/core/backups/).
 
-Similarly, you can save the image folder specified in the docker compose file by copying it.
+Similarly, you can save the image folder specified in the Docker compose file by copying it.
 
-Restoring both `database` and images consists of copying back the backup to the locations specified in the docker compose file.
+Restoring both `database` and images consists of copying back the backup to the locations specified in the Docker compose file.
 
 ## Known issues
 
