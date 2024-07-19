@@ -35,7 +35,7 @@ To generate the production docker compose file with the default settings and the
 lein generate-docker --name your-name/image-name
 ```
 
-## Building a production Docker imageb
+## Building a production Docker image
 
 To build the production Docker image, proceed as follows
 
