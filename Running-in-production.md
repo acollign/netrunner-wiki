@@ -9,32 +9,52 @@ The infrastructure consists of :
 - a public `endpoint` that serves the card images and reverse proxy the `server`
 - a MongoDB `database` that stores the data of the `server`
 
-## Building a production Docker image
+## Generating a production docker compose file
+
+The project provides a Docker compose file that can be used to run the `server`, the `database` and the public `endpoint`.
+The `lein generate-docker` command helps with creating and maintaining the docker compose file based on the template available at `docker/prod/docker-compose.yml.tpl` or any template specified with the `-t` option.
+
+```
+Usage: lein generate-docker [options]
+
+Options:
+  -t, --template PATH                      docker/prod/docker-compose.yml.tpl  Path to docker-compose template
+  -o, --output PATH                        docker-compose.prod.yml             Path to generated docker-compose file
+  -i, --image IMAGE-NAME                                                       Image name is required
+  -p, --port PORT                          1042                                Port exposing Netrunner
+  -r, --folder-resources FOLDER-RESOURCES  ./resources/public                  Path to the public resources
+  -f, --config CONFIG-FILE                 ./docker/prod/prod.edn              Path to the configuration file
+  -m, --image-mongodb IMAGE-NAME-MONGODB   mongo                               Image name of MongoDB
+  -d, --folder-mongodb FOLDER-MONGODB      ./data                              Folder of the MongoDB database
+  -c, --close-mongodb                                                          Disable MongoDB connectivity outside of Docker internal network
+```
+
+To generate the production docker compose file with the default settings and the image name `your-name/your-image`, proceed as follows
+
+```
+lein generate-docker --name your-name/image-name
+```
+
+## Building a production Docker imageb
 
 To build the production Docker image, proceed as follows
 
 ```
-docker build -t <your-org>/netrunner . -f docker/prod/Dockerfile
+docker compose -f docker-compose.prod.yml build
  ```
 
 Building the image takes quite some time as it compiles everything from scratch and generate the uber jar.
 
 ## Setting authentication secret
 
-To update the authentication secret, proceed as follows:
+To update the authentication secret in the default configuration file, proceed as follows:
 - with your favorite editor, edit `docker/prod/prod.edn`
 - set the value of the `:web/auth` `:secret` to a long random string
 
 ## Running a production infrastructure
 
-The project provides a Docker compose file that can be used to run the server, the `database` and the public `endpoint`.
+To run the production infrastructure proceed as follows
 
-It is required to update this file to reference your own image. To update, proceed as follows :
-- edit `docker-compose.prod.yml`
-- locate the definition of the service called `server`
-- update the image name according the name chosen in the build step above
-
-You can then run the server by issuing the following command :
 ```
 docker compose -f docker-compose.prod.yml up
 ```
@@ -65,10 +85,11 @@ You can access Netrunner at [http://localhost:8042](http://localhost:8042).
 
 ## Reducing service exposure
 
-Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of Docker internal network. To disable the ports, proceed as follows :
-- edit `docker-compose.prod.yml`
-- locate the definition of the service called `database`
-- comment out the `ports` definition
+Once the `database` has been populated, it is possible to disable the ports so that the `database` is not accessible outside of Docker internal network. To disable the ports, regenerate the production docker-compose file with the image name `your-name/your-iamge` as follows
+
+```
+lein generate-docker --image your-name/your-image -c
+```
 
 ## Backing up and restoring
 
